@@ -1,0 +1,133 @@
+#!/usr/bin/env python3
+"""GOSCE Portfolio — MCP stdio gateway.
+
+A thin Model Context Protocol server (stdio transport) that exposes the GOSCE
+portfolio of nine remote agents running on getvda.ai as MCP tools.
+
+* Discovery is **static** — `initialize` and `tools/list` answer from the table
+  below, so enumeration works with no network access (Glama scans in a network-
+  restricted sandbox).
+* `tools/call` proxies over HTTPS to the selected agent's live `/mcp` `invoke`
+  tool. Discovery on the upstream agents is free; execution is metered via
+  Nevermined x402 micropayments, so an unpaid call returns a clear
+  `payment_required` result (not an error) describing how to pay.
+
+Each tool maps 1:1 to an agent; the single `input` argument is the JSON request
+body for that capability (identical to the A2A message text it accepts).
+"""
+from __future__ import annotations
+
+import asyncio
+import json
+import os
+
+import httpx
+from mcp.server import Server
+from mcp.server.stdio import stdio_server
+from mcp.types import TextContent, Tool
+
+# --- the portfolio (static so tools/list needs no network) ------------------- #
+AGENTS: list[dict] = [
+    {"slug": "structured-output-agent", "name": "Structured Output MCP Agent",
+     "mcp": "https://fastmcp-instructor-72225f.getvda.ai/mcp",
+     "summary": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."},
+    {"slug": "traced-llm-proxy", "name": "Traced LLM Proxy",
+     "mcp": "https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/mcp",
+     "summary": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."},
+    {"slug": "authenticated-multi-llm-agent", "name": "Authenticated Multi-LLM Agent",
+     "mcp": "https://anthropic-google-auth-oauthlib-mc-70ac16.getvda.ai/mcp",
+     "summary": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."},
+    {"slug": "auth-token-service", "name": "FastAPI Auth Token Service",
+     "mcp": "https://bcrypt-python-jose-d0e0d0.getvda.ai/mcp",
+     "summary": "Hash passwords with bcrypt and issue/verify JWT session tokens."},
+    {"slug": "llm-orchestration-agent", "name": "LLM Orchestration Agent",
+     "mcp": "https://langchain-core-langchain-openai-l-736876.getvda.ai/mcp",
+     "summary": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."},
+    {"slug": "llm-observability-orchestration", "name": "LLM Observability & Orchestration Agent",
+     "mcp": "https://langchain-core-langsmith-openai-8c02f9.getvda.ai/mcp",
+     "summary": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."},
+    {"slug": "authenticated-llm-agent", "name": "Authenticated LLM Agent",
+     "mcp": "https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/mcp",
+     "summary": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."},
+    {"slug": "authenticated-mcp-agent", "name": "Authenticated MCP Agent",
+     "mcp": "https://bcrypt-langchain-core-mcp-25b8f1.getvda.ai/mcp",
+     "summary": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."},
+    {"slug": "gosce-portfolio-router", "name": "GOSCE Portfolio Router",
+     "mcp": "https://router.getvda.ai/mcp",
+     "summary": "Single entry point for the GOSCE portfolio: routes orchestrators to verified agents by capability, with real example output from the router's own /selftest probes."},
+]
+_BY_NAME = {a["slug"]: a for a in AGENTS}
+TIMEOUT = float(os.environ.get("GOSCE_PROXY_TIMEOUT", "45"))
+
+server = Server("gosce-portfolio")
+
+
+@server.list_tools()
+async def list_tools() -> list[Tool]:
+    return [
+        Tool(
+            name=a["slug"],
+            description=a["summary"],
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "input": {
+                        "type": "string",
+                        "description": "JSON request for this capability (the same body you'd send as an A2A message).",
+                    }
+                },
+                "required": ["input"],
+            },
+        )
+        for a in AGENTS
+    ]
+
+
+def _maybe_json(text: str):
+    try:
+        return json.loads(text)
+    except Exception:
+        return text[:500]
+
+
+@server.call_tool()
+async def call_tool(name: str, arguments: dict) -> list[TextContent]:
+    agent = _BY_NAME.get(name)
+    if agent is None:
+        return [TextContent(type="text", text=json.dumps({"error": "unknown tool", "tool": name}))]
+
+    rpc = {
+        "jsonrpc": "2.0", "id": 1, "method": "tools/call",
+        "params": {"name": "invoke", "arguments": {"input": (arguments or {}).get("input", "")}},
+    }
+    try:
+        async with httpx.AsyncClient(timeout=TIMEOUT) as client:
+            resp = await client.post(agent["mcp"], json=rpc, headers={"User-Agent": "gosce-glama-gateway"})
+    except Exception as exc:
+        return [TextContent(type="text", text=json.dumps(
+            {"error": f"upstream request failed: {str(exc)[:200]}", "agent": agent["name"], "endpoint": agent["mcp"]}))]
+
+    if resp.status_code == 402:
+        return [TextContent(type="text", text=json.dumps({
+            "status": "payment_required",
+            "message": "This agent meters execution via Nevermined x402. Discovery is free; calls need a payment token.",
+            "agent": agent["name"], "endpoint": agent["mcp"],
+            "details": _maybe_json(resp.text),
+        }, indent=2))]
+
+    if resp.status_code != 200:
+        return [TextContent(type="text", text=json.dumps(
+            {"error": f"upstream HTTP {resp.status_code}", "agent": agent["name"], "body": _maybe_json(resp.text)}))]
+
+    data = _maybe_json(resp.text)
+    result = data.get("result", data) if isinstance(data, dict) else data
+    return [TextContent(type="text", text=json.dumps(result, indent=2, default=str))]
+
+
+async def main() -> None:
+    async with stdio_server() as (read_stream, write_stream):
+        await server.run(read_stream, write_stream, server.create_initialization_options())
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
