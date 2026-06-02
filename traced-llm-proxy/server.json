@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.mikerawsonnz/traced-llm-proxy",
+  "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus t",
+  "version": "1.0.0",
+  "websiteUrl": "https://anthropic-mcp-opentelemetry-api-264025.getvda.ai",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/mcp"
+    }
+  ]
+}
