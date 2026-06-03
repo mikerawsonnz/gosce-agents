@@ -26,61 +26,61 @@ from mcp.types import TextContent, Tool
 # --- the portfolio (static so tools/list needs no network) ------------------- #
 AGENTS: list[dict] = json.loads(r"""[
  {
-  "slug": "structured-output-agent",
-  "name": "Structured Output MCP Agent",
+  "tool": "extract-structured",
+  "title": "Structured Output MCP Agent",
   "mcp": "https://fastmcp-instructor-72225f.getvda.ai/mcp",
-  "summary": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
+  "description": "Schema-enforced JSON extraction: give a prompt + Pydantic model, get validated typed output."
  },
  {
-  "slug": "traced-llm-proxy",
-  "name": "Traced LLM Proxy",
+  "tool": "trace-llm-call",
+  "title": "Traced LLM Proxy",
   "mcp": "https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/mcp",
-  "summary": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."
+  "description": "Observable LLM proxy: transparent pass-through that adds OpenTelemetry spans to every call. Zero logic, pure instrumentation."
  },
  {
-  "slug": "authenticated-multi-llm-agent",
-  "name": "Authenticated Multi-LLM Agent",
+  "tool": "enterprise-llm-router",
+  "title": "Authenticated Multi-LLM Agent",
   "mcp": "https://anthropic-google-auth-oauthlib-mc-70ac16.getvda.ai/mcp",
-  "summary": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+  "description": "OAuth/OIDC-gated multi-model router: supports Anthropic + OpenAI + Gemini behind enterprise identity providers."
  },
  {
-  "slug": "auth-token-service",
-  "name": "FastAPI Auth Token Service",
+  "tool": "hash-and-verify",
+  "title": "FastAPI Auth Token Service",
   "mcp": "https://bcrypt-python-jose-d0e0d0.getvda.ai/mcp",
-  "summary": "Hash passwords with bcrypt and issue/verify JWT session tokens."
+  "description": "Stateless JWT auth: hash a password or verify a token. No LLM, no external calls. Pure crypto."
  },
  {
-  "slug": "llm-orchestration-agent",
-  "name": "LLM Orchestration Agent",
+  "tool": "chain-prompts",
+  "title": "LLM Orchestration Agent",
   "mcp": "https://langchain-core-langchain-openai-l-736876.getvda.ai/mcp",
-  "summary": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+  "description": "Multi-step LangChain workflows: chain prompts, manage context across steps, coordinate sequential LLM calls."
  },
  {
-  "slug": "llm-observability-orchestration",
-  "name": "LLM Observability & Orchestration Agent",
+  "tool": "chain-and-trace",
+  "title": "LLM Observability & Orchestration Agent",
   "mcp": "https://langchain-core-langsmith-openai-8c02f9.getvda.ai/mcp",
-  "summary": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+  "description": "LangChain workflows WITH LangSmith tracing: same orchestration plus full run visibility, evaluation, and debugging."
  },
  {
-  "slug": "authenticated-llm-agent",
-  "name": "Authenticated LLM Agent",
+  "tool": "gated-llm-call",
+  "title": "Authenticated LLM Agent",
   "mcp": "https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/mcp",
-  "summary": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+  "description": "Password-protected LLM: caller supplies credentials + prompt. Rejects unauthenticated requests. Single-model (Gemini)."
  },
  {
-  "slug": "authenticated-mcp-agent",
-  "name": "Authenticated MCP Agent",
+  "tool": "gated-tool-runner",
+  "title": "Authenticated MCP Agent",
   "mcp": "https://bcrypt-langchain-core-mcp-25b8f1.getvda.ai/mcp",
-  "summary": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+  "description": "Credential-gated MCP tool runner: authenticate first, then invoke any registered MCP tool. Multi-tool, not just LLM."
  },
  {
-  "slug": "gosce-portfolio-router",
-  "name": "GOSCE Portfolio Router",
+  "tool": "route-to-agent",
+  "title": "GOSCE Portfolio Router",
   "mcp": "https://router.getvda.ai/mcp",
-  "summary": "Single entry point for the GOSCE portfolio: routes orchestrators to verified agents by capability, with real example output from the router's own /selftest probes (a quality-assured broker, not a directory)."
+  "description": "Capability discovery broker: describe what you need, get routed to the right specialist agent with verified example output."
  }
 ]""")
-_BY_NAME = {a["slug"]: a for a in AGENTS}
+_BY_NAME = {a["tool"]: a for a in AGENTS}
 TIMEOUT = float(os.environ.get("GOSCE_PROXY_TIMEOUT", "45"))
 
 server = Server("gosce-portfolio")
@@ -90,8 +90,8 @@ server = Server("gosce-portfolio")
 async def list_tools() -> list[Tool]:
     return [
         Tool(
-            name=a["slug"],
-            description=a["summary"],
+            name=a["tool"],
+            description=a["description"],
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -129,19 +129,19 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent]:
             resp = await client.post(agent["mcp"], json=rpc, headers={"User-Agent": "gosce-glama-gateway"})
     except Exception as exc:
         return [TextContent(type="text", text=json.dumps(
-            {"error": f"upstream request failed: {str(exc)[:200]}", "agent": agent["name"], "endpoint": agent["mcp"]}))]
+            {"error": f"upstream request failed: {str(exc)[:200]}", "agent": agent["title"], "endpoint": agent["mcp"]}))]
 
     if resp.status_code == 402:
         return [TextContent(type="text", text=json.dumps({
             "status": "payment_required",
             "message": "This agent meters execution via Nevermined x402. Discovery is free; calls need a payment token.",
-            "agent": agent["name"], "endpoint": agent["mcp"],
+            "agent": agent["title"], "endpoint": agent["mcp"],
             "details": _maybe_json(resp.text),
         }, indent=2))]
 
     if resp.status_code != 200:
         return [TextContent(type="text", text=json.dumps(
-            {"error": f"upstream HTTP {resp.status_code}", "agent": agent["name"], "body": _maybe_json(resp.text)}))]
+            {"error": f"upstream HTTP {resp.status_code}", "agent": agent["title"], "body": _maybe_json(resp.text)}))]
 
     data = _maybe_json(resp.text)
     result = data.get("result", data) if isinstance(data, dict) else data
