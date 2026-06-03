@@ -5,13 +5,20 @@
 # so it works in Glama's network-restricted scan sandbox.
 FROM python:3.12-slim
 
+# Declare the license on the image (OCI standard) so Glama's license-quality
+# check grades the BUILT artifact, not just the repo.
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.title="GOSCE Portfolio MCP Gateway"
+LABEL org.opencontainers.image.source="https://github.com/mikerawsonnz/gosce-agents"
+
 WORKDIR /app
 
 # Install pinned, minimal deps first (better layer caching).
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY glama_server.py ./
+# Ship the server AND the LICENSE inside the image (Glama checks the artifact).
+COPY glama_server.py LICENSE ./
 
 # Run as an unprivileged user (safety check).
 RUN useradd --create-home --uid 10001 mcp && chown -R mcp /app
