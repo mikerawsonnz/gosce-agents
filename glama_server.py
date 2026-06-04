@@ -53,25 +53,25 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "chain-prompts",
   "title": "LLM Orchestration Agent",
   "mcp": "https://langchain-core-langchain-openai-l-736876.getvda.ai/mcp",
-  "description": "Multi-step LangChain workflows: chain prompts, manage context across steps, coordinate sequential LLM calls."
+  "description": "Multi-step LangChain prompt chains over Gemini. Manages context across sequential steps."
  },
  {
   "tool": "chain-and-trace",
   "title": "LLM Observability & Orchestration Agent",
   "mcp": "https://langchain-core-langsmith-openai-8c02f9.getvda.ai/mcp",
-  "description": "LangChain workflows WITH LangSmith tracing: same orchestration plus full run visibility, evaluation, and debugging."
+  "description": "LangChain chains WITH LangSmith tracing: full run visibility, evaluation metrics, and debugging alongside orchestration."
  },
  {
   "tool": "gated-llm-call",
   "title": "Authenticated LLM Agent",
   "mcp": "https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/mcp",
-  "description": "Password-protected LLM: caller supplies credentials + prompt. Rejects unauthenticated requests. Single-model (Gemini)."
+  "description": "Credential-gated single-model LLM: bcrypt + JWT auth, then Gemini completion. Rejects without valid token."
  },
  {
   "tool": "gated-tool-runner",
   "title": "Authenticated MCP Agent",
   "mcp": "https://bcrypt-langchain-core-mcp-25b8f1.getvda.ai/mcp",
-  "description": "Credential-gated MCP tool runner: authenticate first, then invoke any registered MCP tool. Multi-tool, not just LLM."
+  "description": "Credential-gated MCP tool runner: bcrypt + JWT auth, then invoke any registered MCP tool. Multi-capability, not just LLM."
  },
  {
   "tool": "route-to-agent",
