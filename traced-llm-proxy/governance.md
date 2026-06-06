@@ -6,8 +6,8 @@
 - **Agent:** `anthropic-mcp-opentelemetry-api-264025`
 - **Combination:** `ai-infrastructure_opt_012` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://anthropic-mcp-opentelemetry-api-264025.getvda.ai
-- **Version:** 0.1.6
-- **Generated:** 2026-06-01T17:59:09+00:00
+- **Version:** 0.1.0
+- **Generated:** 2026-06-06T00:02:49+00:00
 
 ## Capability declaration
 
