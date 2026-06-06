@@ -26,10 +26,58 @@ from mcp.types import TextContent, Tool
 # --- the portfolio (static so tools/list needs no network) ------------------- #
 AGENTS: list[dict] = json.loads(r"""[
  {
+  "tool": "extract-structured",
+  "title": "Structured Output MCP Agent",
+  "mcp": "https://fastmcp-instructor-72225f.getvda.ai/mcp",
+  "description": "Schema-enforced JSON extraction: give a prompt + Pydantic model, get validated typed output."
+ },
+ {
   "tool": "trace-llm-call",
   "title": "Traced LLM Proxy",
   "mcp": "https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/mcp",
   "description": "Observable LLM proxy: transparent pass-through that adds OpenTelemetry spans to every call. Zero logic, pure instrumentation."
+ },
+ {
+  "tool": "enterprise-llm-router",
+  "title": "Authenticated Multi-LLM Agent",
+  "mcp": "https://anthropic-google-auth-oauthlib-mc-70ac16.getvda.ai/mcp",
+  "description": "OAuth/OIDC-gated multi-model router: supports Anthropic + OpenAI + Gemini behind enterprise identity providers."
+ },
+ {
+  "tool": "hash-and-verify",
+  "title": "FastAPI Auth Token Service",
+  "mcp": "https://bcrypt-python-jose-d0e0d0.getvda.ai/mcp",
+  "description": "Stateless JWT auth: hash a password or verify a token. No LLM, no external calls. Pure crypto."
+ },
+ {
+  "tool": "chain-prompts",
+  "title": "LLM Orchestration Agent",
+  "mcp": "https://langchain-core-langchain-openai-l-736876.getvda.ai/mcp",
+  "description": "Multi-step LangChain prompt chains over Gemini. Manages context across sequential steps."
+ },
+ {
+  "tool": "chain-and-trace",
+  "title": "LLM Observability & Orchestration Agent",
+  "mcp": "https://langchain-core-langsmith-openai-8c02f9.getvda.ai/mcp",
+  "description": "LangChain chains WITH LangSmith tracing: full run visibility, evaluation metrics, and debugging alongside orchestration."
+ },
+ {
+  "tool": "gated-llm-call",
+  "title": "Authenticated LLM Agent",
+  "mcp": "https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/mcp",
+  "description": "Credential-gated single-model LLM: bcrypt + JWT auth, then Gemini completion. Rejects without valid token."
+ },
+ {
+  "tool": "gated-tool-runner",
+  "title": "Authenticated MCP Agent",
+  "mcp": "https://bcrypt-langchain-core-mcp-25b8f1.getvda.ai/mcp",
+  "description": "Credential-gated MCP tool runner: bcrypt + JWT auth, then invoke any registered MCP tool. Multi-capability, not just LLM."
+ },
+ {
+  "tool": "route-to-agent",
+  "title": "GOSCE Portfolio Router",
+  "mcp": "https://router.getvda.ai/mcp",
+  "description": "Capability discovery broker: describe what you need, get routed to the right specialist agent with verified example output."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}

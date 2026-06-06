@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.mikerawsonnz/structured-output-agent",
+  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Verte",
+  "version": "1.0.0",
+  "websiteUrl": "https://fastmcp-instructor-72225f.getvda.ai",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://fastmcp-instructor-72225f.getvda.ai/mcp"
+    }
+  ]
+}

@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Traced LLM Proxy: composes anthropic + mcp + opentelemetry-api + opentelemetry-sdk \u2014 llm-client, agent-protocol, observability via A2A + MCP.",
-  "documentationUrl": "https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/governance.md",
-  "name": "Traced LLM Proxy",
+  "description": "Authenticated Multi-LLM Agent: composes anthropic + google-auth-oauthlib + mcp + openai \u2014 llm-client, oauth-oidc, agent-protocol via A2A + MCP.",
+  "documentationUrl": "https://anthropic-google-auth-oauthlib-mc-70ac16.getvda.ai/governance.md",
+  "name": "Authenticated Multi-LLM Agent",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -22,7 +22,7 @@
   },
   "skills": [
     {
-      "description": "llm client capability provided by anthropic.",
+      "description": "llm client capability provided by anthropic, openai.",
       "examples": [
         "Use the llm-client capability of this agent."
       ],
@@ -36,7 +36,26 @@
         "application/json"
       ],
       "tags": [
-        "anthropic"
+        "anthropic",
+        "openai"
+      ]
+    },
+    {
+      "description": "oauth oidc capability provided by google-auth-oauthlib.",
+      "examples": [
+        "Use the oauth-oidc capability of this agent."
+      ],
+      "id": "oauth-oidc",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Oauth Oidc",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "google-auth-oauthlib"
       ]
     },
     {
@@ -56,27 +75,8 @@
       "tags": [
         "mcp"
       ]
-    },
-    {
-      "description": "observability capability provided by opentelemetry-api, opentelemetry-sdk.",
-      "examples": [
-        "Use the observability capability of this agent."
-      ],
-      "id": "observability",
-      "inputModes": [
-        "text/plain",
-        "application/json"
-      ],
-      "name": "Observability",
-      "outputModes": [
-        "application/json"
-      ],
-      "tags": [
-        "opentelemetry-api",
-        "opentelemetry-sdk"
-      ]
     }
   ],
-  "url": "https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/a2a/",
+  "url": "https://anthropic-google-auth-oauthlib-mc-70ac16.getvda.ai/a2a/",
   "version": "0.1.6"
 }

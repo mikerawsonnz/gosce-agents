@@ -1,0 +1,63 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "FastAPI Auth Token Service: composes bcrypt + python-jose \u2014 crypto, jwt via A2A + MCP.",
+  "documentationUrl": "https://bcrypt-python-jose-d0e0d0.getvda.ai/governance.md",
+  "name": "FastAPI Auth Token Service",
+  "preferredTransport": "JSONRPC",
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "crypto capability provided by bcrypt.",
+      "examples": [
+        "Use the crypto capability of this agent."
+      ],
+      "id": "crypto",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Crypto",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "bcrypt"
+      ]
+    },
+    {
+      "description": "jwt capability provided by python-jose.",
+      "examples": [
+        "Use the jwt capability of this agent."
+      ],
+      "id": "jwt",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Jwt",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "python-jose"
+      ]
+    }
+  ],
+  "url": "https://bcrypt-python-jose-d0e0d0.getvda.ai/a2a/",
+  "version": "0.1.7"
+}

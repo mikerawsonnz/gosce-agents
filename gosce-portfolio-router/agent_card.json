@@ -1,0 +1,167 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "GOSCE Portfolio Router \u2014 the single entry point that routes orchestrators to verified GOSCE agents by capability, returning real example output from its own /selftest probes.",
+  "documentationUrl": "https://router.getvda.ai/governance.md",
+  "name": "GOSCE Portfolio Router",
+  "preferredTransport": "JSONRPC",
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "Route to a verified auth agent (FastAPI Auth Token Service).",
+      "examples": [
+        "Find a auth agent.",
+        "{\"capability\": \"auth\"}"
+      ],
+      "id": "auth",
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "name": "Auth",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "auth",
+        "router"
+      ]
+    },
+    {
+      "description": "Route to a verified auth llm agent (Authenticated LLM Agent, Authenticated MCP Agent).",
+      "examples": [
+        "Find a auth llm agent.",
+        "{\"capability\": \"auth-llm\"}"
+      ],
+      "id": "auth-llm",
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "name": "Auth Llm",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "auth-llm",
+        "router"
+      ]
+    },
+    {
+      "description": "Route to a verified langchain llm agent (LLM Orchestration Agent, LLM Observability \u0026 Orchestration Agent).",
+      "examples": [
+        "Find a langchain llm agent.",
+        "{\"capability\": \"langchain-llm\"}"
+      ],
+      "id": "langchain-llm",
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "name": "Langchain Llm",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "langchain-llm",
+        "router"
+      ]
+    },
+    {
+      "description": "Route to a verified oauth llm agent (Authenticated Multi-LLM Agent).",
+      "examples": [
+        "Find a oauth llm agent.",
+        "{\"capability\": \"oauth-llm\"}"
+      ],
+      "id": "oauth-llm",
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "name": "Oauth Llm",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "oauth-llm",
+        "router"
+      ]
+    },
+    {
+      "description": "Route to a verified router agent (GOSCE Portfolio Router).",
+      "examples": [
+        "Find a router agent.",
+        "{\"capability\": \"router\"}"
+      ],
+      "id": "router",
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "name": "Router",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "router",
+        "router"
+      ]
+    },
+    {
+      "description": "Route to a verified structured output agent (Structured Output MCP Agent).",
+      "examples": [
+        "Find a structured output agent.",
+        "{\"capability\": \"structured-output\"}"
+      ],
+      "id": "structured-output",
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "name": "Structured Output",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "structured-output",
+        "router"
+      ]
+    },
+    {
+      "description": "Route to a verified traced gemini agent (Traced LLM Proxy).",
+      "examples": [
+        "Find a traced gemini agent.",
+        "{\"capability\": \"traced-gemini\"}"
+      ],
+      "id": "traced-gemini",
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "name": "Traced Gemini",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "traced-gemini",
+        "router"
+      ]
+    }
+  ],
+  "url": "https://router.getvda.ai/a2a/",
+  "version": "0.1.0"
+}
