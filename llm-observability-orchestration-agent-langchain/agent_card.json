@@ -1,0 +1,82 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "LLM Observability \u0026 Orchestration Agent (Langchain): composes langchain + langchain-core + langsmith + openai \u2014 orchestration, observability, llm-client via A2A + MCP.",
+  "documentationUrl": "https://langchain-langchain-core-langsmit-d042fc.getvda.ai/governance.md",
+  "name": "LLM Observability \u0026 Orchestration Agent (Langchain)",
+  "preferredTransport": "JSONRPC",
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "orchestration capability provided by langchain, langchain-core.",
+      "examples": [
+        "Use the orchestration capability of this agent."
+      ],
+      "id": "orchestration",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Orchestration",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "langchain",
+        "langchain-core"
+      ]
+    },
+    {
+      "description": "observability capability provided by langsmith.",
+      "examples": [
+        "Use the observability capability of this agent."
+      ],
+      "id": "observability",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Observability",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "langsmith"
+      ]
+    },
+    {
+      "description": "llm client capability provided by openai.",
+      "examples": [
+        "Use the llm-client capability of this agent."
+      ],
+      "id": "llm-client",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Llm Client",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "openai"
+      ]
+    }
+  ],
+  "url": "https://langchain-langchain-core-langsmit-d042fc.getvda.ai/a2a/",
+  "version": "0.1.0"
+}
