@@ -78,6 +78,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "GOSCE Portfolio Router",
   "mcp": "https://router.getvda.ai/mcp",
   "description": "Capability discovery broker: describe what you need, get routed to the right specialist agent with verified example output."
+ },
+ {
+  "tool": "llm-orchestration-agent-mcp",
+  "title": "LLM Orchestration Agent (Mcp)",
+  "mcp": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}
