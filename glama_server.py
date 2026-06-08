@@ -102,6 +102,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "Authenticated LLM Agent (Google Auth Oauthlib)",
   "mcp": "https://google-auth-oauthlib-langchain-la-d46b90.getvda.ai/mcp",
   "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "postgres-redis-compose-generator",
+  "title": "Postgres + Redis Compose Generator",
+  "mcp": "https://postgres-redis-10a16c.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}

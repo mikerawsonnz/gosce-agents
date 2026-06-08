@@ -1,0 +1,117 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Authenticated MCP Agent: composes bcrypt + langchain-core + mcp + openai + opentelemetry-sdk \u2014 crypto, orchestration, agent-protocol, llm-client, observability via A2A + MCP.",
+  "documentationUrl": "https://bcrypt-langchain-core-mcp-25b8f1.getvda.ai/governance.md",
+  "name": "Authenticated MCP Agent",
+  "preferredTransport": "JSONRPC",
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "crypto capability provided by bcrypt.",
+      "examples": [
+        "Use the crypto capability of this agent."
+      ],
+      "id": "crypto",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Crypto",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "bcrypt"
+      ]
+    },
+    {
+      "description": "orchestration capability provided by langchain-core.",
+      "examples": [
+        "Use the orchestration capability of this agent."
+      ],
+      "id": "orchestration",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Orchestration",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "langchain-core"
+      ]
+    },
+    {
+      "description": "agent protocol capability provided by mcp.",
+      "examples": [
+        "Use the agent-protocol capability of this agent."
+      ],
+      "id": "agent-protocol",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Agent Protocol",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "mcp"
+      ]
+    },
+    {
+      "description": "llm client capability provided by openai.",
+      "examples": [
+        "Use the llm-client capability of this agent."
+      ],
+      "id": "llm-client",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Llm Client",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "description": "observability capability provided by opentelemetry-sdk.",
+      "examples": [
+        "Use the observability capability of this agent."
+      ],
+      "id": "observability",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Observability",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "opentelemetry-sdk"
+      ]
+    }
+  ],
+  "url": "https://bcrypt-langchain-core-mcp-25b8f1.getvda.ai/a2a/",
+  "version": "0.1.7"
+}

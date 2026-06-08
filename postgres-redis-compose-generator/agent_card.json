@@ -1,0 +1,39 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Postgres + Redis Compose Generator: composes postgres + redis \u2014 database, cache via A2A + MCP.",
+  "documentationUrl": "https://postgres-redis-10a16c.getvda.ai/governance.md",
+  "name": "Postgres + Redis Compose Generator",
+  "preferredTransport": "JSONRPC",
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "Integration over postgres, redis.",
+      "examples": [
+        "Invoke the composed integration."
+      ],
+      "id": "compose",
+      "name": "Composed integration",
+      "tags": [
+        "postgres",
+        "redis"
+      ]
+    }
+  ],
+  "url": "https://postgres-redis-10a16c.getvda.ai/a2a/",
+  "version": "0.1.0"
+}

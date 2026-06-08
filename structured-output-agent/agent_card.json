@@ -1,0 +1,63 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Structured Output MCP Agent: composes fastmcp + instructor \u2014 agent-protocol, structured-output via A2A + MCP.",
+  "documentationUrl": "https://fastmcp-instructor-72225f.getvda.ai/governance.md",
+  "name": "Structured Output MCP Agent",
+  "preferredTransport": "JSONRPC",
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "agent protocol capability provided by fastmcp.",
+      "examples": [
+        "Use the agent-protocol capability of this agent."
+      ],
+      "id": "agent-protocol",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Agent Protocol",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "fastmcp"
+      ]
+    },
+    {
+      "description": "structured output capability provided by instructor.",
+      "examples": [
+        "Use the structured-output capability of this agent."
+      ],
+      "id": "structured-output",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Structured Output",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "instructor"
+      ]
+    }
+  ],
+  "url": "https://fastmcp-instructor-72225f.getvda.ai/a2a/",
+  "version": "0.1.7"
+}

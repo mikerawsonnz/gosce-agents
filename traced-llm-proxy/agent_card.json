@@ -1,0 +1,82 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Traced LLM Proxy: composes anthropic + mcp + opentelemetry-api + opentelemetry-sdk \u2014 llm-client, agent-protocol, observability via A2A + MCP.",
+  "documentationUrl": "https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/governance.md",
+  "name": "Traced LLM Proxy",
+  "preferredTransport": "JSONRPC",
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "llm client capability provided by anthropic.",
+      "examples": [
+        "Use the llm-client capability of this agent."
+      ],
+      "id": "llm-client",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Llm Client",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "description": "agent protocol capability provided by mcp.",
+      "examples": [
+        "Use the agent-protocol capability of this agent."
+      ],
+      "id": "agent-protocol",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Agent Protocol",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "mcp"
+      ]
+    },
+    {
+      "description": "observability capability provided by opentelemetry-api, opentelemetry-sdk.",
+      "examples": [
+        "Use the observability capability of this agent."
+      ],
+      "id": "observability",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Observability",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "opentelemetry-api",
+        "opentelemetry-sdk"
+      ]
+    }
+  ],
+  "url": "https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/a2a/",
+  "version": "0.1.6"
+}
