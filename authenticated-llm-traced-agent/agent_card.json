@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Authenticated LLM Agent: composes bcrypt + langchain-openai + mcp + openai + python-jose \u2014 crypto, orchestration, agent-protocol, llm-client, jwt via A2A + MCP.",
-  "documentationUrl": "https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/governance.md",
-  "name": "Authenticated LLM Agent",
+  "description": "Authenticated LLM Traced Agent: composes cryptography + google-auth-oauthlib + langchain-openai + mcp + openai + opentelemetry-api + opentelemetry-sdk \u2014 crypto, oauth-oidc, orchestration, agent-protocol, llm-client, observability via A2A + MCP.",
+  "documentationUrl": "https://cryptography-google-auth-oauthlib-29bc28.getvda.ai/governance.md",
+  "name": "Authenticated LLM Traced Agent",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -22,7 +22,7 @@
   },
   "skills": [
     {
-      "description": "crypto capability provided by bcrypt.",
+      "description": "crypto capability provided by cryptography.",
       "examples": [
         "Use the crypto capability of this agent."
       ],
@@ -36,7 +36,25 @@
         "application/json"
       ],
       "tags": [
-        "bcrypt"
+        "cryptography"
+      ]
+    },
+    {
+      "description": "oauth oidc capability provided by google-auth-oauthlib.",
+      "examples": [
+        "Use the oauth-oidc capability of this agent."
+      ],
+      "id": "oauth-oidc",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Oauth Oidc",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "google-auth-oauthlib"
       ]
     },
     {
@@ -94,24 +112,25 @@
       ]
     },
     {
-      "description": "jwt capability provided by python-jose.",
+      "description": "observability capability provided by opentelemetry-api, opentelemetry-sdk.",
       "examples": [
-        "Use the jwt capability of this agent."
+        "Use the observability capability of this agent."
       ],
-      "id": "jwt",
+      "id": "observability",
       "inputModes": [
         "text/plain",
         "application/json"
       ],
-      "name": "Jwt",
+      "name": "Observability",
       "outputModes": [
         "application/json"
       ],
       "tags": [
-        "python-jose"
+        "opentelemetry-api",
+        "opentelemetry-sdk"
       ]
     }
   ],
-  "url": "https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/a2a/",
-  "version": "0.1.6"
+  "url": "https://cryptography-google-auth-oauthlib-29bc28.getvda.ai/a2a/",
+  "version": "0.1.0"
 }

@@ -1,12 +1,12 @@
 # Observable Backend Stack Generator
 
-> Generate a production observability stack as docker-compose: Prometheus (scrape config + alert rules), Grafana (provisioned datasource + dashboard), Alertmanager and node-exporter. Add db/cache images and it emits the FULL observable backend stack (services + Prometheus exporters, pre-scraped) with a .env.example.
+> Observable Backend Stack Generator
 
-A production **remote MCP server** (monitoring) on [getvda.ai](https://grafana-grafana-postgres-prom-pro-51839f.getvda.ai). Speaks the open **A2A** (`message/send`) and **MCP** (`invoke` tool) protocols. Discovery (`initialize`, `tools/list`) is free; execution is metered via Nevermined x402 micropayments.
+A production **remote MCP server** (integration) on [getvda.ai](https://grafana-grafana-postgres-prom-pro-51839f.getvda.ai). Speaks the open **A2A** (`message/send`) and **MCP** (`invoke` tool) protocols. Discovery (`initialize`, `tools/list`) is free; execution is metered via Nevermined x402 micropayments.
 
 ## Capabilities
 
-- **monitoring** — Generate a production observability stack as docker-compose: Prometheus (scrape config + alert rules), Grafana (provisioned datasource + dashboard), Alertmanager and node-exporter. Add db/cache images and it emits the FULL observable backend stack (services + Prometheus exporters, pre-scraped) with a .env.example.
+- **integration** — Observable Backend Stack Generator
 - Composes: grafana/grafana, postgres, prom/prometheus, redis
 
 ## Connect (streamable-http)
@@ -19,64 +19,6 @@ A production **remote MCP server** (monitoring) on [getvda.ai](https://grafana-g
       "transport": "streamable-http"
     }
   }
-}
-```
-
-## Example
-
-Request (`invoke` tool `input`, or A2A message text):
-
-```json
-{
-  "app_name": "shop",
-  "node_exporter": true,
-  "monitor": [
-    {
-      "name": "api",
-      "host": "api",
-      "port": 8000,
-      "metrics_path": "/metrics"
-    }
-  ],
-  "alerts": {
-    "instance_down": true,
-    "high_cpu": true,
-    "high_memory": true
-  },
-  "alertmanager": {
-    "receiver": "default",
-    "slack_webhook": "https://hooks.slack.com/\u2026"
-  },
-  "persistence": [
-    "postgres",
-    "redis"
-  ]
-}
-```
-
-Response:
-
-```json
-{
-  "services": [
-    "prometheus",
-    "alertmanager",
-    "grafana",
-    "node-exporter",
-    "postgres",
-    "postgres-exporter",
-    "redis",
-    "redis-exporter"
-  ],
-  "stack": "prometheus+grafana+alertmanager+node-exporter+postgres+redis",
-  "files": [
-    "docker-compose.yml",
-    "prometheus/prometheus.yml",
-    "prometheus/alert.rules.yml",
-    "alertmanager/alertmanager.yml",
-    "grafana/provisioning/datasources/datasource.yml",
-    "grafana/dashboards/infra-overview.json"
-  ]
 }
 ```
 
