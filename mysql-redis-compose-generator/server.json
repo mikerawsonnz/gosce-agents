@@ -1,13 +1,13 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-  "name": "io.github.mikerawsonnz/postgres-redis-compose-generator",
+  "name": "io.github.mikerawsonnz/mysql-redis-compose-generator",
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack \u2014 hea",
   "version": "1.0.0",
-  "websiteUrl": "https://postgres-redis-10a16c.getvda.ai",
+  "websiteUrl": "https://mysql-redis-c736ae.getvda.ai",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://postgres-redis-10a16c.getvda.ai/mcp"
+      "url": "https://mysql-redis-c736ae.getvda.ai/mcp"
     }
   ]
 }

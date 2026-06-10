@@ -107,19 +107,25 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "postgres-redis-compose-generator",
   "title": "Postgres + Redis Compose Generator",
   "mcp": "https://postgres-redis-10a16c.getvda.ai/mcp",
-  "description": "Postgres + Redis Compose Generator"
+  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
   "tool": "observable-backend-stack-generator",
   "title": "Observable Backend Stack Generator",
   "mcp": "https://grafana-grafana-postgres-prom-pro-51839f.getvda.ai/mcp",
-  "description": "Observable Backend Stack Generator"
+  "description": "Generate a production observability stack as docker-compose: Prometheus (scrape config + alert rules), Grafana (provisioned datasource + dashboard), Alertmanager and node-exporter. Add db/cache images and it emits the FULL observable backend stack (services + Prometheus exporters, pre-scraped) with a .env.example."
  },
  {
   "tool": "authenticated-llm-traced-agent",
   "title": "Authenticated LLM Traced Agent",
   "mcp": "https://cryptography-google-auth-oauthlib-29bc28.getvda.ai/mcp",
   "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "mysql-redis-compose-generator",
+  "title": "MySQL + Redis Compose Generator",
+  "mcp": "https://mysql-redis-c736ae.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}

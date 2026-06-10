@@ -1,21 +1,21 @@
-# Postgres + Redis Compose Generator
+# MySQL + Redis Compose Generator
 
 > Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example.
 
-A production **remote MCP server** (compose) on [getvda.ai](https://postgres-redis-10a16c.getvda.ai). Speaks the open **A2A** (`message/send`) and **MCP** (`invoke` tool) protocols. Discovery (`initialize`, `tools/list`) is free; execution is metered via Nevermined x402 micropayments.
+A production **remote MCP server** (compose) on [getvda.ai](https://mysql-redis-c736ae.getvda.ai). Speaks the open **A2A** (`message/send`) and **MCP** (`invoke` tool) protocols. Discovery (`initialize`, `tools/list`) is free; execution is metered via Nevermined x402 micropayments.
 
 ## Capabilities
 
 - **compose** — Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example.
-- Composes: postgres, redis
+- Composes: mysql, redis
 
 ## Connect (streamable-http)
 
 ```json
 {
   "mcpServers": {
-    "postgres-redis-compose-generator": {
-      "url": "https://postgres-redis-10a16c.getvda.ai/mcp",
+    "mysql-redis-compose-generator": {
+      "url": "https://mysql-redis-c736ae.getvda.ai/mcp",
       "transport": "streamable-http"
     }
   }
@@ -66,7 +66,7 @@ Response:
 
 ## Links
 
-- Homepage: https://postgres-redis-10a16c.getvda.ai
-- Agent Card (A2A): https://postgres-redis-10a16c.getvda.ai/.well-known/agent.json
-- Governance: https://postgres-redis-10a16c.getvda.ai/governance.md
-- Listed on Smithery: https://smithery.ai/servers/a2a/postgres-redis-compose-generator
+- Homepage: https://mysql-redis-c736ae.getvda.ai
+- Agent Card (A2A): https://mysql-redis-c736ae.getvda.ai/.well-known/agent.json
+- Governance: https://mysql-redis-c736ae.getvda.ai/governance.md
+- Listed on Smithery: https://smithery.ai/servers/a2a/mysql-redis-compose-generator
