@@ -126,6 +126,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "MySQL + Redis Compose Generator",
   "mcp": "https://mysql-redis-c736ae.getvda.ai/mcp",
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
+ },
+ {
+  "tool": "mysql-redis-compose-generator-adminer",
+  "title": "MySQL + Redis Compose Generator (Adminer)",
+  "mcp": "https://adminer-mysql-redis-a79723.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}

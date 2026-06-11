@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "MySQL + Redis Compose Generator: composes mysql + redis \u2014 database, cache via A2A + MCP.",
-  "documentationUrl": "https://mysql-redis-c736ae.getvda.ai/governance.md",
-  "name": "MySQL + Redis Compose Generator",
+  "description": "MySQL + Redis Compose Generator (Adminer): composes adminer + mysql + redis \u2014 tooling, database, cache via A2A + MCP.",
+  "documentationUrl": "https://adminer-mysql-redis-a79723.getvda.ai/governance.md",
+  "name": "MySQL + Redis Compose Generator (Adminer)",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -22,18 +22,19 @@
   },
   "skills": [
     {
-      "description": "Integration over mysql, redis.",
+      "description": "Integration over adminer, mysql, redis.",
       "examples": [
         "Invoke the composed integration."
       ],
       "id": "compose",
       "name": "Composed integration",
       "tags": [
+        "adminer",
         "mysql",
         "redis"
       ]
     }
   ],
-  "url": "https://mysql-redis-c736ae.getvda.ai/a2a/",
+  "url": "https://adminer-mysql-redis-a79723.getvda.ai/a2a/",
   "version": "0.1.0"
 }
