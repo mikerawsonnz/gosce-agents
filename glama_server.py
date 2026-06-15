@@ -150,6 +150,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "LLM Orchestration MCP Agent",
   "mcp": "https://cryptography-langchain-langchain-dcb5f0.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "mysql-redis-compose-generator-nginx",
+  "title": "MySQL + Redis Compose Generator (Nginx)",
+  "mcp": "https://mysql-nginx-redis-b24ef9.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}
