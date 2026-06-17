@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "MySQL + Redis Compose Generator (Nginx): composes mysql + nginx + redis \u2014 database, web-server, cache via A2A + MCP.",
-  "documentationUrl": "https://mysql-nginx-redis-b24ef9.getvda.ai/governance.md",
-  "name": "MySQL + Redis Compose Generator (Nginx)",
+  "description": "Postgres + Kafka + Prometheus Stack Generator: composes confluentinc/cp-kafka + postgres + prom/prometheus \u2014 messaging, database, monitoring via A2A + MCP.",
+  "documentationUrl": "https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai/governance.md",
+  "name": "Postgres + Kafka + Prometheus Stack Generator",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -22,19 +22,19 @@
   },
   "skills": [
     {
-      "description": "Integration over mysql, nginx, redis.",
+      "description": "Integration over confluentinc/cp-kafka, postgres, prom/prometheus.",
       "examples": [
         "Invoke the composed integration."
       ],
       "id": "compose",
       "name": "Composed integration",
       "tags": [
-        "mysql",
-        "nginx",
-        "redis"
+        "confluentinc/cp-kafka",
+        "postgres",
+        "prom/prometheus"
       ]
     }
   ],
-  "url": "https://mysql-nginx-redis-b24ef9.getvda.ai/a2a/",
+  "url": "https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai/a2a/",
   "version": "0.1.0"
 }

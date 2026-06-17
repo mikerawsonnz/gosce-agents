@@ -155,7 +155,13 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "mysql-redis-compose-generator-nginx",
   "title": "MySQL + Redis Compose Generator (Nginx)",
   "mcp": "https://mysql-nginx-redis-b24ef9.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "postgres-kafka-prometheus-stack-generator",
+  "title": "Postgres + Kafka + Prometheus Stack Generator",
+  "mcp": "https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}

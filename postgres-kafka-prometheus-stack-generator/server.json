@@ -1,13 +1,13 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-  "name": "io.github.mikerawsonnz/mysql-redis-compose-generator-nginx",
+  "name": "io.github.mikerawsonnz/postgres-kafka-prometheus-stack-generator",
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack \u2014 messaging ",
   "version": "1.0.0",
-  "websiteUrl": "https://mysql-nginx-redis-b24ef9.getvda.ai",
+  "websiteUrl": "https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mysql-nginx-redis-b24ef9.getvda.ai/mcp"
+      "url": "https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai/mcp"
     }
   ]
 }

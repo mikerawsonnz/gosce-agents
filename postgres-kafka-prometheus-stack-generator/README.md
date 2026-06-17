@@ -1,21 +1,21 @@
-# MySQL + Redis Compose Generator (Nginx)
+# Postgres + Kafka + Prometheus Stack Generator
 
 > Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper.
 
-A production **remote MCP server** (infra-stack) on [getvda.ai](https://mysql-nginx-redis-b24ef9.getvda.ai). Speaks the open **A2A** (`message/send`) and **MCP** (`invoke` tool) protocols. Discovery (`initialize`, `tools/list`) is free; execution is metered via Nevermined x402 micropayments.
+A production **remote MCP server** (infra-stack) on [getvda.ai](https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai). Speaks the open **A2A** (`message/send`) and **MCP** (`invoke` tool) protocols. Discovery (`initialize`, `tools/list`) is free; execution is metered via Nevermined x402 micropayments.
 
 ## Capabilities
 
 - **infra-stack** — Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper.
-- Composes: mysql, nginx, redis
+- Composes: confluentinc/cp-kafka, postgres, prom/prometheus
 
 ## Connect (streamable-http)
 
 ```json
 {
   "mcpServers": {
-    "mysql-redis-compose-generator-nginx": {
-      "url": "https://mysql-nginx-redis-b24ef9.getvda.ai/mcp",
+    "postgres-kafka-prometheus-stack-generator": {
+      "url": "https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai/mcp",
       "transport": "streamable-http"
     }
   }
@@ -61,7 +61,7 @@ Response:
 
 ## Links
 
-- Homepage: https://mysql-nginx-redis-b24ef9.getvda.ai
-- Agent Card (A2A): https://mysql-nginx-redis-b24ef9.getvda.ai/.well-known/agent.json
-- Governance: https://mysql-nginx-redis-b24ef9.getvda.ai/governance.md
-- Listed on Smithery: https://smithery.ai/servers/a2a/mysql-redis-compose-generator-nginx
+- Homepage: https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai
+- Agent Card (A2A): https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai/.well-known/agent.json
+- Governance: https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai/governance.md
+- Listed on Smithery: https://smithery.ai/servers/a2a/postgres-kafka-prometheus-stack-generator
