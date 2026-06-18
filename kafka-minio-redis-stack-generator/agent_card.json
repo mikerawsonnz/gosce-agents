@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Postgres + Kafka + Prometheus Stack Generator: composes confluentinc/cp-kafka + postgres + prom/prometheus \u2014 messaging, database, monitoring via A2A + MCP.",
-  "documentationUrl": "https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai/governance.md",
-  "name": "Postgres + Kafka + Prometheus Stack Generator",
+  "description": "Kafka + MinIO + Redis Stack Generator: composes confluentinc/cp-kafka + minio/minio + redis \u2014 messaging, storage, cache via A2A + MCP.",
+  "documentationUrl": "https://confluentinc-cp-kafka-minio-minio-5634ac.getvda.ai/governance.md",
+  "name": "Kafka + MinIO + Redis Stack Generator",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -22,7 +22,7 @@
   },
   "skills": [
     {
-      "description": "Integration over confluentinc/cp-kafka, postgres, prom/prometheus.",
+      "description": "Integration over confluentinc/cp-kafka, minio/minio, redis.",
       "examples": [
         "Invoke the composed integration."
       ],
@@ -30,11 +30,11 @@
       "name": "Composed integration",
       "tags": [
         "confluentinc/cp-kafka",
-        "postgres",
-        "prom/prometheus"
+        "minio/minio",
+        "redis"
       ]
     }
   ],
-  "url": "https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai/a2a/",
+  "url": "https://confluentinc-cp-kafka-minio-minio-5634ac.getvda.ai/a2a/",
   "version": "0.1.0"
 }
