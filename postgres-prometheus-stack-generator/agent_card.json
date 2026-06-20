@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Postgres + Kafka Stack Generator: composes confluentinc/cp-kafka + confluentinc/cp-zookeeper + postgres \u2014 messaging, database via A2A + MCP.",
-  "documentationUrl": "https://confluentinc-cp-kafka-confluentin-83a0d7.getvda.ai/governance.md",
-  "name": "Postgres + Kafka Stack Generator",
+  "description": "Postgres + Prometheus Stack Generator: composes confluentinc/cp-zookeeper + postgres + prom/prometheus \u2014 messaging, database, monitoring via A2A + MCP.",
+  "documentationUrl": "https://confluentinc-cp-zookeeper-postgre-48e7f1.getvda.ai/governance.md",
+  "name": "Postgres + Prometheus Stack Generator",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -22,19 +22,19 @@
   },
   "skills": [
     {
-      "description": "Integration over confluentinc/cp-kafka, confluentinc/cp-zookeeper, postgres.",
+      "description": "Integration over confluentinc/cp-zookeeper, postgres, prom/prometheus.",
       "examples": [
         "Invoke the composed integration."
       ],
       "id": "compose",
       "name": "Composed integration",
       "tags": [
-        "confluentinc/cp-kafka",
         "confluentinc/cp-zookeeper",
-        "postgres"
+        "postgres",
+        "prom/prometheus"
       ]
     }
   ],
-  "url": "https://confluentinc-cp-kafka-confluentin-83a0d7.getvda.ai/a2a/",
+  "url": "https://confluentinc-cp-zookeeper-postgre-48e7f1.getvda.ai/a2a/",
   "version": "0.1.0"
 }
