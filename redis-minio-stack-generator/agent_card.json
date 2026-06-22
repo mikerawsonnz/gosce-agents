@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Postgres + Prometheus + Kafka Stack Generator: composes confluentinc/cp-kafka + confluentinc/cp-zookeeper + postgres + prom/prometheus \u2014 messaging, database, monitoring via A2A + MCP.",
-  "documentationUrl": "https://confluentinc-cp-kafka-confluentin-01eb69.getvda.ai/governance.md",
-  "name": "Postgres + Prometheus + Kafka Stack Generator",
+  "description": "Redis + MinIO Stack Generator: composes confluentinc/cp-zookeeper + minio/minio + redis \u2014 messaging, storage, cache via A2A + MCP.",
+  "documentationUrl": "https://confluentinc-cp-zookeeper-minio-m-545495.getvda.ai/governance.md",
+  "name": "Redis + MinIO Stack Generator",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -22,20 +22,19 @@
   },
   "skills": [
     {
-      "description": "Integration over confluentinc/cp-kafka, confluentinc/cp-zookeeper, postgres, prom/prometheus.",
+      "description": "Integration over confluentinc/cp-zookeeper, minio/minio, redis.",
       "examples": [
         "Invoke the composed integration."
       ],
       "id": "compose",
       "name": "Composed integration",
       "tags": [
-        "confluentinc/cp-kafka",
         "confluentinc/cp-zookeeper",
-        "postgres",
-        "prom/prometheus"
+        "minio/minio",
+        "redis"
       ]
     }
   ],
-  "url": "https://confluentinc-cp-kafka-confluentin-01eb69.getvda.ai/a2a/",
+  "url": "https://confluentinc-cp-zookeeper-minio-m-545495.getvda.ai/a2a/",
   "version": "0.1.0"
 }
