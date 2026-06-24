@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Kafka + Redis + MinIO Stack Generator: composes confluentinc/cp-kafka + confluentinc/cp-zookeeper + minio/minio + redis \u2014 messaging, storage, cache via A2A + MCP.",
-  "documentationUrl": "https://confluentinc-cp-kafka-confluentin-f6eaf2.getvda.ai/governance.md",
-  "name": "Kafka + Redis + MinIO Stack Generator",
+  "description": "Redis + MinIO + Postgres Stack Generator: composes minio/minio + postgres + redis \u2014 storage, database, cache via A2A + MCP.",
+  "documentationUrl": "https://minio-minio-postgres-redis-f309ea.getvda.ai/governance.md",
+  "name": "Redis + MinIO + Postgres Stack Generator",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -22,20 +22,19 @@
   },
   "skills": [
     {
-      "description": "Integration over confluentinc/cp-kafka, confluentinc/cp-zookeeper, minio/minio, redis.",
+      "description": "Integration over minio/minio, postgres, redis.",
       "examples": [
         "Invoke the composed integration."
       ],
       "id": "compose",
       "name": "Composed integration",
       "tags": [
-        "confluentinc/cp-kafka",
-        "confluentinc/cp-zookeeper",
         "minio/minio",
+        "postgres",
         "redis"
       ]
     }
   ],
-  "url": "https://confluentinc-cp-kafka-confluentin-f6eaf2.getvda.ai/a2a/",
+  "url": "https://minio-minio-postgres-redis-f309ea.getvda.ai/a2a/",
   "version": "0.1.0"
 }
