@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Redis + MinIO Stack Generator (Minio/Minio): composes minio/minio + redis \u2014 storage, cache via A2A + MCP.",
-  "documentationUrl": "https://minio-minio-redis-8f2c54.getvda.ai/governance.md",
-  "name": "Redis + MinIO Stack Generator (Minio/Minio)",
+  "description": "Postgres + MinIO Stack Generator: composes minio/minio + postgres \u2014 storage, database via A2A + MCP.",
+  "documentationUrl": "https://minio-minio-postgres-ff7470.getvda.ai/governance.md",
+  "name": "Postgres + MinIO Stack Generator",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -22,7 +22,7 @@
   },
   "skills": [
     {
-      "description": "Integration over minio/minio, redis.",
+      "description": "Integration over minio/minio, postgres.",
       "examples": [
         "Invoke the composed integration."
       ],
@@ -30,10 +30,10 @@
       "name": "Composed integration",
       "tags": [
         "minio/minio",
-        "redis"
+        "postgres"
       ]
     }
   ],
-  "url": "https://minio-minio-redis-8f2c54.getvda.ai/a2a/",
+  "url": "https://minio-minio-postgres-ff7470.getvda.ai/a2a/",
   "version": "0.1.0"
 }
