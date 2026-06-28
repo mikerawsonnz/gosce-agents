@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Postgres + MinIO Stack Generator: composes minio/minio + postgres \u2014 storage, database via A2A + MCP.",
-  "documentationUrl": "https://minio-minio-postgres-ff7470.getvda.ai/governance.md",
-  "name": "Postgres + MinIO Stack Generator",
+  "description": "RabbitMQ + Redis Stack Generator: composes rabbitmq + redis \u2014 messaging, cache via A2A + MCP.",
+  "documentationUrl": "https://rabbitmq-redis-e257b7.getvda.ai/governance.md",
+  "name": "RabbitMQ + Redis Stack Generator",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -22,18 +22,18 @@
   },
   "skills": [
     {
-      "description": "Integration over minio/minio, postgres.",
+      "description": "Integration over rabbitmq, redis.",
       "examples": [
         "Invoke the composed integration."
       ],
       "id": "compose",
       "name": "Composed integration",
       "tags": [
-        "minio/minio",
-        "postgres"
+        "rabbitmq",
+        "redis"
       ]
     }
   ],
-  "url": "https://minio-minio-postgres-ff7470.getvda.ai/a2a/",
+  "url": "https://rabbitmq-redis-e257b7.getvda.ai/a2a/",
   "version": "0.1.0"
 }
