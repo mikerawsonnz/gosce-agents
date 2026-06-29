@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "RabbitMQ + Redis Stack Generator: composes rabbitmq + redis \u2014 messaging, cache via A2A + MCP.",
-  "documentationUrl": "https://rabbitmq-redis-e257b7.getvda.ai/governance.md",
-  "name": "RabbitMQ + Redis Stack Generator",
+  "description": "Postgres + Grafana Stack Generator: composes grafana/grafana + grafana/loki + postgres \u2014 monitoring, database via A2A + MCP.",
+  "documentationUrl": "https://grafana-grafana-grafana-loki-post-452481.getvda.ai/governance.md",
+  "name": "Postgres + Grafana Stack Generator",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -22,18 +22,19 @@
   },
   "skills": [
     {
-      "description": "Integration over rabbitmq, redis.",
+      "description": "Integration over grafana/grafana, grafana/loki, postgres.",
       "examples": [
         "Invoke the composed integration."
       ],
       "id": "compose",
       "name": "Composed integration",
       "tags": [
-        "rabbitmq",
-        "redis"
+        "grafana/grafana",
+        "grafana/loki",
+        "postgres"
       ]
     }
   ],
-  "url": "https://rabbitmq-redis-e257b7.getvda.ai/a2a/",
+  "url": "https://grafana-grafana-grafana-loki-post-452481.getvda.ai/a2a/",
   "version": "0.1.0"
 }
