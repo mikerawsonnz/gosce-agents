@@ -80,12 +80,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Capability discovery broker: describe what you need, get routed to the right specialist agent with verified example output."
  },
  {
-  "tool": "llm-orchestration-agent-mcp",
-  "title": "LLM Orchestration Agent (Mcp)",
-  "mcp": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
- },
- {
   "tool": "llm-observability-orchestration-agent-langchain",
   "title": "LLM Observability & Orchestration Agent (Langchain)",
   "mcp": "https://langchain-langchain-core-langsmit-d042fc.getvda.ai/mcp",
@@ -234,6 +228,24 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "Postgres + Grafana Stack Generator",
   "mcp": "https://grafana-grafana-grafana-loki-post-452481.getvda.ai/mcp",
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "authenticated-mcp-jwt-agent",
+  "title": "Authenticated MCP JWT Agent",
+  "mcp": "https://bcrypt-langchain-core-mcp-97246c.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
+  "tool": "traced-llm-mcp-proxy",
+  "title": "Traced LLM MCP Proxy",
+  "mcp": "https://anthropic-cryptography-langchain-d8b8c4.getvda.ai/mcp",
+  "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."
+ },
+ {
+  "tool": "llm-orchestration-jwt-agent",
+  "title": "LLM Orchestration JWT Agent",
+  "mcp": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}

@@ -1,0 +1,117 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "LLM Orchestration JWT Agent: composes cryptography + langchain-core + mcp + opentelemetry-api + python-jose \u2014 crypto, orchestration, agent-protocol, observability, jwt via A2A + MCP.",
+  "documentationUrl": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/governance.md",
+  "name": "LLM Orchestration JWT Agent",
+  "preferredTransport": "JSONRPC",
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "crypto capability provided by cryptography.",
+      "examples": [
+        "Use the crypto capability of this agent."
+      ],
+      "id": "crypto",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Crypto",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "cryptography"
+      ]
+    },
+    {
+      "description": "orchestration capability provided by langchain-core.",
+      "examples": [
+        "Use the orchestration capability of this agent."
+      ],
+      "id": "orchestration",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Orchestration",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "langchain-core"
+      ]
+    },
+    {
+      "description": "agent protocol capability provided by mcp.",
+      "examples": [
+        "Use the agent-protocol capability of this agent."
+      ],
+      "id": "agent-protocol",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Agent Protocol",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "mcp"
+      ]
+    },
+    {
+      "description": "observability capability provided by opentelemetry-api.",
+      "examples": [
+        "Use the observability capability of this agent."
+      ],
+      "id": "observability",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Observability",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "opentelemetry-api"
+      ]
+    },
+    {
+      "description": "jwt capability provided by python-jose.",
+      "examples": [
+        "Use the jwt capability of this agent."
+      ],
+      "id": "jwt",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Jwt",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "python-jose"
+      ]
+    }
+  ],
+  "url": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/a2a/",
+  "version": "0.1.1"
+}

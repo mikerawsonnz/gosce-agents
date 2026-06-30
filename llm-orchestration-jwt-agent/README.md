@@ -1,4 +1,4 @@
-# LLM Orchestration Agent (Mcp)
+# LLM Orchestration JWT Agent
 
 > Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing.
 
@@ -7,14 +7,14 @@ A production **remote MCP server** (langchain-llm) on [getvda.ai](https://crypto
 ## Capabilities
 
 - **langchain-llm** — Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing.
-- Composes: cryptography, langchain-core, mcp, opentelemetry-sdk, python-jose
+- Composes: cryptography, langchain-core, mcp, opentelemetry-api, python-jose
 
 ## Connect (streamable-http)
 
 ```json
 {
   "mcpServers": {
-    "llm-orchestration-agent-mcp": {
+    "llm-orchestration-jwt-agent": {
       "url": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/mcp",
       "transport": "streamable-http"
     }
@@ -50,4 +50,4 @@ Response:
 - Homepage: https://cryptography-langchain-core-mcp-07d652.getvda.ai
 - Agent Card (A2A): https://cryptography-langchain-core-mcp-07d652.getvda.ai/.well-known/agent.json
 - Governance: https://cryptography-langchain-core-mcp-07d652.getvda.ai/governance.md
-- Listed on Smithery: https://smithery.ai/servers/a2a/llm-orchestration-agent-mcp
+- Listed on Smithery: https://smithery.ai/servers/a2a/llm-orchestration-jwt-agent

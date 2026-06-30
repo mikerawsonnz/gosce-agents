@@ -1,0 +1,118 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Traced LLM MCP Proxy: composes anthropic + cryptography + langchain-core + mcp + opentelemetry-exporter-otlp-proto-http + opentelemetry-sdk \u2014 llm-client, crypto, orchestration, agent-protocol, observability via A2A + MCP.",
+  "documentationUrl": "https://anthropic-cryptography-langchain-d8b8c4.getvda.ai/governance.md",
+  "name": "Traced LLM MCP Proxy",
+  "preferredTransport": "JSONRPC",
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "llm client capability provided by anthropic.",
+      "examples": [
+        "Use the llm-client capability of this agent."
+      ],
+      "id": "llm-client",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Llm Client",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "anthropic"
+      ]
+    },
+    {
+      "description": "crypto capability provided by cryptography.",
+      "examples": [
+        "Use the crypto capability of this agent."
+      ],
+      "id": "crypto",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Crypto",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "cryptography"
+      ]
+    },
+    {
+      "description": "orchestration capability provided by langchain-core.",
+      "examples": [
+        "Use the orchestration capability of this agent."
+      ],
+      "id": "orchestration",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Orchestration",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "langchain-core"
+      ]
+    },
+    {
+      "description": "agent protocol capability provided by mcp.",
+      "examples": [
+        "Use the agent-protocol capability of this agent."
+      ],
+      "id": "agent-protocol",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Agent Protocol",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "mcp"
+      ]
+    },
+    {
+      "description": "observability capability provided by opentelemetry-exporter-otlp-proto-http, opentelemetry-sdk.",
+      "examples": [
+        "Use the observability capability of this agent."
+      ],
+      "id": "observability",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Observability",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "opentelemetry-exporter-otlp-proto-http",
+        "opentelemetry-sdk"
+      ]
+    }
+  ],
+  "url": "https://anthropic-cryptography-langchain-d8b8c4.getvda.ai/a2a/",
+  "version": "0.1.0"
+}
