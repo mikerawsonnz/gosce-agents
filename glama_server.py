@@ -246,6 +246,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "LLM Orchestration JWT Agent",
   "mcp": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-orchestration-agent-cryptography",
+  "title": "LLM Orchestration Agent (Cryptography)",
+  "mcp": "https://cryptography-langchain-core-mcp-a24088.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}

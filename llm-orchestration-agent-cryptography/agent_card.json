@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Traced LLM MCP Proxy: composes anthropic + cryptography + langchain-core + mcp + opentelemetry-exporter-otlp-proto-http + opentelemetry-sdk \u2014 llm-client, crypto, orchestration, agent-protocol, observability via A2A + MCP.",
-  "documentationUrl": "https://anthropic-cryptography-langchain-d8b8c4.getvda.ai/governance.md",
-  "name": "Traced LLM MCP Proxy",
+  "description": "LLM Orchestration Agent (Cryptography): composes cryptography + langchain-core + mcp + opentelemetry-sdk + python-jose \u2014 crypto, orchestration, agent-protocol, observability, jwt via A2A + MCP.",
+  "documentationUrl": "https://cryptography-langchain-core-mcp-a24088.getvda.ai/governance.md",
+  "name": "LLM Orchestration Agent (Cryptography)",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -21,24 +21,6 @@
     "url": "https://getvda.ai"
   },
   "skills": [
-    {
-      "description": "llm client capability provided by anthropic.",
-      "examples": [
-        "Use the llm-client capability of this agent."
-      ],
-      "id": "llm-client",
-      "inputModes": [
-        "text/plain",
-        "application/json"
-      ],
-      "name": "Llm Client",
-      "outputModes": [
-        "application/json"
-      ],
-      "tags": [
-        "anthropic"
-      ]
-    },
     {
       "description": "crypto capability provided by cryptography.",
       "examples": [
@@ -94,7 +76,7 @@
       ]
     },
     {
-      "description": "observability capability provided by opentelemetry-exporter-otlp-proto-http, opentelemetry-sdk.",
+      "description": "observability capability provided by opentelemetry-sdk.",
       "examples": [
         "Use the observability capability of this agent."
       ],
@@ -108,11 +90,28 @@
         "application/json"
       ],
       "tags": [
-        "opentelemetry-exporter-otlp-proto-http",
         "opentelemetry-sdk"
+      ]
+    },
+    {
+      "description": "jwt capability provided by python-jose.",
+      "examples": [
+        "Use the jwt capability of this agent."
+      ],
+      "id": "jwt",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Jwt",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "python-jose"
       ]
     }
   ],
-  "url": "https://anthropic-cryptography-langchain-d8b8c4.getvda.ai/a2a/",
+  "url": "https://cryptography-langchain-core-mcp-a24088.getvda.ai/a2a/",
   "version": "0.1.0"
 }
