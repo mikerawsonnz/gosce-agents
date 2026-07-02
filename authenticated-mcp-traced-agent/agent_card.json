@@ -11,9 +11,9 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "LLM Orchestration Agent (Cryptography): composes cryptography + langchain-core + mcp + opentelemetry-sdk + python-jose \u2014 crypto, orchestration, agent-protocol, observability, jwt via A2A + MCP.",
-  "documentationUrl": "https://cryptography-langchain-core-mcp-a24088.getvda.ai/governance.md",
-  "name": "LLM Orchestration Agent (Cryptography)",
+  "description": "Authenticated MCP Traced Agent: composes bcrypt + cryptography + langchain-core + mcp + opentelemetry-sdk + python-jose \u2014 crypto, orchestration, agent-protocol, observability, jwt via A2A + MCP.",
+  "documentationUrl": "https://bcrypt-cryptography-langchain-cor-027cf2.getvda.ai/governance.md",
+  "name": "Authenticated MCP Traced Agent",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.2.5",
   "provider": {
@@ -22,7 +22,7 @@
   },
   "skills": [
     {
-      "description": "crypto capability provided by cryptography.",
+      "description": "crypto capability provided by bcrypt, cryptography.",
       "examples": [
         "Use the crypto capability of this agent."
       ],
@@ -36,6 +36,7 @@
         "application/json"
       ],
       "tags": [
+        "bcrypt",
         "cryptography"
       ]
     },
@@ -112,6 +113,6 @@
       ]
     }
   ],
-  "url": "https://cryptography-langchain-core-mcp-a24088.getvda.ai/a2a/",
+  "url": "https://bcrypt-cryptography-langchain-cor-027cf2.getvda.ai/a2a/",
   "version": "0.1.0"
 }
