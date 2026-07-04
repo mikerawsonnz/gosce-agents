@@ -86,18 +86,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
-  "tool": "authenticated-llm-agent-cryptography",
-  "title": "Authenticated LLM Agent (Cryptography)",
-  "mcp": "https://cryptography-google-auth-oauthlib-931267.getvda.ai/mcp",
-  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
- },
- {
-  "tool": "authenticated-llm-agent-google-auth-oauthlib",
-  "title": "Authenticated LLM Agent (Google Auth Oauthlib)",
-  "mcp": "https://google-auth-oauthlib-langchain-la-d46b90.getvda.ai/mcp",
-  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
- },
- {
   "tool": "postgres-redis-compose-generator",
   "title": "Postgres + Redis Compose Generator",
   "mcp": "https://postgres-redis-10a16c.getvda.ai/mcp",
@@ -264,6 +252,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "Authenticated LLM OAuth Agent",
   "mcp": "https://cryptography-google-auth-oauthlib-7bb152.getvda.ai/mcp",
   "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "authenticated-mcp-agent-bcrypt",
+  "title": "Authenticated MCP Agent (Bcrypt)",
+  "mcp": "https://bcrypt-mcp-openai-3b46a0.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}
