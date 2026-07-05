@@ -258,6 +258,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "Authenticated MCP Agent (Bcrypt)",
   "mcp": "https://bcrypt-mcp-openai-3b46a0.getvda.ai/mcp",
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
+  "tool": "authenticated-llm-mcp-agent",
+  "title": "Authenticated LLM MCP Agent",
+  "mcp": "https://google-auth-oauthlib-langchain-la-c1a755.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}
