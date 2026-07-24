@@ -1,13 +1,13 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-  "name": "io.github.mikerawsonnz/auth-token-service",
+  "name": "io.github.mikerawsonnz/auth-token-mcp-service",
   "description": "Hash passwords with bcrypt and issue/verify JWT session tokens.",
   "version": "1.0.0",
-  "websiteUrl": "https://bcrypt-python-jose-d0e0d0.getvda.ai",
+  "websiteUrl": "https://bcrypt-langchain-mcp-ae7d44.getvda.ai",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://bcrypt-python-jose-d0e0d0.getvda.ai/mcp"
+      "url": "https://bcrypt-langchain-mcp-ae7d44.getvda.ai/mcp"
     }
   ]
 }

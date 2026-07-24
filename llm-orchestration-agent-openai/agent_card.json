@@ -1,0 +1,64 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "LLM Orchestration Agent (Openai): composes langchain-anthropic + langchain-openai + openai \u2014 orchestration, llm-client via A2A + MCP.",
+  "documentationUrl": "https://langchain-anthropic-langchain-ope-6af681.getvda.ai/governance.md",
+  "name": "LLM Orchestration Agent (Openai)",
+  "preferredTransport": "JSONRPC",
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "orchestration capability provided by langchain-anthropic, langchain-openai.",
+      "examples": [
+        "Use the orchestration capability of this agent."
+      ],
+      "id": "orchestration",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Orchestration",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "langchain-anthropic",
+        "langchain-openai"
+      ]
+    },
+    {
+      "description": "llm client capability provided by openai.",
+      "examples": [
+        "Use the llm-client capability of this agent."
+      ],
+      "id": "llm-client",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Llm Client",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "openai"
+      ]
+    }
+  ],
+  "url": "https://langchain-anthropic-langchain-ope-6af681.getvda.ai/a2a/",
+  "version": "0.1.0"
+}

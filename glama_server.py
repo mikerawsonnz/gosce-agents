@@ -44,18 +44,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "OAuth/OIDC-gated multi-model router: supports Anthropic + OpenAI + Gemini behind enterprise identity providers."
  },
  {
-  "tool": "hash-and-verify",
-  "title": "FastAPI Auth Token Service",
-  "mcp": "https://bcrypt-python-jose-d0e0d0.getvda.ai/mcp",
-  "description": "Stateless JWT auth: hash a password or verify a token. No LLM, no external calls. Pure crypto."
- },
- {
-  "tool": "chain-prompts",
-  "title": "LLM Orchestration Agent",
-  "mcp": "https://langchain-core-langchain-openai-l-736876.getvda.ai/mcp",
-  "description": "Multi-step LangChain prompt chains over Gemini. Manages context across sequential steps."
- },
- {
   "tool": "chain-and-trace",
   "title": "LLM Observability & Orchestration Agent",
   "mcp": "https://langchain-core-langsmith-openai-8c02f9.getvda.ai/mcp",
@@ -68,22 +56,10 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Credential-gated single-model LLM: bcrypt + JWT auth, then Gemini completion. Rejects without valid token."
  },
  {
-  "tool": "gated-tool-runner",
-  "title": "Authenticated MCP Agent",
-  "mcp": "https://bcrypt-langchain-core-mcp-25b8f1.getvda.ai/mcp",
-  "description": "Credential-gated MCP tool runner: bcrypt + JWT auth, then invoke any registered MCP tool. Multi-capability, not just LLM."
- },
- {
   "tool": "route-to-agent",
   "title": "GOSCE Portfolio Router",
   "mcp": "https://router.getvda.ai/mcp",
   "description": "Capability discovery broker: describe what you need, get routed to the right specialist agent with verified example output."
- },
- {
-  "tool": "llm-observability-orchestration-agent-langchain",
-  "title": "LLM Observability & Orchestration Agent (Langchain)",
-  "mcp": "https://langchain-langchain-core-langsmit-d042fc.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
   "tool": "postgres-redis-compose-generator",
@@ -230,12 +206,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."
  },
  {
-  "tool": "llm-orchestration-jwt-agent",
-  "title": "LLM Orchestration JWT Agent",
-  "mcp": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
- },
- {
   "tool": "llm-orchestration-agent-cryptography",
   "title": "LLM Orchestration Agent (Cryptography)",
   "mcp": "https://cryptography-langchain-core-mcp-a24088.getvda.ai/mcp",
@@ -260,10 +230,112 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
+  "tool": "auth-token-mcp-service",
+  "title": "Auth Token MCP Service",
+  "mcp": "https://bcrypt-langchain-mcp-ae7d44.getvda.ai/mcp",
+  "description": "Hash passwords with bcrypt and issue/verify JWT session tokens."
+ },
+ {
+  "tool": "llm-orchestration-agent-langchain",
+  "title": "LLM Orchestration Agent (Langchain)",
+  "mcp": "https://langchain-langchain-openai-langgr-ae01b8.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "authenticated-llm-agent-bcrypt",
+  "title": "Authenticated LLM Agent (Bcrypt)",
+  "mcp": "https://bcrypt-langchain-openai-mcp-077256.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
+  "tool": "authenticated-mcp-agent-langchain-core",
+  "title": "Authenticated MCP Agent (Langchain Core)",
+  "mcp": "https://bcrypt-langchain-core-mcp-d0e0d0.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
+  "tool": "chain-prompts",
+  "title": "LLM Orchestration Agent",
+  "mcp": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai/mcp",
+  "description": "Multi-step LangChain prompt chains over Gemini. Manages context across sequential steps."
+ },
+ {
+  "tool": "llm-orchestration-agent-langchain-anthropic",
+  "title": "LLM Orchestration Agent (Langchain Anthropic)",
+  "mcp": "https://langchain-anthropic-langchain-com-f78c82.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "fastapi-auth-token-service",
+  "title": "FastAPI Auth Token Service",
+  "mcp": "https://bcrypt-python-jose-1b8dd0.getvda.ai/mcp",
+  "description": "Hash passwords with bcrypt and issue/verify JWT session tokens."
+ },
+ {
+  "tool": "authenticated-llm-agent-anthropic",
+  "title": "Authenticated LLM Agent (Anthropic)",
+  "mcp": "https://anthropic-google-auth-oauthlib-mc-aed9d5.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "llm-orchestration-agent-langchain-core",
+  "title": "LLM Orchestration Agent (Langchain Core)",
+  "mcp": "https://langchain-core-mcp-openai-29a249.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-orchestration-observability-agent",
+  "title": "LLM Orchestration Observability Agent",
+  "mcp": "https://langchain-langchain-community-lan-6e24db.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "authenticated-mcp-agent-openai",
+  "title": "Authenticated MCP Agent (Openai)",
+  "mcp": "https://bcrypt-langchain-core-mcp-6c9b9c.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
+  "tool": "llm-orchestration-agent-langchain-openai",
+  "title": "LLM Orchestration Agent (Langchain Openai)",
+  "mcp": "https://langchain-langchain-openai-langgr-7f6d74.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-observability-orchestration-agent-langchain-community",
+  "title": "LLM Observability & Orchestration Agent (Langchain Community)",
+  "mcp": "https://langchain-langchain-community-lan-c1a755.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-orchestration-agent-langsmith",
+  "title": "LLM Orchestration Agent (Langsmith)",
+  "mcp": "https://langchain-langchain-core-langchai-66fa5c.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "authenticated-mcp-agent-opentelemetry-api",
+  "title": "Authenticated MCP Agent (Opentelemetry Api)",
+  "mcp": "https://bcrypt-langchain-core-mcp-dc2f7b.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
+  "tool": "llm-orchestration-agent-langgraph",
+  "title": "LLM Orchestration Agent (Langgraph)",
+  "mcp": "https://langchain-core-langgraph-mcp-280d80.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
   "tool": "authenticated-llm-mcp-agent",
   "title": "Authenticated LLM MCP Agent",
-  "mcp": "https://google-auth-oauthlib-langchain-la-c1a755.getvda.ai/mcp",
+  "mcp": "https://google-auth-oauthlib-langchain-la-d042fc.getvda.ai/mcp",
   "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "llm-orchestration-agent-openai",
+  "title": "LLM Orchestration Agent (Openai)",
+  "mcp": "https://langchain-anthropic-langchain-ope-6af681.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}
