@@ -342,6 +342,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "LLM Orchestration Agent (Mcp)",
   "mcp": "https://cryptography-langchain-openai-mcp-0ac13b.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "authenticated-llm-agent-google-auth-oauthlib",
+  "title": "Authenticated LLM Agent (Google Auth Oauthlib)",
+  "mcp": "https://google-auth-oauthlib-langchain-mc-f0143f.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}
