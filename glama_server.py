@@ -348,6 +348,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "Authenticated LLM Agent (Google Auth Oauthlib)",
   "mcp": "https://google-auth-oauthlib-langchain-mc-f0143f.getvda.ai/mcp",
   "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "nginx-redis-stack-generator",
+  "title": "Nginx + Redis Stack Generator",
+  "mcp": "https://nginx-redis-7f29d8.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}
