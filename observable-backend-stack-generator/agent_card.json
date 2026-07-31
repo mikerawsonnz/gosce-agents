@@ -1,0 +1,41 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Observable Backend Stack Generator: composes grafana/grafana + postgres + prom/prometheus + redis \u2014 monitoring, database, cache via A2A + MCP.",
+  "documentationUrl": "https://grafana-grafana-postgres-prom-pro-51839f.getvda.ai/governance.md",
+  "name": "Observable Backend Stack Generator",
+  "preferredTransport": "JSONRPC",
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "Integration over grafana/grafana, postgres, prom/prometheus, redis.",
+      "examples": [
+        "Invoke the composed integration."
+      ],
+      "id": "compose",
+      "name": "Composed integration",
+      "tags": [
+        "grafana/grafana",
+        "postgres",
+        "prom/prometheus",
+        "redis"
+      ]
+    }
+  ],
+  "url": "https://grafana-grafana-postgres-prom-pro-51839f.getvda.ai/a2a/",
+  "version": "0.1.0"
+}

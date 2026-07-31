@@ -14,7 +14,7 @@ A production **remote MCP server** (langchain-llm) on [getvda.ai](https://langch
 ```json
 {
   "mcpServers": {
-    "llm-orchestration-agent": {
+    "llm-orchestration-agent-d2feb0": {
       "url": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai/mcp",
       "transport": "streamable-http"
     }
@@ -50,4 +50,4 @@ Response:
 - Homepage: https://langchain-core-langchain-openai-l-d2feb0.getvda.ai
 - Agent Card (A2A): https://langchain-core-langchain-openai-l-d2feb0.getvda.ai/.well-known/agent.json
 - Governance: https://langchain-core-langchain-openai-l-d2feb0.getvda.ai/governance.md
-- Listed on Smithery: https://smithery.ai/servers/a2a/llm-orchestration-agent
+- Listed on Smithery: https://smithery.ai/servers/a2a/llm-orchestration-agent-d2feb0

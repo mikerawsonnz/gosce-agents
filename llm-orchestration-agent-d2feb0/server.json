@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-  "name": "io.github.mikerawsonnz/llm-orchestration-agent",
+  "name": "io.github.mikerawsonnz/llm-orchestration-agent-d2feb0",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith",
   "version": "1.0.0",
   "websiteUrl": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai",

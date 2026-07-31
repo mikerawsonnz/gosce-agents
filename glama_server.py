@@ -26,10 +26,10 @@ from mcp.types import TextContent, Tool
 # --- the portfolio (static so tools/list needs no network) ------------------- #
 AGENTS: list[dict] = json.loads(r"""[
  {
-  "tool": "extract-structured",
-  "title": "Structured Output MCP Agent",
-  "mcp": "https://fastmcp-instructor-72225f.getvda.ai/mcp",
-  "description": "Schema-enforced JSON extraction: give a prompt + Pydantic model, get validated typed output."
+  "tool": "enterprise-llm-router",
+  "title": "Authenticated Multi-LLM Agent",
+  "mcp": "https://anthropic-google-auth-oauthlib-mc-70ac16.getvda.ai/mcp",
+  "description": "OAuth/OIDC-gated multi-model router: supports Anthropic + OpenAI + Gemini behind enterprise identity providers."
  },
  {
   "tool": "trace-llm-call",
@@ -38,10 +38,16 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Observable LLM proxy: transparent pass-through that adds OpenTelemetry spans to every call. Zero logic, pure instrumentation."
  },
  {
-  "tool": "enterprise-llm-router",
-  "title": "Authenticated Multi-LLM Agent",
-  "mcp": "https://anthropic-google-auth-oauthlib-mc-70ac16.getvda.ai/mcp",
-  "description": "OAuth/OIDC-gated multi-model router: supports Anthropic + OpenAI + Gemini behind enterprise identity providers."
+  "tool": "gated-llm-call",
+  "title": "Authenticated LLM Agent",
+  "mcp": "https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/mcp",
+  "description": "Credential-gated single-model LLM: bcrypt + JWT auth, then Gemini completion. Rejects without valid token."
+ },
+ {
+  "tool": "extract-structured",
+  "title": "Structured Output MCP Agent",
+  "mcp": "https://fastmcp-instructor-72225f.getvda.ai/mcp",
+  "description": "Schema-enforced JSON extraction: give a prompt + Pydantic model, get validated typed output."
  },
  {
   "tool": "chain-and-trace",
@@ -50,40 +56,10 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "LangChain chains WITH LangSmith tracing: full run visibility, evaluation metrics, and debugging alongside orchestration."
  },
  {
-  "tool": "gated-llm-call",
-  "title": "Authenticated LLM Agent",
-  "mcp": "https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/mcp",
-  "description": "Credential-gated single-model LLM: bcrypt + JWT auth, then Gemini completion. Rejects without valid token."
- },
- {
   "tool": "route-to-agent",
   "title": "GOSCE Portfolio Router",
   "mcp": "https://router.getvda.ai/mcp",
   "description": "Capability discovery broker: describe what you need, get routed to the right specialist agent with verified example output."
- },
- {
-  "tool": "postgres-redis-compose-generator",
-  "title": "Postgres + Redis Compose Generator",
-  "mcp": "https://postgres-redis-10a16c.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
- },
- {
-  "tool": "observable-backend-stack-generator",
-  "title": "Observable Backend Stack Generator",
-  "mcp": "https://grafana-grafana-postgres-prom-pro-51839f.getvda.ai/mcp",
-  "description": "Generate a production observability stack as docker-compose: Prometheus (scrape config + alert rules), Grafana (provisioned datasource + dashboard), Alertmanager and node-exporter. Add db/cache images and it emits the FULL observable backend stack (services + Prometheus exporters, pre-scraped) with a .env.example."
- },
- {
-  "tool": "authenticated-llm-traced-agent",
-  "title": "Authenticated LLM Traced Agent",
-  "mcp": "https://cryptography-google-auth-oauthlib-29bc28.getvda.ai/mcp",
-  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
- },
- {
-  "tool": "mysql-redis-compose-generator",
-  "title": "MySQL + Redis Compose Generator",
-  "mcp": "https://mysql-redis-c736ae.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
   "tool": "mysql-redis-compose-generator-adminer",
@@ -92,124 +68,22 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
-  "tool": "llm-orchestration-traced-agent",
-  "title": "LLM Orchestration Traced Agent",
-  "mcp": "https://cryptography-langchain-core-mcp-22c862.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
- },
- {
-  "tool": "memcached-mongodb-redis-compose-generator",
-  "title": "Memcached + MongoDB + Redis Compose Generator",
-  "mcp": "https://memcached-mongo-redis-4cc448.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
- },
- {
-  "tool": "llm-orchestration-mcp-agent",
-  "title": "LLM Orchestration MCP Agent",
-  "mcp": "https://cryptography-langchain-langchain-dcb5f0.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
- },
- {
-  "tool": "mysql-redis-compose-generator-nginx",
-  "title": "MySQL + Redis Compose Generator (Nginx)",
-  "mcp": "https://mysql-nginx-redis-b24ef9.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "postgres-kafka-prometheus-stack-generator",
-  "title": "Postgres + Kafka + Prometheus Stack Generator",
-  "mcp": "https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "kafka-minio-redis-stack-generator",
-  "title": "Kafka + MinIO + Redis Stack Generator",
-  "mcp": "https://confluentinc-cp-kafka-minio-minio-5634ac.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "postgres-kafka-stack-generator",
-  "title": "Postgres + Kafka Stack Generator",
-  "mcp": "https://confluentinc-cp-kafka-confluentin-83a0d7.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "postgres-prometheus-stack-generator",
-  "title": "Postgres + Prometheus Stack Generator",
-  "mcp": "https://confluentinc-cp-zookeeper-postgre-48e7f1.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "postgres-prometheus-kafka-stack-generator",
-  "title": "Postgres + Prometheus + Kafka Stack Generator",
-  "mcp": "https://confluentinc-cp-kafka-confluentin-01eb69.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "redis-minio-stack-generator",
-  "title": "Redis + MinIO Stack Generator",
-  "mcp": "https://confluentinc-cp-zookeeper-minio-m-545495.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "kafka-redis-minio-stack-generator",
-  "title": "Kafka + Redis + MinIO Stack Generator",
-  "mcp": "https://confluentinc-cp-kafka-confluentin-f6eaf2.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "redis-minio-postgres-stack-generator",
-  "title": "Redis + MinIO + Postgres Stack Generator",
-  "mcp": "https://minio-minio-postgres-redis-f309ea.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "minio-postgres-redis-stack-generator",
-  "title": "MinIO + Postgres + Redis Stack Generator",
-  "mcp": "https://minio-mc-minio-minio-postgres-c93202.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "redis-minio-stack-generator-minio-minio",
-  "title": "Redis + MinIO Stack Generator (Minio/Minio)",
-  "mcp": "https://minio-minio-redis-8f2c54.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "postgres-minio-stack-generator",
-  "title": "Postgres + MinIO Stack Generator",
-  "mcp": "https://minio-minio-postgres-ff7470.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "rabbitmq-redis-stack-generator",
-  "title": "RabbitMQ + Redis Stack Generator",
-  "mcp": "https://rabbitmq-redis-e257b7.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "postgres-grafana-stack-generator",
-  "title": "Postgres + Grafana Stack Generator",
-  "mcp": "https://grafana-grafana-grafana-loki-post-452481.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "authenticated-mcp-jwt-agent",
-  "title": "Authenticated MCP JWT Agent",
-  "mcp": "https://bcrypt-langchain-core-mcp-97246c.getvda.ai/mcp",
-  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
- },
- {
   "tool": "traced-llm-mcp-proxy",
   "title": "Traced LLM MCP Proxy",
   "mcp": "https://anthropic-cryptography-langchain-d8b8c4.getvda.ai/mcp",
   "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."
  },
  {
-  "tool": "llm-orchestration-agent-cryptography",
-  "title": "LLM Orchestration Agent (Cryptography)",
-  "mcp": "https://cryptography-langchain-core-mcp-a24088.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+  "tool": "authenticated-llm-agent-anthropic",
+  "title": "Authenticated LLM Agent (Anthropic)",
+  "mcp": "https://anthropic-google-auth-oauthlib-mc-aed9d5.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "traced-llm-proxy-anthropic",
+  "title": "Traced LLM Proxy (Anthropic)",
+  "mcp": "https://anthropic-lm-format-enforcer-mcp-5364ea.getvda.ai/mcp",
+  "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."
  },
  {
   "tool": "authenticated-mcp-traced-agent",
@@ -218,33 +92,15 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
-  "tool": "authenticated-llm-oauth-agent",
-  "title": "Authenticated LLM OAuth Agent",
-  "mcp": "https://cryptography-google-auth-oauthlib-7bb152.getvda.ai/mcp",
-  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
- },
- {
-  "tool": "authenticated-mcp-agent-bcrypt",
-  "title": "Authenticated MCP Agent (Bcrypt)",
-  "mcp": "https://bcrypt-mcp-openai-3b46a0.getvda.ai/mcp",
+  "tool": "authenticated-mcp-agent-openai",
+  "title": "Authenticated MCP Agent (Openai)",
+  "mcp": "https://bcrypt-langchain-core-mcp-6c9b9c.getvda.ai/mcp",
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
-  "tool": "auth-token-mcp-service",
-  "title": "Auth Token MCP Service",
-  "mcp": "https://bcrypt-langchain-mcp-ae7d44.getvda.ai/mcp",
-  "description": "Hash passwords with bcrypt and issue/verify JWT session tokens."
- },
- {
-  "tool": "llm-orchestration-agent-langchain",
-  "title": "LLM Orchestration Agent (Langchain)",
-  "mcp": "https://langchain-langchain-openai-langgr-ae01b8.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
- },
- {
-  "tool": "authenticated-llm-agent-bcrypt",
-  "title": "Authenticated LLM Agent (Bcrypt)",
-  "mcp": "https://bcrypt-langchain-openai-mcp-077256.getvda.ai/mcp",
+  "tool": "authenticated-mcp-jwt-agent",
+  "title": "Authenticated MCP JWT Agent",
+  "mcp": "https://bcrypt-langchain-core-mcp-97246c.getvda.ai/mcp",
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
@@ -254,16 +110,28 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
-  "tool": "chain-prompts",
-  "title": "LLM Orchestration Agent",
-  "mcp": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai/mcp",
-  "description": "Multi-step LangChain prompt chains over Gemini. Manages context across sequential steps."
+  "tool": "authenticated-mcp-agent-opentelemetry-api",
+  "title": "Authenticated MCP Agent (Opentelemetry Api)",
+  "mcp": "https://bcrypt-langchain-core-mcp-dc2f7b.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
-  "tool": "llm-orchestration-agent-langchain-anthropic",
-  "title": "LLM Orchestration Agent (Langchain Anthropic)",
-  "mcp": "https://langchain-anthropic-langchain-com-f78c82.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+  "tool": "auth-token-mcp-service",
+  "title": "Auth Token MCP Service",
+  "mcp": "https://bcrypt-langchain-mcp-ae7d44.getvda.ai/mcp",
+  "description": "Hash passwords with bcrypt and issue/verify JWT session tokens."
+ },
+ {
+  "tool": "authenticated-llm-agent-bcrypt",
+  "title": "Authenticated LLM Agent (Bcrypt)",
+  "mcp": "https://bcrypt-langchain-openai-mcp-077256.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
+  "tool": "authenticated-mcp-agent-bcrypt",
+  "title": "Authenticated MCP Agent (Bcrypt)",
+  "mcp": "https://bcrypt-mcp-openai-3b46a0.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
   "tool": "fastapi-auth-token-service",
@@ -272,10 +140,148 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Hash passwords with bcrypt and issue/verify JWT session tokens."
  },
  {
-  "tool": "authenticated-llm-agent-anthropic",
-  "title": "Authenticated LLM Agent (Anthropic)",
-  "mcp": "https://anthropic-google-auth-oauthlib-mc-aed9d5.getvda.ai/mcp",
+  "tool": "postgres-prometheus-kafka-stack-generator",
+  "title": "Postgres + Prometheus + Kafka Stack Generator",
+  "mcp": "https://confluentinc-cp-kafka-confluentin-01eb69.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "postgres-kafka-stack-generator",
+  "title": "Postgres + Kafka Stack Generator",
+  "mcp": "https://confluentinc-cp-kafka-confluentin-83a0d7.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "kafka-redis-minio-stack-generator",
+  "title": "Kafka + Redis + MinIO Stack Generator",
+  "mcp": "https://confluentinc-cp-kafka-confluentin-f6eaf2.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "kafka-minio-redis-stack-generator",
+  "title": "Kafka + MinIO + Redis Stack Generator",
+  "mcp": "https://confluentinc-cp-kafka-minio-minio-5634ac.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "postgres-kafka-prometheus-stack-generator",
+  "title": "Postgres + Kafka + Prometheus Stack Generator",
+  "mcp": "https://confluentinc-cp-kafka-postgres-pr-60ca80.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "redis-minio-stack-generator",
+  "title": "Redis + MinIO Stack Generator",
+  "mcp": "https://confluentinc-cp-zookeeper-minio-m-545495.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "postgres-prometheus-stack-generator",
+  "title": "Postgres + Prometheus Stack Generator",
+  "mcp": "https://confluentinc-cp-zookeeper-postgre-48e7f1.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "authenticated-llm-traced-agent",
+  "title": "Authenticated LLM Traced Agent",
+  "mcp": "https://cryptography-google-auth-oauthlib-29bc28.getvda.ai/mcp",
   "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "authenticated-llm-oauth-agent",
+  "title": "Authenticated LLM OAuth Agent",
+  "mcp": "https://cryptography-google-auth-oauthlib-7bb152.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "llm-orchestration-traced-agent",
+  "title": "LLM Orchestration Traced Agent",
+  "mcp": "https://cryptography-langchain-core-mcp-22c862.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-orchestration-agent-cryptography",
+  "title": "LLM Orchestration Agent (Cryptography)",
+  "mcp": "https://cryptography-langchain-core-mcp-a24088.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-orchestration-mcp-agent",
+  "title": "LLM Orchestration MCP Agent",
+  "mcp": "https://cryptography-langchain-langchain-dcb5f0.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-orchestration-agent-mcp",
+  "title": "LLM Orchestration Agent (Mcp)",
+  "mcp": "https://cryptography-langchain-openai-mcp-0ac13b.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "elasticsearch-redis-mysql-stack-generator",
+  "title": "Elasticsearch + Redis + MySQL Stack Generator",
+  "mcp": "https://elasticsearch-elasticsearch-kiban-19b4ad.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "elasticsearch-redis-stack-generator",
+  "title": "Elasticsearch + Redis Stack Generator",
+  "mcp": "https://elasticsearch-elasticsearch-kiban-c05def.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "authenticated-llm-mcp-agent",
+  "title": "Authenticated LLM MCP Agent",
+  "mcp": "https://google-auth-oauthlib-langchain-la-d042fc.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "authenticated-llm-agent-google-auth-oauthlib",
+  "title": "Authenticated LLM Agent (Google Auth Oauthlib)",
+  "mcp": "https://google-auth-oauthlib-langchain-mc-f0143f.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "postgres-grafana-stack-generator",
+  "title": "Postgres + Grafana Stack Generator",
+  "mcp": "https://grafana-grafana-grafana-loki-post-452481.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "observable-backend-stack-generator",
+  "title": "Observable Backend Stack Generator",
+  "mcp": "https://grafana-grafana-postgres-prom-pro-51839f.getvda.ai/mcp",
+  "description": "Generate a production observability stack as docker-compose: Prometheus (scrape config + alert rules), Grafana (provisioned datasource + dashboard), Alertmanager and node-exporter. Add db/cache images and it emits the FULL observable backend stack (services + Prometheus exporters, pre-scraped) with a .env.example."
+ },
+ {
+  "tool": "structured-output-agent-c2ddcc",
+  "title": "Structured Output Agent",
+  "mcp": "https://groq-instructor-langchain-communi-c2ddcc.getvda.ai/mcp",
+  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
+ },
+ {
+  "tool": "llm-orchestration-agent-langchain-anthropic",
+  "title": "LLM Orchestration Agent (Langchain Anthropic)",
+  "mcp": "https://langchain-anthropic-langchain-com-f78c82.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-orchestration-agent-openai",
+  "title": "LLM Orchestration Agent (Openai)",
+  "mcp": "https://langchain-anthropic-langchain-ope-6af681.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-orchestration-agent-d2feb0",
+  "title": "LLM Orchestration Agent",
+  "mcp": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-orchestration-agent-langgraph",
+  "title": "LLM Orchestration Agent (Langgraph)",
+  "mcp": "https://langchain-core-langgraph-mcp-280d80.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
   "tool": "llm-orchestration-agent-langchain-core",
@@ -287,18 +293,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "llm-orchestration-observability-agent",
   "title": "LLM Orchestration Observability Agent",
   "mcp": "https://langchain-langchain-community-lan-6e24db.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
- },
- {
-  "tool": "authenticated-mcp-agent-openai",
-  "title": "Authenticated MCP Agent (Openai)",
-  "mcp": "https://bcrypt-langchain-core-mcp-6c9b9c.getvda.ai/mcp",
-  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
- },
- {
-  "tool": "llm-orchestration-agent-langchain-openai",
-  "title": "LLM Orchestration Agent (Langchain Openai)",
-  "mcp": "https://langchain-langchain-openai-langgr-7f6d74.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
@@ -314,45 +308,75 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
-  "tool": "authenticated-mcp-agent-opentelemetry-api",
-  "title": "Authenticated MCP Agent (Opentelemetry Api)",
-  "mcp": "https://bcrypt-langchain-core-mcp-dc2f7b.getvda.ai/mcp",
-  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
- },
- {
-  "tool": "llm-orchestration-agent-langgraph",
-  "title": "LLM Orchestration Agent (Langgraph)",
-  "mcp": "https://langchain-core-langgraph-mcp-280d80.getvda.ai/mcp",
+  "tool": "llm-orchestration-agent-langchain-openai",
+  "title": "LLM Orchestration Agent (Langchain Openai)",
+  "mcp": "https://langchain-langchain-openai-langgr-7f6d74.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
-  "tool": "authenticated-llm-mcp-agent",
-  "title": "Authenticated LLM MCP Agent",
-  "mcp": "https://google-auth-oauthlib-langchain-la-d042fc.getvda.ai/mcp",
-  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
- },
- {
-  "tool": "llm-orchestration-agent-openai",
-  "title": "LLM Orchestration Agent (Openai)",
-  "mcp": "https://langchain-anthropic-langchain-ope-6af681.getvda.ai/mcp",
+  "tool": "llm-orchestration-agent-langchain",
+  "title": "LLM Orchestration Agent (Langchain)",
+  "mcp": "https://langchain-langchain-openai-langgr-ae01b8.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
-  "tool": "llm-orchestration-agent-mcp",
-  "title": "LLM Orchestration Agent (Mcp)",
-  "mcp": "https://cryptography-langchain-openai-mcp-0ac13b.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+  "tool": "memcached-mongodb-redis-compose-generator",
+  "title": "Memcached + MongoDB + Redis Compose Generator",
+  "mcp": "https://memcached-mongo-redis-4cc448.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
-  "tool": "authenticated-llm-agent-google-auth-oauthlib",
-  "title": "Authenticated LLM Agent (Google Auth Oauthlib)",
-  "mcp": "https://google-auth-oauthlib-langchain-mc-f0143f.getvda.ai/mcp",
-  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+  "tool": "minio-postgres-redis-stack-generator",
+  "title": "MinIO + Postgres + Redis Stack Generator",
+  "mcp": "https://minio-mc-minio-minio-postgres-c93202.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "postgres-minio-stack-generator",
+  "title": "Postgres + MinIO Stack Generator",
+  "mcp": "https://minio-minio-postgres-ff7470.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "redis-minio-postgres-stack-generator",
+  "title": "Redis + MinIO + Postgres Stack Generator",
+  "mcp": "https://minio-minio-postgres-redis-f309ea.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "redis-minio-stack-generator-minio-minio",
+  "title": "Redis + MinIO Stack Generator (Minio/Minio)",
+  "mcp": "https://minio-minio-redis-8f2c54.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "mysql-redis-compose-generator-nginx",
+  "title": "MySQL + Redis Compose Generator (Nginx)",
+  "mcp": "https://mysql-nginx-redis-b24ef9.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "mysql-redis-compose-generator",
+  "title": "MySQL + Redis Compose Generator",
+  "mcp": "https://mysql-redis-c736ae.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
   "tool": "nginx-redis-stack-generator",
   "title": "Nginx + Redis Stack Generator",
   "mcp": "https://nginx-redis-7f29d8.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "postgres-redis-compose-generator",
+  "title": "Postgres + Redis Compose Generator",
+  "mcp": "https://postgres-redis-10a16c.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
+ },
+ {
+  "tool": "rabbitmq-redis-stack-generator",
+  "title": "RabbitMQ + Redis Stack Generator",
+  "mcp": "https://rabbitmq-redis-e257b7.getvda.ai/mcp",
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  }
 ]""")
