@@ -1,0 +1,82 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "LLM Orchestration Agent 2: composes langchain-core + langchain-openai + mcp + openai \u2014 orchestration, agent-protocol, llm-client via A2A + MCP.",
+  "documentationUrl": "https://langchain-core-langchain-openai-m-5117c8.getvda.ai/governance.md",
+  "name": "LLM Orchestration Agent 2",
+  "preferredTransport": "JSONRPC",
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "orchestration capability provided by langchain-core, langchain-openai.",
+      "examples": [
+        "Use the orchestration capability of this agent."
+      ],
+      "id": "orchestration",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Orchestration",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "langchain-core",
+        "langchain-openai"
+      ]
+    },
+    {
+      "description": "agent protocol capability provided by mcp.",
+      "examples": [
+        "Use the agent-protocol capability of this agent."
+      ],
+      "id": "agent-protocol",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Agent Protocol",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "mcp"
+      ]
+    },
+    {
+      "description": "llm client capability provided by openai.",
+      "examples": [
+        "Use the llm-client capability of this agent."
+      ],
+      "id": "llm-client",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Llm Client",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "openai"
+      ]
+    }
+  ],
+  "url": "https://langchain-core-langchain-openai-m-5117c8.getvda.ai/a2a/",
+  "version": "0.1.0"
+}

@@ -260,6 +260,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
  },
  {
+  "tool": "dynamic-health-monitor",
+  "title": "Dynamic Health Monitor",
+  "mcp": "https://health.getvda.ai/mcp",
+  "description": "Dynamic Health Monitor"
+ },
+ {
   "tool": "llm-orchestration-agent-langchain-anthropic",
   "title": "LLM Orchestration Agent (Langchain Anthropic)",
   "mcp": "https://langchain-anthropic-langchain-com-f78c82.getvda.ai/mcp",
@@ -275,6 +281,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "llm-orchestration-agent-d2feb0",
   "title": "LLM Orchestration Agent",
   "mcp": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-orchestration-agent-2",
+  "title": "LLM Orchestration Agent 2",
+  "mcp": "https://langchain-core-langchain-openai-m-5117c8.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.mikerawsonnz/dynamic-health-monitor",
+  "description": "Dynamic Health Monitor",
+  "version": "1.0.0",
+  "websiteUrl": "https://health.getvda.ai",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://health.getvda.ai/mcp"
+    }
+  ]
+}
