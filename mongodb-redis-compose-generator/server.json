@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.mikerawsonnz/mongodb-redis-compose-generator",
+  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack \u2014 hea",
+  "version": "1.0.0",
+  "websiteUrl": "https://mongodb-redis-compose-generator.getvda.ai",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mongodb-redis-compose-generator.getvda.ai/mcp"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.mikerawsonnz/llm-orchestration-agent-3",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith",
+  "version": "1.0.0",
+  "websiteUrl": "https://llm-orchestration-agent-3.getvda.ai",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://llm-orchestration-agent-3.getvda.ai/mcp"
+    }
+  ]
+}
