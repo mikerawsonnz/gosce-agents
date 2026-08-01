@@ -12,9 +12,17 @@
     "application/json"
   ],
   "description": "Structured Output MCP Agent: composes fastmcp + instructor \u2014 agent-protocol, structured-output via A2A + MCP.",
-  "documentationUrl": "https://fastmcp-instructor-72225f.getvda.ai/governance.md",
+  "documentationUrl": "https://structured-output-agent.getvda.ai/governance.md",
   "name": "Structured Output MCP Agent",
   "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..ah4-7m67IEwjl301Na_idr3E4xh_Dtp_dyr6aaq6-rsysjB7lGO6vEowcgaMOXhtiH8z6DkIIgyXSyLQrAm0AQ",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
   "protocolVersion": "0.2.5",
   "provider": {
     "organization": "VDA / GOSCE",
@@ -58,6 +66,6 @@
       ]
     }
   ],
-  "url": "https://fastmcp-instructor-72225f.getvda.ai/a2a/",
-  "version": "0.1.7"
+  "url": "https://structured-output-agent.getvda.ai/a2a/",
+  "version": "0.1.8"
 }

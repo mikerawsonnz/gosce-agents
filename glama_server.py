@@ -68,12 +68,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
-  "tool": "traced-llm-mcp-proxy",
-  "title": "Traced LLM MCP Proxy",
-  "mcp": "https://anthropic-cryptography-langchain-d8b8c4.getvda.ai/mcp",
-  "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."
- },
- {
   "tool": "authenticated-llm-agent-anthropic",
   "title": "Authenticated LLM Agent (Anthropic)",
   "mcp": "https://anthropic-google-auth-oauthlib-mc-aed9d5.getvda.ai/mcp",
@@ -95,12 +89,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "authenticated-mcp-agent-openai",
   "title": "Authenticated MCP Agent (Openai)",
   "mcp": "https://bcrypt-langchain-core-mcp-6c9b9c.getvda.ai/mcp",
-  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
- },
- {
-  "tool": "authenticated-mcp-jwt-agent",
-  "title": "Authenticated MCP JWT Agent",
-  "mcp": "https://bcrypt-langchain-core-mcp-97246c.getvda.ai/mcp",
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
@@ -230,24 +218,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  },
  {
-  "tool": "elasticsearch-mongodb-redis-stack-generator",
-  "title": "Elasticsearch + MongoDB + Redis Stack Generator",
-  "mcp": "https://elasticsearch-mongodb-redis-stack-generator.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "elasticsearch-mysql-stack-generator",
-  "title": "Elasticsearch + MySQL Stack Generator",
-  "mcp": "https://elasticsearch-mysql-stack-generator.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "elasticsearch-postgres-stack-generator",
-  "title": "Elasticsearch + Postgres Stack Generator",
-  "mcp": "https://elasticsearch-postgres-stack-generator.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
   "tool": "elasticsearch-redis-stack-generator-elasticsearch-elasticsearch",
   "title": "Elasticsearch + Redis Stack Generator (Elasticsearch/Elasticsearch)",
   "mcp": "https://elasticsearch-redis-stack-generator-elasticsea-588e3e.getvda.ai/mcp",
@@ -356,18 +326,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
-  "tool": "llm-orchestration-agent-3",
-  "title": "LLM Orchestration Agent 3",
-  "mcp": "https://llm-orchestration-agent-3.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
- },
- {
-  "tool": "llm-orchestration-agent-4",
-  "title": "LLM Orchestration Agent 4",
-  "mcp": "https://llm-orchestration-agent-4.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
- },
- {
   "tool": "memcached-mongodb-redis-compose-generator",
   "title": "Memcached + MongoDB + Redis Compose Generator",
   "mcp": "https://memcached-mongo-redis-4cc448.getvda.ai/mcp",
@@ -398,33 +356,9 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  },
  {
-  "tool": "mongodb-mysql-redis-compose-generator",
-  "title": "MongoDB + MySQL + Redis Compose Generator",
-  "mcp": "https://mongodb-mysql-redis-compose-generator.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
- },
- {
-  "tool": "mongodb-redis-compose-generator",
-  "title": "MongoDB + Redis Compose Generator",
-  "mcp": "https://mongodb-redis-compose-generator.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
- },
- {
-  "tool": "mongodb-redis-compose-generator-mongo-express",
-  "title": "MongoDB + Redis Compose Generator (Mongo Express)",
-  "mcp": "https://mongodb-redis-compose-generator-mongo-express.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
- },
- {
   "tool": "mysql-redis-compose-generator-nginx",
   "title": "MySQL + Redis Compose Generator (Nginx)",
   "mcp": "https://mysql-nginx-redis-b24ef9.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "mysql-nginx-stack-generator",
-  "title": "MySQL + Nginx Stack Generator",
-  "mcp": "https://mysql-nginx-stack-generator.getvda.ai/mcp",
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  },
  {
@@ -446,46 +380,10 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
-  "tool": "rabbitmq-elasticsearch-postgres-stack-generator",
-  "title": "RabbitMQ + Elasticsearch + Postgres Stack Generator",
-  "mcp": "https://rabbitmq-elasticsearch-postgres-stack-generator.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "rabbitmq-elasticsearch-redis-stack-generator",
-  "title": "RabbitMQ + Elasticsearch + Redis Stack Generator",
-  "mcp": "https://rabbitmq-elasticsearch-redis-stack-generator.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "rabbitmq-elasticsearch-stack-generator",
-  "title": "RabbitMQ + Elasticsearch Stack Generator",
-  "mcp": "https://rabbitmq-elasticsearch-stack-generator.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "rabbitmq-elasticsearch-stack-generator-elasticsearch-elasticsearch",
-  "title": "RabbitMQ + Elasticsearch Stack Generator (Elasticsearch/Elasticsearch)",
-  "mcp": "https://rabbitmq-elasticsearch-stack-generator-elastic-b00e53.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "rabbitmq-mongodb-redis-stack-generator",
-  "title": "RabbitMQ + MongoDB + Redis Stack Generator",
-  "mcp": "https://rabbitmq-mongodb-redis-stack-generator.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
   "tool": "rabbitmq-redis-stack-generator",
   "title": "RabbitMQ + Redis Stack Generator",
   "mcp": "https://rabbitmq-redis-e257b7.getvda.ai/mcp",
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
-  "tool": "structured-output-agent-instructor",
-  "title": "Structured Output Agent (Instructor)",
-  "mcp": "https://structured-output-agent-instructor.getvda.ai/mcp",
-  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}

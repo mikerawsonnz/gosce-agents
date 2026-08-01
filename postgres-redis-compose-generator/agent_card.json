@@ -12,9 +12,17 @@
     "application/json"
   ],
   "description": "Postgres + Redis Compose Generator: composes postgres + redis \u2014 database, cache via A2A + MCP.",
-  "documentationUrl": "https://postgres-redis-10a16c.getvda.ai/governance.md",
+  "documentationUrl": "https://postgres-redis-compose-generator.getvda.ai/governance.md",
   "name": "Postgres + Redis Compose Generator",
   "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..69xktwbe_-5aZOcO7xbxOMfNPcjGzVF_64bsTJUVuBLwHYUHBSpEhsozitY7U0RWgbqzke43KliUE3eWPuTtAA",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
   "protocolVersion": "0.2.5",
   "provider": {
     "organization": "VDA / GOSCE",
@@ -34,6 +42,6 @@
       ]
     }
   ],
-  "url": "https://postgres-redis-10a16c.getvda.ai/a2a/",
-  "version": "0.1.0"
+  "url": "https://postgres-redis-compose-generator.getvda.ai/a2a/",
+  "version": "0.1.1"
 }

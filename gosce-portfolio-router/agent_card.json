@@ -22,7 +22,7 @@
   },
   "skills": [
     {
-      "description": "Route to a verified auth agent (FastAPI Auth Token Service).",
+      "description": "Route to a verified auth agent (Auth Token MCP Service, FastAPI Auth Token Service).",
       "examples": [
         "Find a auth agent.",
         "{\"capability\": \"auth\"}"
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "description": "Route to a verified auth llm agent (Authenticated LLM Agent, Authenticated MCP Agent).",
+      "description": "Route to a verified auth llm agent (Authenticated LLM Agent, Authenticated MCP Traced Agent, Authenticated MCP Agent (Bcrypt), Authenticated LLM Agent (Bcrypt), Authenticated MCP Agent (Langchain Core), Authenticated MCP Agent (Openai), Authenticated MCP Agent (Opentelemetry Api)).",
       "examples": [
         "Find a auth llm agent.",
         "{\"capability\": \"auth-llm\"}"
@@ -62,7 +62,47 @@
       ]
     },
     {
-      "description": "Route to a verified langchain llm agent (LLM Orchestration Agent, LLM Observability \u0026 Orchestration Agent).",
+      "description": "Route to a verified compose agent (Postgres + Redis Compose Generator, MySQL + Redis Compose Generator, MySQL + Redis Compose Generator (Adminer), Memcached + MongoDB + Redis Compose Generator, MySQL + Redis Compose Generator (Nginx)).",
+      "examples": [
+        "Find a compose agent.",
+        "{\"capability\": \"compose\"}"
+      ],
+      "id": "compose",
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "name": "Compose",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "compose",
+        "router"
+      ]
+    },
+    {
+      "description": "Route to a verified infra stack agent (Postgres + Kafka + Prometheus Stack Generator, Kafka + MinIO + Redis Stack Generator, Postgres + Kafka Stack Generator, Postgres + Prometheus Stack Generator, Postgres + Prometheus + Kafka Stack Generator, Redis + MinIO Stack Generator, Kafka + Redis + MinIO Stack Generator, Redis + MinIO + Postgres Stack Generator, MinIO + Postgres + Redis Stack Generator, Redis + MinIO Stack Generator (Minio/Minio), Postgres + MinIO Stack Generator, RabbitMQ + Redis Stack Generator, Postgres + Grafana Stack Generator, Nginx + Redis Stack Generator, Elasticsearch + Redis + MySQL Stack Generator, Elasticsearch + Redis Stack Generator).",
+      "examples": [
+        "Find a infra stack agent.",
+        "{\"capability\": \"infra-stack\"}"
+      ],
+      "id": "infra-stack",
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "name": "Infra Stack",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "infra-stack",
+        "router"
+      ]
+    },
+    {
+      "description": "Route to a verified langchain llm agent (LLM Observability \u0026 Orchestration Agent, LLM Orchestration Traced Agent, LLM Orchestration MCP Agent, LLM Orchestration Agent (Cryptography), LLM Orchestration Agent (Langchain), LLM Orchestration Agent, LLM Orchestration Agent (Langchain Anthropic), LLM Orchestration Agent (Langchain Core), LLM Orchestration Observability Agent, LLM Orchestration Agent (Langchain Openai), LLM Observability \u0026 Orchestration Agent (Langchain Community), LLM Orchestration Agent (Langsmith), LLM Orchestration Agent (Langgraph), LLM Orchestration Agent (Openai), LLM Orchestration Agent (Mcp)).",
       "examples": [
         "Find a langchain llm agent.",
         "{\"capability\": \"langchain-llm\"}"
@@ -82,7 +122,27 @@
       ]
     },
     {
-      "description": "Route to a verified oauth llm agent (Authenticated Multi-LLM Agent).",
+      "description": "Route to a verified monitoring agent (Observable Backend Stack Generator).",
+      "examples": [
+        "Find a monitoring agent.",
+        "{\"capability\": \"monitoring\"}"
+      ],
+      "id": "monitoring",
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "name": "Monitoring",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "monitoring",
+        "router"
+      ]
+    },
+    {
+      "description": "Route to a verified oauth llm agent (Authenticated Multi-LLM Agent, Authenticated LLM Traced Agent, Authenticated LLM OAuth Agent, Authenticated LLM Agent (Anthropic), Authenticated LLM MCP Agent, Authenticated LLM Agent (Google Auth Oauthlib)).",
       "examples": [
         "Find a oauth llm agent.",
         "{\"capability\": \"oauth-llm\"}"
@@ -122,7 +182,7 @@
       ]
     },
     {
-      "description": "Route to a verified structured output agent (Structured Output MCP Agent).",
+      "description": "Route to a verified structured output agent (Structured Output MCP Agent, Structured Output Agent).",
       "examples": [
         "Find a structured output agent.",
         "{\"capability\": \"structured-output\"}"
@@ -142,7 +202,7 @@
       ]
     },
     {
-      "description": "Route to a verified traced gemini agent (Traced LLM Proxy).",
+      "description": "Route to a verified traced gemini agent (Traced LLM Proxy, Traced LLM Proxy (Anthropic)).",
       "examples": [
         "Find a traced gemini agent.",
         "{\"capability\": \"traced-gemini\"}"

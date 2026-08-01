@@ -1,0 +1,46 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Dynamic Health Monitor: composes gosce-health \u2014 integration via A2A + MCP.",
+  "documentationUrl": "https://health.getvda.ai/governance.md",
+  "name": "Dynamic Health Monitor",
+  "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..kbo-l_h6SSwDC9vhN6os1DAOSEq13FgTr9Fkqjb2B1AuVXAzHqHXXbJuRfwCFSJy1lMXDUsW4HmbWwBGrivAAA",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "Integration over gosce-health.",
+      "examples": [
+        "Invoke the composed integration."
+      ],
+      "id": "compose",
+      "name": "Composed integration",
+      "tags": [
+        "gosce-health"
+      ]
+    }
+  ],
+  "url": "https://health.getvda.ai/a2a/",
+  "version": "0.1.1"
+}

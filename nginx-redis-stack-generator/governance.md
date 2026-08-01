@@ -5,9 +5,9 @@
 
 - **Agent:** `nginx-redis-7f29d8`
 - **Combination:** `infra_nginx_redis` (zone `infrastructure-stacks`, system `DOCKER`)
-- **Public URL:** https://nginx-redis-7f29d8.getvda.ai
-- **Version:** 0.1.0
-- **Generated:** 2026-07-27T00:03:59+00:00
+- **Public URL:** https://nginx-redis-stack-generator.getvda.ai
+- **Version:** 0.1.1
+- **Generated:** 2026-07-31T20:51:43+00:00
 
 ## Capability declaration
 
@@ -29,7 +29,7 @@ is bundled. (Per-package SPDX identifiers are attached by C2MD in production.)
 ## Data flow
 
 ```
-client → https://nginx-redis-7f29d8.getvda.ai/{mcp | a2a}
+client → https://nginx-redis-stack-generator.getvda.ai/{mcp | a2a}
        → capability dispatch (nginx + redis)
        → response
 ```
@@ -49,9 +49,26 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/nginx-redis-stack-generator
-- **MCP endpoint:** https://nginx-redis-7f29d8.getvda.ai/mcp
-- **Agent Card:** https://nginx-redis-7f29d8.getvda.ai/.well-known/agent.json
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/redis-nginx-stack-generator
+- **MCP endpoint:** https://nginx-redis-stack-generator.getvda.ai/mcp
+- **Agent Card:** https://nginx-redis-stack-generator.getvda.ai/.well-known/agent.json
+
+## Identity & verification
+
+This agent's identity is cryptographically signed. Verify at
+**https://agents.getvda.ai/.well-known/jwks.json**
+
+The Agent Card carries a detached **Ed25519 / EdDSA** JWS (RFC 7515) in its `proof`
+member, issued by the GOSCE factory at build time. The agent itself never holds the
+signing key, so a compromised agent cannot issue a card for any other agent.
+
+- **Verification method:** see `proof.verificationMethod` on the Agent Card
+- **Public keys (JWKS, RFC 7517):** https://agents.getvda.ai/.well-known/jwks.json
+- **Step-by-step instructions:** `GET https://nginx-redis-stack-generator.getvda.ai/verify` (free)
+- **Signed bytes:** the Agent Card with `proof` removed, serialised as JSON with
+  sorted keys, separators `(',',':')`, UTF-8
+
+An unsigned card is not evidence of forgery — it means the agent predates signing.
 
 ## Provider
 

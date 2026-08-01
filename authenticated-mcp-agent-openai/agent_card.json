@@ -1,0 +1,126 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Authenticated MCP Agent: composes bcrypt + langchain-core + mcp + openai + opentelemetry-api + opentelemetry-sdk \u2014 crypto, orchestration, agent-protocol, llm-client, observability via A2A + MCP.",
+  "documentationUrl": "https://authenticated-mcp-agent-openai.getvda.ai/governance.md",
+  "name": "Authenticated MCP Agent",
+  "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..M9Qh4RsSfjKqP5bbsC6WSSDOMjpLT-VAHtjajkHzCEXLAWatEteNyzcOkAJGmfKIw7IX3BWsEKN2OSw5aE85BQ",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "crypto capability provided by bcrypt.",
+      "examples": [
+        "Use the crypto capability of this agent."
+      ],
+      "id": "crypto",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Crypto",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "bcrypt"
+      ]
+    },
+    {
+      "description": "orchestration capability provided by langchain-core.",
+      "examples": [
+        "Use the orchestration capability of this agent."
+      ],
+      "id": "orchestration",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Orchestration",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "langchain-core"
+      ]
+    },
+    {
+      "description": "agent protocol capability provided by mcp.",
+      "examples": [
+        "Use the agent-protocol capability of this agent."
+      ],
+      "id": "agent-protocol",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Agent Protocol",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "mcp"
+      ]
+    },
+    {
+      "description": "llm client capability provided by openai.",
+      "examples": [
+        "Use the llm-client capability of this agent."
+      ],
+      "id": "llm-client",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Llm Client",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "openai"
+      ]
+    },
+    {
+      "description": "observability capability provided by opentelemetry-api, opentelemetry-sdk.",
+      "examples": [
+        "Use the observability capability of this agent."
+      ],
+      "id": "observability",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Observability",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "opentelemetry-api",
+        "opentelemetry-sdk"
+      ]
+    }
+  ],
+  "url": "https://authenticated-mcp-agent-openai.getvda.ai/a2a/",
+  "version": "0.1.1"
+}

@@ -12,9 +12,17 @@
     "application/json"
   ],
   "description": "Observable Backend Stack Generator: composes grafana/grafana + postgres + prom/prometheus + redis \u2014 monitoring, database, cache via A2A + MCP.",
-  "documentationUrl": "https://grafana-grafana-postgres-prom-pro-51839f.getvda.ai/governance.md",
+  "documentationUrl": "https://observable-backend-stack-generator.getvda.ai/governance.md",
   "name": "Observable Backend Stack Generator",
   "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..kZ9gR99Uz_JDqbXveLv4CQd3IDYYxd_2lAwIGeLrfnETrtROCuss6REp2aTDn_eEMfOvO_SoIHnOvp4PqSWnDw",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
   "protocolVersion": "0.2.5",
   "provider": {
     "organization": "VDA / GOSCE",
@@ -36,6 +44,6 @@
       ]
     }
   ],
-  "url": "https://grafana-grafana-postgres-prom-pro-51839f.getvda.ai/a2a/",
-  "version": "0.1.0"
+  "url": "https://observable-backend-stack-generator.getvda.ai/a2a/",
+  "version": "0.1.1"
 }

@@ -5,9 +5,9 @@
 
 - **Agent:** `bcrypt-langchain-openai-mcp-bb738e`
 - **Combination:** `ai-infrastructure_opt_043` (zone `ai-infrastructure`, system `PYPI`)
-- **Public URL:** https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai
-- **Version:** 0.1.6
-- **Generated:** 2026-06-01T18:18:35+00:00
+- **Public URL:** https://authenticated-llm-agent.getvda.ai
+- **Version:** 0.1.7
+- **Generated:** 2026-07-31T16:17:46+00:00
 
 ## Capability declaration
 
@@ -32,7 +32,7 @@ is bundled. (Per-package SPDX identifiers are attached by C2MD in production.)
 ## Data flow
 
 ```
-client → https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/{mcp | a2a}
+client → https://authenticated-llm-agent.getvda.ai/{mcp | a2a}
        → capability dispatch (bcrypt + langchain-openai + mcp + openai + python-jose)
        → response
 ```
@@ -53,8 +53,25 @@ request payload it is given.
 ## Distribution
 
 - **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-llm-agent
-- **MCP endpoint:** https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/mcp
-- **Agent Card:** https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/.well-known/agent.json
+- **MCP endpoint:** https://authenticated-llm-agent.getvda.ai/mcp
+- **Agent Card:** https://authenticated-llm-agent.getvda.ai/.well-known/agent.json
+
+## Identity & verification
+
+This agent's identity is cryptographically signed. Verify at
+**https://agents.getvda.ai/.well-known/jwks.json**
+
+The Agent Card carries a detached **Ed25519 / EdDSA** JWS (RFC 7515) in its `proof`
+member, issued by the GOSCE factory at build time. The agent itself never holds the
+signing key, so a compromised agent cannot issue a card for any other agent.
+
+- **Verification method:** see `proof.verificationMethod` on the Agent Card
+- **Public keys (JWKS, RFC 7517):** https://agents.getvda.ai/.well-known/jwks.json
+- **Step-by-step instructions:** `GET https://authenticated-llm-agent.getvda.ai/verify` (free)
+- **Signed bytes:** the Agent Card with `proof` removed, serialised as JSON with
+  sorted keys, separators `(',',':')`, UTF-8
+
+An unsigned card is not evidence of forgery — it means the agent predates signing.
 
 ## Provider
 

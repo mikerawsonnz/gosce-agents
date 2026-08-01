@@ -1,0 +1,107 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Authenticated LLM Agent (Google Auth Oauthlib): composes google-auth-oauthlib + langchain + mcp + openai \u2014 oauth-oidc, orchestration, agent-protocol, llm-client via A2A + MCP.",
+  "documentationUrl": "https://authenticated-llm-agent-google-auth-oauthlib.getvda.ai/governance.md",
+  "name": "Authenticated LLM Agent (Google Auth Oauthlib)",
+  "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..LMB0TIUZ4-k_oP3OIWrCLtNCaj2Tknms6jhbp8RweSGQQAyGfBvG0PC8zLeD9bk3fucm0lRjTofGlsqXEreZCw",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "oauth oidc capability provided by google-auth-oauthlib.",
+      "examples": [
+        "Use the oauth-oidc capability of this agent."
+      ],
+      "id": "oauth-oidc",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Oauth Oidc",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "google-auth-oauthlib"
+      ]
+    },
+    {
+      "description": "orchestration capability provided by langchain.",
+      "examples": [
+        "Use the orchestration capability of this agent."
+      ],
+      "id": "orchestration",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Orchestration",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "langchain"
+      ]
+    },
+    {
+      "description": "agent protocol capability provided by mcp.",
+      "examples": [
+        "Use the agent-protocol capability of this agent."
+      ],
+      "id": "agent-protocol",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Agent Protocol",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "mcp"
+      ]
+    },
+    {
+      "description": "llm client capability provided by openai.",
+      "examples": [
+        "Use the llm-client capability of this agent."
+      ],
+      "id": "llm-client",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Llm Client",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "openai"
+      ]
+    }
+  ],
+  "url": "https://authenticated-llm-agent-google-auth-oauthlib.getvda.ai/a2a/",
+  "version": "0.1.1"
+}

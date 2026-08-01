@@ -12,9 +12,17 @@
     "application/json"
   ],
   "description": "Traced LLM Proxy: composes anthropic + mcp + opentelemetry-api + opentelemetry-sdk \u2014 llm-client, agent-protocol, observability via A2A + MCP.",
-  "documentationUrl": "https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/governance.md",
+  "documentationUrl": "https://traced-llm-proxy.getvda.ai/governance.md",
   "name": "Traced LLM Proxy",
   "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..t7AxAw6FODo127Uv7sXdKCpAN6XS4YsXRFF6X2PpQ2EhVWGLPWKfbrk9grziymbYanAFoDzHcIjAtbD2zKjhCg",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
   "protocolVersion": "0.2.5",
   "provider": {
     "organization": "VDA / GOSCE",
@@ -77,6 +85,6 @@
       ]
     }
   ],
-  "url": "https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/a2a/",
-  "version": "0.1.6"
+  "url": "https://traced-llm-proxy.getvda.ai/a2a/",
+  "version": "0.1.7"
 }

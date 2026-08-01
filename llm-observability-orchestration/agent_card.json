@@ -12,9 +12,17 @@
     "application/json"
   ],
   "description": "LLM Observability \u0026 Orchestration Agent: composes langchain-core + langsmith + openai \u2014 orchestration, observability, llm-client via A2A + MCP.",
-  "documentationUrl": "https://langchain-core-langsmith-openai-8c02f9.getvda.ai/governance.md",
+  "documentationUrl": "https://llm-observability-orchestration.getvda.ai/governance.md",
   "name": "LLM Observability \u0026 Orchestration Agent",
   "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..4xrbsM5NnlT7plMUrpxXwiTc1tE-VuFJlxmfIbpZaVe9dadZ2wMwjiMtqA-HExgeNgFdwGsk68fg2UO-LvIyBA",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
   "protocolVersion": "0.2.5",
   "provider": {
     "organization": "VDA / GOSCE",
@@ -76,6 +84,6 @@
       ]
     }
   ],
-  "url": "https://langchain-core-langsmith-openai-8c02f9.getvda.ai/a2a/",
-  "version": "0.1.6"
+  "url": "https://llm-observability-orchestration.getvda.ai/a2a/",
+  "version": "0.1.7"
 }

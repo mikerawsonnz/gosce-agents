@@ -5,9 +5,9 @@
 
 - **Agent:** `anthropic-mcp-opentelemetry-api-264025`
 - **Combination:** `ai-infrastructure_opt_012` (zone `ai-infrastructure`, system `PYPI`)
-- **Public URL:** https://anthropic-mcp-opentelemetry-api-264025.getvda.ai
-- **Version:** 0.1.6
-- **Generated:** 2026-06-01T17:59:09+00:00
+- **Public URL:** https://traced-llm-proxy.getvda.ai
+- **Version:** 0.1.7
+- **Generated:** 2026-07-31T16:08:30+00:00
 
 ## Capability declaration
 
@@ -31,7 +31,7 @@ is bundled. (Per-package SPDX identifiers are attached by C2MD in production.)
 ## Data flow
 
 ```
-client → https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/{mcp | a2a}
+client → https://traced-llm-proxy.getvda.ai/{mcp | a2a}
        → capability dispatch (anthropic + mcp + opentelemetry-api + opentelemetry-sdk)
        → response
 ```
@@ -52,8 +52,25 @@ request payload it is given.
 ## Distribution
 
 - **Listed on Smithery:** https://smithery.ai/servers/a2a/traced-llm-proxy
-- **MCP endpoint:** https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/mcp
-- **Agent Card:** https://anthropic-mcp-opentelemetry-api-264025.getvda.ai/.well-known/agent.json
+- **MCP endpoint:** https://traced-llm-proxy.getvda.ai/mcp
+- **Agent Card:** https://traced-llm-proxy.getvda.ai/.well-known/agent.json
+
+## Identity & verification
+
+This agent's identity is cryptographically signed. Verify at
+**https://agents.getvda.ai/.well-known/jwks.json**
+
+The Agent Card carries a detached **Ed25519 / EdDSA** JWS (RFC 7515) in its `proof`
+member, issued by the GOSCE factory at build time. The agent itself never holds the
+signing key, so a compromised agent cannot issue a card for any other agent.
+
+- **Verification method:** see `proof.verificationMethod` on the Agent Card
+- **Public keys (JWKS, RFC 7517):** https://agents.getvda.ai/.well-known/jwks.json
+- **Step-by-step instructions:** `GET https://traced-llm-proxy.getvda.ai/verify` (free)
+- **Signed bytes:** the Agent Card with `proof` removed, serialised as JSON with
+  sorted keys, separators `(',',':')`, UTF-8
+
+An unsigned card is not evidence of forgery — it means the agent predates signing.
 
 ## Provider
 

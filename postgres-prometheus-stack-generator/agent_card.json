@@ -1,0 +1,48 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Postgres + Prometheus Stack Generator: composes confluentinc/cp-zookeeper + postgres + prom/prometheus \u2014 messaging, database, monitoring via A2A + MCP.",
+  "documentationUrl": "https://postgres-prometheus-stack-generator.getvda.ai/governance.md",
+  "name": "Postgres + Prometheus Stack Generator",
+  "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..tWAeDe6PLAZK0JOIDrQz-agTG1Tg6IQCmBdM5xtJST_FMveDt1pGr8MdkKxyt0MZcDbnh1n9bZ0n-BZXH5WyCg",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "Integration over confluentinc/cp-zookeeper, postgres, prom/prometheus.",
+      "examples": [
+        "Invoke the composed integration."
+      ],
+      "id": "compose",
+      "name": "Composed integration",
+      "tags": [
+        "confluentinc/cp-zookeeper",
+        "postgres",
+        "prom/prometheus"
+      ]
+    }
+  ],
+  "url": "https://postgres-prometheus-stack-generator.getvda.ai/a2a/",
+  "version": "0.1.1"
+}

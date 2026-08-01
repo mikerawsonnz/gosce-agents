@@ -12,9 +12,17 @@
     "application/json"
   ],
   "description": "LLM Orchestration Agent 2: composes langchain-core + langchain-openai + mcp + openai \u2014 orchestration, agent-protocol, llm-client via A2A + MCP.",
-  "documentationUrl": "https://langchain-core-langchain-openai-m-5117c8.getvda.ai/governance.md",
+  "documentationUrl": "https://llm-orchestration-agent-2.getvda.ai/governance.md",
   "name": "LLM Orchestration Agent 2",
   "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..d98bXsQoR-yoB6knC7yLczfX4IemSyXu-d2zjrgwmOgF9U9IT9oEnPIlacyvEKJLWJPL-AcCg6P4G9fbkgbbAQ",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
   "protocolVersion": "0.2.5",
   "provider": {
     "organization": "VDA / GOSCE",
@@ -77,6 +85,6 @@
       ]
     }
   ],
-  "url": "https://langchain-core-langchain-openai-m-5117c8.getvda.ai/a2a/",
-  "version": "0.1.0"
+  "url": "https://llm-orchestration-agent-2.getvda.ai/a2a/",
+  "version": "0.1.1"
 }

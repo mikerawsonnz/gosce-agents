@@ -12,9 +12,17 @@
     "application/json"
   ],
   "description": "Authenticated LLM Agent: composes bcrypt + langchain-openai + mcp + openai + python-jose \u2014 crypto, orchestration, agent-protocol, llm-client, jwt via A2A + MCP.",
-  "documentationUrl": "https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/governance.md",
+  "documentationUrl": "https://authenticated-llm-agent.getvda.ai/governance.md",
   "name": "Authenticated LLM Agent",
   "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..wTLnwy7to9d9SWAGoMP0V1QPX1plk9uXOB73NLx3eWhaarJQAvsxxyhv5kYWI7EYst4LzTFQESrd-dL02idEBQ",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
   "protocolVersion": "0.2.5",
   "provider": {
     "organization": "VDA / GOSCE",
@@ -112,6 +120,6 @@
       ]
     }
   ],
-  "url": "https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/a2a/",
-  "version": "0.1.6"
+  "url": "https://authenticated-llm-agent.getvda.ai/a2a/",
+  "version": "0.1.7"
 }

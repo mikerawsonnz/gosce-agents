@@ -1,0 +1,48 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "MySQL + Redis Compose Generator (Adminer): composes adminer + mysql + redis \u2014 tooling, database, cache via A2A + MCP.",
+  "documentationUrl": "https://mysql-redis-compose-generator-adminer.getvda.ai/governance.md",
+  "name": "MySQL + Redis Compose Generator (Adminer)",
+  "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..xQPZcc7TgWTDK9mxNR1OpMnUp8ZIp070GNnGBDwtVa-GjIHWaNcEH1Gs-u0KGgipNkaNFnKgxJsYko4SFPm-Bg",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "Integration over adminer, mysql, redis.",
+      "examples": [
+        "Invoke the composed integration."
+      ],
+      "id": "compose",
+      "name": "Composed integration",
+      "tags": [
+        "adminer",
+        "mysql",
+        "redis"
+      ]
+    }
+  ],
+  "url": "https://mysql-redis-compose-generator-adminer.getvda.ai/a2a/",
+  "version": "0.1.1"
+}

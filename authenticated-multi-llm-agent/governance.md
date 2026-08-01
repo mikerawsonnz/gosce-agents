@@ -5,9 +5,9 @@
 
 - **Agent:** `anthropic-google-auth-oauthlib-mc-70ac16`
 - **Combination:** `trust-identity_opt_026` (zone `trust-identity`, system `PYPI`)
-- **Public URL:** https://anthropic-google-auth-oauthlib-mc-70ac16.getvda.ai
-- **Version:** 0.1.6
-- **Generated:** 2026-06-01T18:02:26+00:00
+- **Public URL:** https://authenticated-multi-llm-agent.getvda.ai
+- **Version:** 0.1.7
+- **Generated:** 2026-07-31T16:10:59+00:00
 
 ## Capability declaration
 
@@ -31,7 +31,7 @@ is bundled. (Per-package SPDX identifiers are attached by C2MD in production.)
 ## Data flow
 
 ```
-client → https://anthropic-google-auth-oauthlib-mc-70ac16.getvda.ai/{mcp | a2a}
+client → https://authenticated-multi-llm-agent.getvda.ai/{mcp | a2a}
        → capability dispatch (anthropic + google-auth-oauthlib + mcp + openai)
        → response
 ```
@@ -52,8 +52,25 @@ request payload it is given.
 ## Distribution
 
 - **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-multi-llm-agent
-- **MCP endpoint:** https://anthropic-google-auth-oauthlib-mc-70ac16.getvda.ai/mcp
-- **Agent Card:** https://anthropic-google-auth-oauthlib-mc-70ac16.getvda.ai/.well-known/agent.json
+- **MCP endpoint:** https://authenticated-multi-llm-agent.getvda.ai/mcp
+- **Agent Card:** https://authenticated-multi-llm-agent.getvda.ai/.well-known/agent.json
+
+## Identity & verification
+
+This agent's identity is cryptographically signed. Verify at
+**https://agents.getvda.ai/.well-known/jwks.json**
+
+The Agent Card carries a detached **Ed25519 / EdDSA** JWS (RFC 7515) in its `proof`
+member, issued by the GOSCE factory at build time. The agent itself never holds the
+signing key, so a compromised agent cannot issue a card for any other agent.
+
+- **Verification method:** see `proof.verificationMethod` on the Agent Card
+- **Public keys (JWKS, RFC 7517):** https://agents.getvda.ai/.well-known/jwks.json
+- **Step-by-step instructions:** `GET https://authenticated-multi-llm-agent.getvda.ai/verify` (free)
+- **Signed bytes:** the Agent Card with `proof` removed, serialised as JSON with
+  sorted keys, separators `(',',':')`, UTF-8
+
+An unsigned card is not evidence of forgery — it means the agent predates signing.
 
 ## Provider
 

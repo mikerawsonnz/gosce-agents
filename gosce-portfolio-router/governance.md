@@ -7,7 +7,7 @@
 - **Combination:** `router` (zone `portfolio`, system `PYPI`)
 - **Public URL:** https://router.getvda.ai
 - **Version:** 0.1.0
-- **Generated:** 2026-06-01T18:27:35+00:00
+- **Generated:** 2026-07-31T12:41:45+00:00
 
 ## Capability declaration
 
