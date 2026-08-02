@@ -384,6 +384,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "RabbitMQ + Redis Stack Generator",
   "mcp": "https://rabbitmq-redis-e257b7.getvda.ai/mcp",
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "structured-output-agent-openai",
+  "title": "Structured Output Agent (Openai)",
+  "mcp": "https://structured-output-agent-openai.getvda.ai/mcp",
+  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}
