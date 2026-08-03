@@ -1,4 +1,4 @@
-# Elasticsearch + Redis Stack Generator (Elasticsearch/Elasticsearch)
+# Elasticsearch + Redis Stack Generator (Official Image)
 
 > Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper.
 
@@ -14,7 +14,7 @@ A production **remote MCP server** (infra-stack) on [getvda.ai](https://elastics
 ```json
 {
   "mcpServers": {
-    "elasticsearch-redis-stack-generator-elasticsearch-elasticsearch": {
+    "elasticsearch-redis-stack-generator-official-image": {
       "url": "https://elasticsearch-redis-stack-generator-elasticsea-588e3e.getvda.ai/mcp",
       "transport": "streamable-http"
     }
@@ -64,4 +64,4 @@ Response:
 - Homepage: https://elasticsearch-redis-stack-generator-elasticsea-588e3e.getvda.ai
 - Agent Card (A2A): https://elasticsearch-redis-stack-generator-elasticsea-588e3e.getvda.ai/.well-known/agent.json
 - Governance: https://elasticsearch-redis-stack-generator-elasticsea-588e3e.getvda.ai/governance.md
-- Listed on Smithery: https://smithery.ai/servers/a2a/elasticsearch-redis-stack-generator-elasticsearch-elasticsearch
+- Listed on Smithery: https://smithery.ai/servers/a2a/elasticsearch-redis-stack-generator-official-image

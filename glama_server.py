@@ -218,8 +218,8 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  },
  {
-  "tool": "elasticsearch-redis-stack-generator-elasticsearch-elasticsearch",
-  "title": "Elasticsearch + Redis Stack Generator (Elasticsearch/Elasticsearch)",
+  "tool": "elasticsearch-redis-stack-generator-official-image",
+  "title": "Elasticsearch + Redis Stack Generator (Official Image)",
   "mcp": "https://elasticsearch-redis-stack-generator-elasticsea-588e3e.getvda.ai/mcp",
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  },
@@ -248,8 +248,8 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production observability stack as docker-compose: Prometheus (scrape config + alert rules), Grafana (provisioned datasource + dashboard), Alertmanager and node-exporter. Add db/cache images and it emits the FULL observable backend stack (services + Prometheus exporters, pre-scraped) with a .env.example."
  },
  {
-  "tool": "structured-output-agent-c2ddcc",
-  "title": "Structured Output Agent",
+  "tool": "traced-structured-output-agent-groq",
+  "title": "Traced Structured Output Agent (Groq)",
   "mcp": "https://groq-instructor-langchain-communi-c2ddcc.getvda.ai/mcp",
   "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
  },
@@ -272,14 +272,14 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
-  "tool": "llm-orchestration-agent-d2feb0",
-  "title": "LLM Orchestration Agent",
+  "tool": "langsmith-traced-llm-orchestration-agent",
+  "title": "LangSmith-Traced LLM Orchestration Agent",
   "mcp": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
-  "tool": "llm-orchestration-agent-2",
-  "title": "LLM Orchestration Agent 2",
+  "tool": "mcp-native-llm-orchestration-agent",
+  "title": "MCP-Native LLM Orchestration Agent",
   "mcp": "https://langchain-core-langchain-openai-m-5117c8.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
@@ -303,7 +303,7 @@ AGENTS: list[dict] = json.loads(r"""[
  },
  {
   "tool": "llm-observability-orchestration-agent-langchain-community",
-  "title": "LLM Observability & Orchestration Agent (Langchain Community)",
+  "title": "LLM Observability & Orchestration Agent (LangChain Community)",
   "mcp": "https://langchain-langchain-community-lan-c1a755.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
@@ -378,6 +378,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "Postgres + Redis Compose Generator",
   "mcp": "https://postgres-redis-10a16c.getvda.ai/mcp",
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
+ },
+ {
+  "tool": "rabbitmq-elasticsearch-postgres-stack-generator-elasticsearch-elasticsearch",
+  "title": "RabbitMQ + Elasticsearch + Postgres Stack Generator (Elasticsearch/Elasticsearch)",
+  "mcp": "https://rabbitmq-elasticsearch-postgres-stack-generato-053bcf.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  },
  {
   "tool": "rabbitmq-redis-stack-generator",

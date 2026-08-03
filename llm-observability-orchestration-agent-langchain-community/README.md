@@ -1,4 +1,4 @@
-# LLM Observability & Orchestration Agent (Langchain Community)
+# LLM Observability & Orchestration Agent (LangChain Community)
 
 > Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing.
 

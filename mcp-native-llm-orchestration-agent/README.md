@@ -1,4 +1,4 @@
-# LLM Orchestration Agent 2
+# MCP-Native LLM Orchestration Agent
 
 > Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing.
 
@@ -14,7 +14,7 @@ A production **remote MCP server** (langchain-llm) on [getvda.ai](https://langch
 ```json
 {
   "mcpServers": {
-    "llm-orchestration-agent-2": {
+    "mcp-native-llm-orchestration-agent": {
       "url": "https://langchain-core-langchain-openai-m-5117c8.getvda.ai/mcp",
       "transport": "streamable-http"
     }
@@ -50,4 +50,4 @@ Response:
 - Homepage: https://langchain-core-langchain-openai-m-5117c8.getvda.ai
 - Agent Card (A2A): https://langchain-core-langchain-openai-m-5117c8.getvda.ai/.well-known/agent.json
 - Governance: https://langchain-core-langchain-openai-m-5117c8.getvda.ai/governance.md
-- Listed on Smithery: https://smithery.ai/servers/a2a/llm-orchestration-agent-2
+- Listed on Smithery: https://smithery.ai/servers/a2a/mcp-native-llm-orchestration-agent

@@ -1,4 +1,4 @@
-# Structured Output Agent
+# Traced Structured Output Agent (Groq)
 
 > Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI).
 
@@ -14,7 +14,7 @@ A production **remote MCP server** (structured-output) on [getvda.ai](https://gr
 ```json
 {
   "mcpServers": {
-    "structured-output-agent-c2ddcc": {
+    "traced-structured-output-agent-groq": {
       "url": "https://groq-instructor-langchain-communi-c2ddcc.getvda.ai/mcp",
       "transport": "streamable-http"
     }
@@ -58,4 +58,4 @@ Response:
 - Homepage: https://groq-instructor-langchain-communi-c2ddcc.getvda.ai
 - Agent Card (A2A): https://groq-instructor-langchain-communi-c2ddcc.getvda.ai/.well-known/agent.json
 - Governance: https://groq-instructor-langchain-communi-c2ddcc.getvda.ai/governance.md
-- Listed on Smithery: https://smithery.ai/servers/a2a/structured-output-agent-c2ddcc
+- Listed on Smithery: https://smithery.ai/servers/a2a/traced-structured-output-agent-groq
