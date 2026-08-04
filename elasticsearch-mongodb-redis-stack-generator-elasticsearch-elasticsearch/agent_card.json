@@ -1,0 +1,53 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Elasticsearch + MongoDB + Redis Stack Generator (Elasticsearch/Elasticsearch): composes elasticsearch/elasticsearch + mongo + redis + traefik \u2014 search, database, cache, web-server via A2A + MCP.",
+  "documentationUrl": "https://elasticsearch-mongodb-redis-stack-generator-el-d8f067.getvda.ai/governance.md",
+  "name": "Elasticsearch + MongoDB + Redis Stack Generator (Elasticsearch/Elasticsearch)",
+  "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..IUOp_muF8X3T7LQFEwzbUTNzRX1HorEXFPqK_Ue2BIwAF35LWgG5MeG0xBfVQZ0VvNR9rxs7YukaA5GygyPIDQ",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "gateway capability provided by traefik.",
+      "examples": [
+        "Use the gateway capability of this agent."
+      ],
+      "id": "gateway",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Gateway",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "traefik"
+      ]
+    }
+  ],
+  "url": "https://elasticsearch-mongodb-redis-stack-generator-el-d8f067.getvda.ai/a2a/",
+  "version": "0.1.0"
+}

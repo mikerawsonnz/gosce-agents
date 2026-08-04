@@ -218,6 +218,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  },
  {
+  "tool": "elasticsearch-mongodb-redis-stack-generator-elasticsearch-elasticsearch",
+  "title": "Elasticsearch + MongoDB + Redis Stack Generator (Elasticsearch/Elasticsearch)",
+  "mcp": "https://elasticsearch-mongodb-redis-stack-generator-el-d8f067.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
   "tool": "elasticsearch-redis-stack-generator-official-image",
   "title": "Elasticsearch + Redis Stack Generator (Official Image)",
   "mcp": "https://elasticsearch-redis-stack-generator-elasticsea-588e3e.getvda.ai/mcp",
