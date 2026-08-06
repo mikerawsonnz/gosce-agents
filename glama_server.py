@@ -386,6 +386,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
+  "tool": "rabbitmq-elasticsearch-mongodb-stack-generator",
+  "title": "RabbitMQ + Elasticsearch + MongoDB Stack Generator",
+  "mcp": "https://rabbitmq-elasticsearch-mongodb-stack-generator.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
   "tool": "rabbitmq-elasticsearch-postgres-stack-generator-elasticsearch-elasticsearch",
   "title": "RabbitMQ + Elasticsearch + Postgres Stack Generator (Elasticsearch/Elasticsearch)",
   "mcp": "https://rabbitmq-elasticsearch-postgres-stack-generato-053bcf.getvda.ai/mcp",
