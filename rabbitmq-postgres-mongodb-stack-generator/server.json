@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.mikerawsonnz/rabbitmq-postgres-mongodb-stack-generator",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack \u2014 messaging ",
+  "version": "1.0.0",
+  "websiteUrl": "https://rabbitmq-postgres-mongodb-stack-generator.getvda.ai",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://rabbitmq-postgres-mongodb-stack-generator.getvda.ai/mcp"
+    }
+  ]
+}
