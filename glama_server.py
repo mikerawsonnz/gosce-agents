@@ -426,6 +426,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "Structured Output Agent (Openai)",
   "mcp": "https://structured-output-agent-openai.getvda.ai/mcp",
   "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
+ },
+ {
+  "tool": "structured-output-mcp-traced-agent",
+  "title": "Structured Output MCP Traced Agent",
+  "mcp": "https://structured-output-mcp-traced-agent.getvda.ai/mcp",
+  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}
