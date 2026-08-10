@@ -80,6 +80,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."
  },
  {
+  "tool": "authenticated-llm-jwt-agent",
+  "title": "Authenticated LLM JWT Agent",
+  "mcp": "https://authenticated-llm-jwt-agent.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
   "tool": "authenticated-mcp-traced-agent",
   "title": "Authenticated MCP Traced Agent",
   "mcp": "https://bcrypt-cryptography-langchain-cor-027cf2.getvda.ai/mcp",
@@ -89,12 +95,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "authenticated-mcp-agent-openai",
   "title": "Authenticated MCP Agent (Openai)",
   "mcp": "https://bcrypt-langchain-core-mcp-6c9b9c.getvda.ai/mcp",
-  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
- },
- {
-  "tool": "authenticated-mcp-agent-langchain-core",
-  "title": "Authenticated MCP Agent (Langchain Core)",
-  "mcp": "https://bcrypt-langchain-core-mcp-d0e0d0.getvda.ai/mcp",
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {

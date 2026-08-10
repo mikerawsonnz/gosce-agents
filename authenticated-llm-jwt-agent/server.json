@@ -1,13 +1,13 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-  "name": "io.github.mikerawsonnz/authenticated-mcp-agent-langchain-core",
+  "name": "io.github.mikerawsonnz/authenticated-llm-jwt-agent",
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. ",
   "version": "1.0.0",
-  "websiteUrl": "https://bcrypt-langchain-core-mcp-d0e0d0.getvda.ai",
+  "websiteUrl": "https://authenticated-llm-jwt-agent.getvda.ai",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://bcrypt-langchain-core-mcp-d0e0d0.getvda.ai/mcp"
+      "url": "https://authenticated-llm-jwt-agent.getvda.ai/mcp"
     }
   ]
 }
