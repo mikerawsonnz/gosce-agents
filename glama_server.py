@@ -116,12 +116,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
-  "tool": "authenticated-mcp-agent-bcrypt",
-  "title": "Authenticated MCP Agent (Bcrypt)",
-  "mcp": "https://bcrypt-mcp-openai-3b46a0.getvda.ai/mcp",
-  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
- },
- {
   "tool": "fastapi-auth-token-service",
   "title": "FastAPI Auth Token Service",
   "mcp": "https://bcrypt-python-jose-1b8dd0.getvda.ai/mcp",
@@ -425,6 +419,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "structured-output-agent-openai",
   "title": "Structured Output Agent (Openai)",
   "mcp": "https://structured-output-agent-openai.getvda.ai/mcp",
+  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
+ },
+ {
+  "tool": "structured-output-mcp-agent-instructor",
+  "title": "Structured Output MCP Agent (Instructor)",
+  "mcp": "https://structured-output-mcp-agent-instructor.getvda.ai/mcp",
   "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
  },
  {
