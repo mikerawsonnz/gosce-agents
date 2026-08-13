@@ -68,12 +68,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
-  "tool": "authenticated-llm-agent-anthropic",
-  "title": "Authenticated LLM Agent (Anthropic)",
-  "mcp": "https://anthropic-google-auth-oauthlib-mc-aed9d5.getvda.ai/mcp",
-  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
- },
- {
   "tool": "traced-llm-proxy-anthropic",
   "title": "Traced LLM Proxy (Anthropic)",
   "mcp": "https://anthropic-lm-format-enforcer-mcp-5364ea.getvda.ai/mcp",
@@ -83,6 +77,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "authenticated-llm-jwt-agent",
   "title": "Authenticated LLM JWT Agent",
   "mcp": "https://authenticated-llm-jwt-agent.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
+  "tool": "authenticated-mcp-agent-aed9d5",
+  "title": "Authenticated MCP Agent",
+  "mcp": "https://authenticated-mcp-agent-aed9d5.getvda.ai/mcp",
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
