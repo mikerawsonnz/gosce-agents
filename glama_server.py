@@ -326,6 +326,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
+  "tool": "llm-orchestration-agent-d0a1a1",
+  "title": "LLM Orchestration Agent",
+  "mcp": "https://llm-orchestration-agent-d0a1a1.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
   "tool": "memcached-mongodb-redis-compose-generator",
   "title": "Memcached + MongoDB + Redis Compose Generator",
   "mcp": "https://memcached-mongo-redis-4cc448.getvda.ai/mcp",
