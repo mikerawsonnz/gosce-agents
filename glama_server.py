@@ -68,12 +68,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
-  "tool": "traced-llm-proxy-anthropic",
-  "title": "Traced LLM Proxy (Anthropic)",
-  "mcp": "https://anthropic-lm-format-enforcer-mcp-5364ea.getvda.ai/mcp",
-  "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."
- },
- {
   "tool": "authenticated-llm-jwt-agent",
   "title": "Authenticated LLM JWT Agent",
   "mcp": "https://authenticated-llm-jwt-agent.getvda.ai/mcp",
@@ -389,6 +383,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "rabbitmq-elasticsearch-mongodb-stack-generator",
   "title": "RabbitMQ + Elasticsearch + MongoDB Stack Generator",
   "mcp": "https://rabbitmq-elasticsearch-mongodb-stack-generator.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "rabbitmq-elasticsearch-mysql-stack-generator",
+  "title": "RabbitMQ + Elasticsearch + MySQL Stack Generator",
+  "mcp": "https://rabbitmq-elasticsearch-mysql-stack-generator.getvda.ai/mcp",
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  },
  {
