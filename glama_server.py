@@ -68,6 +68,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
+  "tool": "authenticated-llm-agent-cryptography",
+  "title": "Authenticated LLM Agent (Cryptography)",
+  "mcp": "https://authenticated-llm-agent-cryptography.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
   "tool": "authenticated-llm-jwt-agent",
   "title": "Authenticated LLM JWT Agent",
   "mcp": "https://authenticated-llm-jwt-agent.getvda.ai/mcp",
@@ -437,12 +443,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "structured-output-mcp-agent-langchain-core",
   "title": "Structured Output MCP Agent (Langchain Core)",
   "mcp": "https://structured-output-mcp-agent-langchain-core.getvda.ai/mcp",
-  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
- },
- {
-  "tool": "structured-output-mcp-traced-agent",
-  "title": "Structured Output MCP Traced Agent",
-  "mcp": "https://structured-output-mcp-traced-agent.getvda.ai/mcp",
   "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
  }
 ]""")
