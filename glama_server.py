@@ -86,12 +86,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
-  "tool": "authenticated-mcp-traced-agent",
-  "title": "Authenticated MCP Traced Agent",
-  "mcp": "https://bcrypt-cryptography-langchain-cor-027cf2.getvda.ai/mcp",
-  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
- },
- {
   "tool": "authenticated-mcp-agent-openai",
   "title": "Authenticated MCP Agent (Openai)",
   "mcp": "https://bcrypt-langchain-core-mcp-6c9b9c.getvda.ai/mcp",
@@ -329,6 +323,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "llm-orchestration-agent-d0a1a1",
   "title": "LLM Orchestration Agent",
   "mcp": "https://llm-orchestration-agent-d0a1a1.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-orchestration-jwt-agent",
+  "title": "LLM Orchestration JWT Agent",
+  "mcp": "https://llm-orchestration-jwt-agent.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {

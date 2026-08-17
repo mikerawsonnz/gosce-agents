@@ -11,15 +11,15 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Authenticated MCP Agent: composes bcrypt + cryptography + langchain-core + mcp + opentelemetry-sdk + python-jose \u2014 crypto, orchestration, agent-protocol, observability, jwt via A2A + MCP.",
-  "documentationUrl": "https://authenticated-mcp-traced-agent.getvda.ai/governance.md",
-  "name": "Authenticated MCP Agent",
+  "description": "LLM Orchestration JWT Agent: composes cryptography + langchain-core + mcp + opentelemetry-api + python-jose \u2014 crypto, orchestration, agent-protocol, observability, jwt via A2A + MCP.",
+  "documentationUrl": "https://llm-orchestration-jwt-agent.getvda.ai/governance.md",
+  "name": "LLM Orchestration JWT Agent",
   "preferredTransport": "JSONRPC",
   "proof": {
     "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
     "created": null,
     "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
-    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..h0ldxrwMG8ioS7CS6LtrcfX0v9F46x5h7Y63wAewuHol7usu0_He1BEC14RLNkjv82KcZHCwVGi4m3oPp3NnCQ",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..r4i12RGZjb1eaj8-FixsHYeSzCvXwOqkeayLJwDu3RY_KrFMI3mSdCiC3o0g2OL3yKS4shmAmK2lAw1DW0dGDg",
     "type": "JsonWebSignature2020",
     "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
   },
@@ -30,7 +30,7 @@
   },
   "skills": [
     {
-      "description": "crypto capability provided by bcrypt, cryptography.",
+      "description": "crypto capability provided by cryptography.",
       "examples": [
         "Use the crypto capability of this agent."
       ],
@@ -44,7 +44,6 @@
         "application/json"
       ],
       "tags": [
-        "bcrypt",
         "cryptography"
       ]
     },
@@ -85,7 +84,7 @@
       ]
     },
     {
-      "description": "observability capability provided by opentelemetry-sdk.",
+      "description": "observability capability provided by opentelemetry-api.",
       "examples": [
         "Use the observability capability of this agent."
       ],
@@ -99,7 +98,7 @@
         "application/json"
       ],
       "tags": [
-        "opentelemetry-sdk"
+        "opentelemetry-api"
       ]
     },
     {
@@ -121,6 +120,6 @@
       ]
     }
   ],
-  "url": "https://authenticated-mcp-traced-agent.getvda.ai/a2a/",
-  "version": "0.1.1"
+  "url": "https://llm-orchestration-jwt-agent.getvda.ai/a2a/",
+  "version": "0.1.0"
 }
