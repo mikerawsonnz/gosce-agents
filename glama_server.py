@@ -86,6 +86,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
+  "tool": "authenticated-mcp-traced-agent",
+  "title": "Authenticated MCP Traced Agent",
+  "mcp": "https://authenticated-mcp-traced-agent.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
   "tool": "authenticated-mcp-agent-openai",
   "title": "Authenticated MCP Agent (Openai)",
   "mcp": "https://bcrypt-langchain-core-mcp-6c9b9c.getvda.ai/mcp",
@@ -108,12 +114,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "Authenticated LLM Agent (Bcrypt)",
   "mcp": "https://bcrypt-langchain-openai-mcp-077256.getvda.ai/mcp",
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
- },
- {
-  "tool": "fastapi-auth-token-service",
-  "title": "FastAPI Auth Token Service",
-  "mcp": "https://bcrypt-python-jose-1b8dd0.getvda.ai/mcp",
-  "description": "Hash passwords with bcrypt and issue/verify JWT session tokens."
  },
  {
   "tool": "postgres-prometheus-kafka-stack-generator",
@@ -161,12 +161,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "authenticated-llm-traced-agent",
   "title": "Authenticated LLM Traced Agent",
   "mcp": "https://cryptography-google-auth-oauthlib-29bc28.getvda.ai/mcp",
-  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
- },
- {
-  "tool": "authenticated-llm-oauth-agent",
-  "title": "Authenticated LLM OAuth Agent",
-  "mcp": "https://cryptography-google-auth-oauthlib-7bb152.getvda.ai/mcp",
   "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
  },
  {
