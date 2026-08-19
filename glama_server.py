@@ -80,12 +80,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
-  "tool": "authenticated-mcp-agent-aed9d5",
-  "title": "Authenticated MCP Agent",
-  "mcp": "https://authenticated-mcp-agent-aed9d5.getvda.ai/mcp",
-  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
- },
- {
   "tool": "authenticated-mcp-traced-agent",
   "title": "Authenticated MCP Traced Agent",
   "mcp": "https://authenticated-mcp-traced-agent.getvda.ai/mcp",
@@ -95,12 +89,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "authenticated-mcp-agent-openai",
   "title": "Authenticated MCP Agent (Openai)",
   "mcp": "https://bcrypt-langchain-core-mcp-6c9b9c.getvda.ai/mcp",
-  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
- },
- {
-  "tool": "authenticated-mcp-agent-opentelemetry-api",
-  "title": "Authenticated MCP Agent (Opentelemetry Api)",
-  "mcp": "https://bcrypt-langchain-core-mcp-dc2f7b.getvda.ai/mcp",
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
@@ -210,6 +198,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "Elasticsearch + Redis Stack Generator (Official Image)",
   "mcp": "https://elasticsearch-redis-stack-generator-elasticsea-588e3e.getvda.ai/mcp",
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
+  "tool": "fastapi-auth-token-service",
+  "title": "FastAPI Auth Token Service",
+  "mcp": "https://fastapi-auth-token-service.getvda.ai/mcp",
+  "description": "Hash passwords with bcrypt and issue/verify JWT session tokens."
  },
  {
   "tool": "authenticated-llm-mcp-agent",

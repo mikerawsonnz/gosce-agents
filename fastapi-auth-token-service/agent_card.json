@@ -1,0 +1,71 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "FastAPI Auth Token Service: composes bcrypt + python-jose \u2014 crypto, jwt via A2A + MCP.",
+  "documentationUrl": "https://fastapi-auth-token-service.getvda.ai/governance.md",
+  "name": "FastAPI Auth Token Service",
+  "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..N4335TSZ_kWUqOWvi14DKAMAPcxeq6Z__SGFC2b1dF-U5sUWj0LKE1KhUx9yPTiZocfxElwnHfUqPsXcJrL6Bw",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
+  "protocolVersion": "0.2.5",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "crypto capability provided by bcrypt.",
+      "examples": [
+        "Use the crypto capability of this agent."
+      ],
+      "id": "crypto",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Crypto",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "bcrypt"
+      ]
+    },
+    {
+      "description": "jwt capability provided by python-jose.",
+      "examples": [
+        "Use the jwt capability of this agent."
+      ],
+      "id": "jwt",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Jwt",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "python-jose"
+      ]
+    }
+  ],
+  "url": "https://fastapi-auth-token-service.getvda.ai/a2a/",
+  "version": "0.1.0"
+}
