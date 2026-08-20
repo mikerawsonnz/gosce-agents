@@ -314,6 +314,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
+  "tool": "llm-orchestration-agent-opentelemetry-api",
+  "title": "LLM Orchestration Agent (Opentelemetry Api)",
+  "mcp": "https://llm-orchestration-agent-opentelemetry-api.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
   "tool": "llm-orchestration-jwt-agent",
   "title": "LLM Orchestration JWT Agent",
   "mcp": "https://llm-orchestration-jwt-agent.getvda.ai/mcp",
