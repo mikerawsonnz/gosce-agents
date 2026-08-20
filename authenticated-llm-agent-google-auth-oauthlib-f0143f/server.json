@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.mikerawsonnz/authenticated-llm-agent-google-auth-oauthlib-f0143f",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion f",
+  "version": "1.0.0",
+  "websiteUrl": "https://google-auth-oauthlib-langchain-mc-f0143f.getvda.ai",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://google-auth-oauthlib-langchain-mc-f0143f.getvda.ai/mcp"
+    }
+  ]
+}

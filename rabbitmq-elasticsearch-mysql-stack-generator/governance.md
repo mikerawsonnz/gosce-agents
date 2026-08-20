@@ -6,8 +6,8 @@
 - **Agent:** `rabbitmq-elasticsearch-mysql-stack-generator`
 - **Combination:** `infra_elasticsearch_elasticsearch_mysql_rabbitmq_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://rabbitmq-elasticsearch-mysql-stack-generator.getvda.ai
-- **Version:** 0.1.0
-- **Generated:** 2026-08-15T00:05:17+00:00
+- **Version:** 0.1.1
+- **Generated:** 2026-08-20T14:48:45+00:00
 
 ## Capability declaration
 

@@ -38,10 +38,28 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Observable LLM proxy: transparent pass-through that adds OpenTelemetry spans to every call. Zero logic, pure instrumentation."
  },
  {
+  "tool": "gated-tool-runner",
+  "title": "ai.getvda/bcrypt-langchain-core-mcp-25b8f1",
+  "mcp": "https://bcrypt-langchain-core-mcp-25b8f1.getvda.ai/mcp",
+  "description": "Credential-gated MCP tool runner: bcrypt + JWT auth, then invoke any registered MCP tool. Multi-capability, not just LLM."
+ },
+ {
   "tool": "gated-llm-call",
   "title": "Authenticated LLM Agent",
   "mcp": "https://bcrypt-langchain-openai-mcp-bb738e.getvda.ai/mcp",
   "description": "Credential-gated single-model LLM: bcrypt + JWT auth, then Gemini completion. Rejects without valid token."
+ },
+ {
+  "tool": "hash-and-verify",
+  "title": "ai.getvda/bcrypt-python-jose-d0e0d0",
+  "mcp": "https://bcrypt-python-jose-d0e0d0.getvda.ai/mcp",
+  "description": "Stateless JWT auth: hash a password or verify a token. No LLM, no external calls. Pure crypto."
+ },
+ {
+  "tool": "elasticsearch-redis-stack-generator-elasticsearch-elasticsearch",
+  "title": "Elasticsearch + Redis Stack Generator (Official Image)",
+  "mcp": "https://elasticsearch-redis-stack-generator-elasticsea-588e3e.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  },
  {
   "tool": "extract-structured",
@@ -50,10 +68,40 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Schema-enforced JSON extraction: give a prompt + Pydantic model, get validated typed output."
  },
  {
+  "tool": "structured-output-agent-c2ddcc",
+  "title": "Traced Structured Output Agent (Groq)",
+  "mcp": "https://groq-instructor-langchain-communi-c2ddcc.getvda.ai/mcp",
+  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
+ },
+ {
+  "tool": "chain-prompts",
+  "title": "ai.getvda/langchain-core-langchain-openai-l-736876",
+  "mcp": "https://langchain-core-langchain-openai-l-736876.getvda.ai/mcp",
+  "description": "Multi-step LangChain prompt chains over Gemini. Manages context across sequential steps."
+ },
+ {
+  "tool": "llm-orchestration-agent-d2feb0",
+  "title": "LangSmith-Traced LLM Orchestration Agent",
+  "mcp": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-orchestration-agent-2",
+  "title": "MCP-Native LLM Orchestration Agent",
+  "mcp": "https://langchain-core-langchain-openai-m-5117c8.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
   "tool": "chain-and-trace",
   "title": "LLM Observability & Orchestration Agent",
   "mcp": "https://langchain-core-langsmith-openai-8c02f9.getvda.ai/mcp",
   "description": "LangChain chains WITH LangSmith tracing: full run visibility, evaluation metrics, and debugging alongside orchestration."
+ },
+ {
+  "tool": "llm-observability-orchestration-agent-langchain-community",
+  "title": "LLM Observability & Orchestration Agent (LangChain Community)",
+  "mcp": "https://langchain-langchain-community-lan-c1a755.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
   "tool": "route-to-agent",
@@ -68,6 +116,18 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
+  "tool": "ai-getvda-anthropic-google-auth-oauthlib-mc-aed9d5",
+  "title": "ai.getvda/anthropic-google-auth-oauthlib-mc-aed9d5",
+  "mcp": "https://anthropic-google-auth-oauthlib-mc-aed9d5.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "ai-getvda-anthropic-lm-format-enforcer-mcp-5364ea",
+  "title": "ai.getvda/anthropic-lm-format-enforcer-mcp-5364ea",
+  "mcp": "https://anthropic-lm-format-enforcer-mcp-5364ea.getvda.ai/mcp",
+  "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."
+ },
+ {
   "tool": "authenticated-llm-agent-cryptography",
   "title": "Authenticated LLM Agent (Cryptography)",
   "mcp": "https://authenticated-llm-agent-cryptography.getvda.ai/mcp",
@@ -80,15 +140,39 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
+  "tool": "authenticated-mcp-agent-aed9d5",
+  "title": "Authenticated MCP Agent",
+  "mcp": "https://authenticated-mcp-agent-aed9d5.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
   "tool": "authenticated-mcp-traced-agent",
   "title": "Authenticated MCP Traced Agent",
   "mcp": "https://authenticated-mcp-traced-agent.getvda.ai/mcp",
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
+  "tool": "ai-getvda-bcrypt-cryptography-langchain-cor-027cf2",
+  "title": "ai.getvda/bcrypt-cryptography-langchain-cor-027cf2",
+  "mcp": "https://bcrypt-cryptography-langchain-cor-027cf2.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
   "tool": "authenticated-mcp-agent-openai",
   "title": "Authenticated MCP Agent (Openai)",
   "mcp": "https://bcrypt-langchain-core-mcp-6c9b9c.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
+  "tool": "ai-getvda-bcrypt-langchain-core-mcp-d0e0d0",
+  "title": "ai.getvda/bcrypt-langchain-core-mcp-d0e0d0",
+  "mcp": "https://bcrypt-langchain-core-mcp-d0e0d0.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
+  "tool": "ai-getvda-bcrypt-langchain-core-mcp-dc2f7b",
+  "title": "ai.getvda/bcrypt-langchain-core-mcp-dc2f7b",
+  "mcp": "https://bcrypt-langchain-core-mcp-dc2f7b.getvda.ai/mcp",
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
@@ -102,6 +186,18 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "Authenticated LLM Agent (Bcrypt)",
   "mcp": "https://bcrypt-langchain-openai-mcp-077256.getvda.ai/mcp",
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
+  "tool": "ai-getvda-bcrypt-mcp-openai-3b46a0",
+  "title": "ai.getvda/bcrypt-mcp-openai-3b46a0",
+  "mcp": "https://bcrypt-mcp-openai-3b46a0.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
+  "tool": "ai-getvda-bcrypt-python-jose-1b8dd0",
+  "title": "ai.getvda/bcrypt-python-jose-1b8dd0",
+  "mcp": "https://bcrypt-python-jose-1b8dd0.getvda.ai/mcp",
+  "description": "Hash passwords with bcrypt and issue/verify JWT session tokens."
  },
  {
   "tool": "postgres-prometheus-kafka-stack-generator",
@@ -152,6 +248,24 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
  },
  {
+  "tool": "ai-getvda-cryptography-google-auth-oauthlib-7bb152",
+  "title": "ai.getvda/cryptography-google-auth-oauthlib-7bb152",
+  "mcp": "https://cryptography-google-auth-oauthlib-7bb152.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "authenticated-llm-agent-cryptography-931267",
+  "title": "Authenticated LLM Agent (Cryptography)",
+  "mcp": "https://cryptography-google-auth-oauthlib-931267.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "llm-orchestration-jwt-agent",
+  "title": "LLM Orchestration JWT Agent",
+  "mcp": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
   "tool": "llm-orchestration-traced-agent",
   "title": "LLM Orchestration Traced Agent",
   "mcp": "https://cryptography-langchain-core-mcp-22c862.getvda.ai/mcp",
@@ -176,6 +290,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
+  "tool": "integration-agent",
+  "title": "Integration Agent",
+  "mcp": "https://drift.getvda.ai/mcp",
+  "description": ""
+ },
+ {
   "tool": "elasticsearch-redis-mysql-stack-generator",
   "title": "Elasticsearch + Redis + MySQL Stack Generator",
   "mcp": "https://elasticsearch-elasticsearch-kiban-19b4ad.getvda.ai/mcp",
@@ -194,12 +314,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  },
  {
-  "tool": "elasticsearch-redis-stack-generator-official-image",
-  "title": "Elasticsearch + Redis Stack Generator (Official Image)",
-  "mcp": "https://elasticsearch-redis-stack-generator-elasticsea-588e3e.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
- },
- {
   "tool": "fastapi-auth-token-service",
   "title": "FastAPI Auth Token Service",
   "mcp": "https://fastapi-auth-token-service.getvda.ai/mcp",
@@ -208,11 +322,23 @@ AGENTS: list[dict] = json.loads(r"""[
  {
   "tool": "authenticated-llm-mcp-agent",
   "title": "Authenticated LLM MCP Agent",
+  "mcp": "https://google-auth-oauthlib-langchain-la-c1a755.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "authenticated-llm-mcp-agent-d042fc",
+  "title": "Authenticated LLM MCP Agent",
   "mcp": "https://google-auth-oauthlib-langchain-la-d042fc.getvda.ai/mcp",
   "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
  },
  {
   "tool": "authenticated-llm-agent-google-auth-oauthlib",
+  "title": "Authenticated LLM Agent (Google Auth Oauthlib)",
+  "mcp": "https://google-auth-oauthlib-langchain-la-d46b90.getvda.ai/mcp",
+  "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
+ },
+ {
+  "tool": "authenticated-llm-agent-google-auth-oauthlib-f0143f",
   "title": "Authenticated LLM Agent (Google Auth Oauthlib)",
   "mcp": "https://google-auth-oauthlib-langchain-mc-f0143f.getvda.ai/mcp",
   "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller."
@@ -230,16 +356,16 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production observability stack as docker-compose: Prometheus (scrape config + alert rules), Grafana (provisioned datasource + dashboard), Alertmanager and node-exporter. Add db/cache images and it emits the FULL observable backend stack (services + Prometheus exporters, pre-scraped) with a .env.example."
  },
  {
-  "tool": "traced-structured-output-agent-groq",
-  "title": "Traced Structured Output Agent (Groq)",
-  "mcp": "https://groq-instructor-langchain-communi-c2ddcc.getvda.ai/mcp",
-  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
- },
- {
   "tool": "dynamic-health-monitor",
   "title": "Dynamic Health Monitor",
   "mcp": "https://health.getvda.ai/mcp",
   "description": "Auto-discovering health monitoring. Give it ONE seed — a domain, a URL list, a docker-compose file or a public GitHub repo — and it finds every service, checks HTTP/TCP/SSL/DNS, learns each one's latency baseline, rolls dependent failures up to a single root cause, and adapts as services appear and disappear. You never edit a monitoring config."
+ },
+ {
+  "tool": "structured-output-agent-6af681",
+  "title": "Structured Output Agent",
+  "mcp": "https://instructor-litellm-6af681.getvda.ai/mcp",
+  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
  },
  {
   "tool": "llm-orchestration-agent-langchain-anthropic",
@@ -251,18 +377,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "llm-orchestration-agent-openai",
   "title": "LLM Orchestration Agent (Openai)",
   "mcp": "https://langchain-anthropic-langchain-ope-6af681.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
- },
- {
-  "tool": "langsmith-traced-llm-orchestration-agent",
-  "title": "LangSmith-Traced LLM Orchestration Agent",
-  "mcp": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
- },
- {
-  "tool": "mcp-native-llm-orchestration-agent",
-  "title": "MCP-Native LLM Orchestration Agent",
-  "mcp": "https://langchain-core-langchain-openai-m-5117c8.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
@@ -284,15 +398,15 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
-  "tool": "llm-observability-orchestration-agent-langchain-community",
-  "title": "LLM Observability & Orchestration Agent (LangChain Community)",
-  "mcp": "https://langchain-langchain-community-lan-c1a755.getvda.ai/mcp",
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
- },
- {
   "tool": "llm-orchestration-agent-langsmith",
   "title": "LLM Orchestration Agent (Langsmith)",
   "mcp": "https://langchain-langchain-core-langchai-66fa5c.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
+  "tool": "llm-observability-orchestration-agent-langchain",
+  "title": "LLM Observability & Orchestration Agent (Langchain)",
+  "mcp": "https://langchain-langchain-core-langsmit-d042fc.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
@@ -320,7 +434,7 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
-  "tool": "llm-orchestration-jwt-agent",
+  "tool": "llm-orchestration-jwt-agent-llm-orch",
   "title": "LLM Orchestration JWT Agent",
   "mcp": "https://llm-orchestration-jwt-agent.getvda.ai/mcp",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
@@ -437,6 +551,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "structured-output-mcp-agent-langchain-core",
   "title": "Structured Output MCP Agent (Langchain Core)",
   "mcp": "https://structured-output-mcp-agent-langchain-core.getvda.ai/mcp",
+  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
+ },
+ {
+  "tool": "structured-output-mcp-traced-agent",
+  "title": "Structured Output MCP Traced Agent",
+  "mcp": "https://structured-output-mcp-traced-agent.getvda.ai/mcp",
   "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
  }
 ]""")

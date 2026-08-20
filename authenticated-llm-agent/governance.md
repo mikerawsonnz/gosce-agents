@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_opt_043` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://authenticated-llm-agent.getvda.ai
 - **Version:** 0.1.7
-- **Generated:** 2026-07-31T16:17:46+00:00
+- **Generated:** 2026-08-20T14:20:52+00:00
 
 ## Capability declaration
 

@@ -7,7 +7,7 @@
 - **Combination:** `infra_confluentinc_cp_zookeeper_minio_minio_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://redis-minio-stack-generator.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-07-31T17:09:03+00:00
+- **Generated:** 2026-08-20T14:26:45+00:00
 
 ## Capability declaration
 

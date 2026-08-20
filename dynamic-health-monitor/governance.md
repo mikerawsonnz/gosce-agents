@@ -7,7 +7,7 @@
 - **Combination:** `gosce-health-monitor` (zone `platform-engineering`, system `PYPI`)
 - **Public URL:** https://health.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-07-31T15:49:42+00:00
+- **Generated:** 2026-08-20T17:16:13+00:00
 
 ## Capability declaration
 
@@ -55,14 +55,14 @@ request payload it is given.
 ## Identity & verification
 
 This agent's identity is cryptographically signed. Verify at
-**https://getvda.ai/.well-known/jwks.json**
+**https://agents.getvda.ai/.well-known/jwks.json**
 
 The Agent Card carries a detached **Ed25519 / EdDSA** JWS (RFC 7515) in its `proof`
 member, issued by the GOSCE factory at build time. The agent itself never holds the
 signing key, so a compromised agent cannot issue a card for any other agent.
 
 - **Verification method:** see `proof.verificationMethod` on the Agent Card
-- **Public keys (JWKS, RFC 7517):** https://getvda.ai/.well-known/jwks.json
+- **Public keys (JWKS, RFC 7517):** https://agents.getvda.ai/.well-known/jwks.json
 - **Step-by-step instructions:** `GET https://health.getvda.ai/verify` (free)
 - **Signed bytes:** the Agent Card with `proof` removed, serialised as JSON with
   sorted keys, separators `(',',':')`, UTF-8

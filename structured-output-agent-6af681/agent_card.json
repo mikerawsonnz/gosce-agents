@@ -1,0 +1,95 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Structured Output Agent (Litellm): composes instructor + litellm \u2014 structured-output, llm-client via A2A + MCP.",
+  "documentationUrl": "https://instructor-litellm-6af681.getvda.ai/governance.md",
+  "name": "Structured Output Agent (Litellm)",
+  "preferredTransport": "JSONRPC",
+  "proof": {
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8, non-ASCII characters emitted LITERALLY and never escaped as \\uXXXX (Python: ensure_ascii=False)",
+    "created": null,
+    "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..zaLYrbjiXfhUOnEMGM67Bw5LhvHWdR7b8DLUzY6Cq9LRVdcHXDkwWtei0kjm4P-veEG8JN6YvTWAInblKOTYBQ",
+    "type": "JsonWebSignature2020",
+    "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
+  },
+  "protocolVersion": "0.3.0",
+  "provider": {
+    "organization": "VDA / GOSCE",
+    "url": "https://getvda.ai"
+  },
+  "skills": [
+    {
+      "description": "structured output capability provided by instructor.",
+      "examples": [
+        "Use the structured-output capability of this agent."
+      ],
+      "id": "structured-output",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Structured Output",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "instructor"
+      ]
+    },
+    {
+      "description": "llm client capability provided by litellm.",
+      "examples": [
+        "Use the llm-client capability of this agent."
+      ],
+      "id": "llm-client",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Llm Client",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "litellm"
+      ]
+    },
+    {
+      "description": "FREE \u2014 no payment, no API key, no signup. Runs this agent\u0027s REAL capability on fixed canned input and returns the genuine result, an honest assertion grade (`asserted_correct` = a property of the output was checked; `ran_without_error` = it ran but nothing was asserted, which is NOT a pass), a trust manifest with a proof link for every claim, and a tamper-evident Ed25519-signed VDA Witness record of the run that anyone can verify with no credential.",
+      "examples": [
+        "Run your self-test and show me the result.",
+        "Prove you do what your card claims.",
+        "Give me the signed Witness record for your last self-test."
+      ],
+      "id": "selftest",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Self-test (free verification)",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "verification",
+        "free",
+        "trust",
+        "attestation",
+        "witness"
+      ]
+    }
+  ],
+  "url": "https://instructor-litellm-6af681.getvda.ai/a2a/",
+  "version": "0.1.1"
+}

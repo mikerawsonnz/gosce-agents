@@ -6,8 +6,8 @@
 - **Agent:** `rabbitmq-postgres-mongodb-stack-generator`
 - **Combination:** `infra_mongo_postgres_rabbitmq_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://rabbitmq-postgres-mongodb-stack-generator.getvda.ai
-- **Version:** 0.1.0
-- **Generated:** 2026-08-07T00:06:11+00:00
+- **Version:** 0.1.1
+- **Generated:** 2026-08-20T14:46:14+00:00
 
 ## Capability declaration
 

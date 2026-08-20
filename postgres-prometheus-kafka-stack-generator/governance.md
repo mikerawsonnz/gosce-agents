@@ -7,7 +7,7 @@
 - **Combination:** `infra_confluentinc_cp_kafka_confluentinc_cp_zookeeper_postgres_prom_prometheus` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://postgres-prometheus-kafka-stack-generator.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-07-31T17:05:48+00:00
+- **Generated:** 2026-08-20T14:26:33+00:00
 
 ## Capability declaration
 

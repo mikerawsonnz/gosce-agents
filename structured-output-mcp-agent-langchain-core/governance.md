@@ -6,8 +6,8 @@
 - **Agent:** `structured-output-mcp-agent-langchain-core`
 - **Combination:** `trust-identity_opt_034` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://structured-output-mcp-agent-langchain-core.getvda.ai
-- **Version:** 0.1.0
-- **Generated:** 2026-08-12T00:04:26+00:00
+- **Version:** 0.1.1
+- **Generated:** 2026-08-20T14:48:24+00:00
 
 ## Capability declaration
 
@@ -52,7 +52,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/structured-output-mcp-agent-langchain-core
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/structured-output-mcp-traced-agent
 - **MCP endpoint:** https://structured-output-mcp-agent-langchain-core.getvda.ai/mcp
 - **Agent Card:** https://structured-output-mcp-agent-langchain-core.getvda.ai/.well-known/agent.json
 

@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_024` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://llm-orchestration-agent-cryptography.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-07-31T17:29:37+00:00
+- **Generated:** 2026-08-20T14:29:29+00:00
 
 ## Capability declaration
 
@@ -52,7 +52,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/llm-orchestration-jwt-agent
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/llm-orchestration-agent-cryptography
 - **MCP endpoint:** https://llm-orchestration-agent-cryptography.getvda.ai/mcp
 - **Agent Card:** https://llm-orchestration-agent-cryptography.getvda.ai/.well-known/agent.json
 

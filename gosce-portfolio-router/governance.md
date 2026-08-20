@@ -7,7 +7,7 @@
 - **Combination:** `router` (zone `portfolio`, system `PYPI`)
 - **Public URL:** https://router.getvda.ai
 - **Version:** 0.1.0
-- **Generated:** 2026-07-31T12:41:45+00:00
+- **Generated:** 2026-08-20T19:53:39+00:00
 
 ## Capability declaration
 
@@ -50,6 +50,23 @@ request payload it is given.
 - **Listed on Smithery:** https://smithery.ai/servers/a2a/gosce-portfolio-router
 - **MCP endpoint:** https://router.getvda.ai/mcp
 - **Agent Card:** https://router.getvda.ai/.well-known/agent.json
+
+## Identity & verification
+
+This agent's identity is cryptographically signed. Verify at
+**https://agents.getvda.ai/.well-known/jwks.json**
+
+The Agent Card carries a detached **Ed25519 / EdDSA** JWS (RFC 7515) in its `proof`
+member, issued by the GOSCE factory at build time. The agent itself never holds the
+signing key, so a compromised agent cannot issue a card for any other agent.
+
+- **Verification method:** see `proof.verificationMethod` on the Agent Card
+- **Public keys (JWKS, RFC 7517):** https://agents.getvda.ai/.well-known/jwks.json
+- **Step-by-step instructions:** `GET https://router.getvda.ai/verify` (free)
+- **Signed bytes:** the Agent Card with `proof` removed, serialised as JSON with
+  sorted keys, separators `(',',':')`, UTF-8
+
+An unsigned card is not evidence of forgery — it means the agent predates signing.
 
 ## Provider
 

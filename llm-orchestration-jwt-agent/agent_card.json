@@ -11,19 +11,19 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "LLM Orchestration JWT Agent: composes cryptography + langchain-core + mcp + opentelemetry-api + python-jose \u2014 crypto, orchestration, agent-protocol, observability, jwt via A2A + MCP.",
-  "documentationUrl": "https://llm-orchestration-jwt-agent.getvda.ai/governance.md",
-  "name": "LLM Orchestration JWT Agent",
+  "description": "LLM Orchestration Agent (Python Jose): composes cryptography + langchain-core + mcp + opentelemetry-api + python-jose \u2014 crypto, orchestration, agent-protocol, observability, jwt via A2A + MCP.",
+  "documentationUrl": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/governance.md",
+  "name": "LLM Orchestration Agent (Python Jose)",
   "preferredTransport": "JSONRPC",
   "proof": {
-    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8",
+    "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8, non-ASCII characters emitted LITERALLY and never escaped as \\uXXXX (Python: ensure_ascii=False)",
     "created": null,
     "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
-    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..r4i12RGZjb1eaj8-FixsHYeSzCvXwOqkeayLJwDu3RY_KrFMI3mSdCiC3o0g2OL3yKS4shmAmK2lAw1DW0dGDg",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..Rc4oeIk_2lYvTf9R--RdtFW-UfVFHQ1RAsSeiOoM7VeTasgDVPE3zZPVJeXjXxOuYhY2k-IDk2QnCaHr9NpZCA",
     "type": "JsonWebSignature2020",
     "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
   },
-  "protocolVersion": "0.2.5",
+  "protocolVersion": "0.3.0",
   "provider": {
     "organization": "VDA / GOSCE",
     "url": "https://getvda.ai"
@@ -118,8 +118,32 @@
       "tags": [
         "python-jose"
       ]
+    },
+    {
+      "description": "FREE \u2014 no payment, no API key, no signup. Runs this agent\u0027s REAL capability on fixed canned input and returns the genuine result, an honest assertion grade (`asserted_correct` = a property of the output was checked; `ran_without_error` = it ran but nothing was asserted, which is NOT a pass), a trust manifest with a proof link for every claim, and a tamper-evident Ed25519-signed VDA Witness record of the run that anyone can verify with no credential.",
+      "examples": [
+        "Run your self-test and show me the result.",
+        "Prove you do what your card claims.",
+        "Give me the signed Witness record for your last self-test."
+      ],
+      "id": "selftest",
+      "inputModes": [
+        "text/plain",
+        "application/json"
+      ],
+      "name": "Self-test (free verification)",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "verification",
+        "free",
+        "trust",
+        "attestation",
+        "witness"
+      ]
     }
   ],
-  "url": "https://llm-orchestration-jwt-agent.getvda.ai/a2a/",
-  "version": "0.1.0"
+  "url": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/a2a/",
+  "version": "0.1.1"
 }

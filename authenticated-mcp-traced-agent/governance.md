@@ -6,8 +6,8 @@
 - **Agent:** `authenticated-mcp-traced-agent`
 - **Combination:** `trust-identity_opt_028` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://authenticated-mcp-traced-agent.getvda.ai
-- **Version:** 0.1.0
-- **Generated:** 2026-08-18T00:04:19+00:00
+- **Version:** 0.1.1
+- **Generated:** 2026-08-20T14:50:35+00:00
 
 ## Capability declaration
 
@@ -53,7 +53,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-mcp-traced-agent
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-mcp-agent-authenti
 - **MCP endpoint:** https://authenticated-mcp-traced-agent.getvda.ai/mcp
 - **Agent Card:** https://authenticated-mcp-traced-agent.getvda.ai/.well-known/agent.json
 

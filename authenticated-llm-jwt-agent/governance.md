@@ -6,8 +6,8 @@
 - **Agent:** `authenticated-llm-jwt-agent`
 - **Combination:** `trust-identity_opt_030` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://authenticated-llm-jwt-agent.getvda.ai
-- **Version:** 0.1.0
-- **Generated:** 2026-08-10T00:05:11+00:00
+- **Version:** 0.1.1
+- **Generated:** 2026-08-20T14:46:45+00:00
 
 ## Capability declaration
 

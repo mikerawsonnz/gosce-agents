@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_026` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://authenticated-multi-llm-agent.getvda.ai
 - **Version:** 0.1.7
-- **Generated:** 2026-07-31T16:10:59+00:00
+- **Generated:** 2026-08-20T14:18:09+00:00
 
 ## Capability declaration
 

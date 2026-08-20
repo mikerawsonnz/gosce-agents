@@ -2,7 +2,7 @@
 
 > Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing.
 
-A production **remote MCP server** (langchain-llm) on [getvda.ai](https://llm-orchestration-jwt-agent.getvda.ai). Speaks the open **A2A** (`message/send`) and **MCP** (`invoke` tool) protocols. Discovery (`initialize`, `tools/list`) is free; execution is metered via Nevermined x402 micropayments.
+A production **remote MCP server** (langchain-llm) on [getvda.ai](https://cryptography-langchain-core-mcp-07d652.getvda.ai). Speaks the open **A2A** (`message/send`) and **MCP** (`invoke` tool) protocols. Discovery (`initialize`, `tools/list`) is free; execution is metered via Nevermined x402 micropayments.
 
 ## Capabilities
 
@@ -15,7 +15,7 @@ A production **remote MCP server** (langchain-llm) on [getvda.ai](https://llm-or
 {
   "mcpServers": {
     "llm-orchestration-jwt-agent": {
-      "url": "https://llm-orchestration-jwt-agent.getvda.ai/mcp",
+      "url": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/mcp",
       "transport": "streamable-http"
     }
   }
@@ -47,7 +47,7 @@ Response:
 
 ## Links
 
-- Homepage: https://llm-orchestration-jwt-agent.getvda.ai
-- Agent Card (A2A): https://llm-orchestration-jwt-agent.getvda.ai/.well-known/agent.json
-- Governance: https://llm-orchestration-jwt-agent.getvda.ai/governance.md
+- Homepage: https://cryptography-langchain-core-mcp-07d652.getvda.ai
+- Agent Card (A2A): https://cryptography-langchain-core-mcp-07d652.getvda.ai/.well-known/agent.json
+- Governance: https://cryptography-langchain-core-mcp-07d652.getvda.ai/governance.md
 - Listed on Smithery: https://smithery.ai/servers/a2a/llm-orchestration-jwt-agent

@@ -6,8 +6,8 @@
 - **Agent:** `authenticated-llm-agent-cryptography`
 - **Combination:** `trust-identity_opt_012` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://authenticated-llm-agent-cryptography.getvda.ai
-- **Version:** 0.1.0
-- **Generated:** 2026-08-16T00:05:17+00:00
+- **Version:** 0.1.1
+- **Generated:** 2026-08-20T14:49:00+00:00
 
 ## Capability declaration
 
@@ -54,7 +54,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-llm-agent-cryptography
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-llm-oauth-agent
 - **MCP endpoint:** https://authenticated-llm-agent-cryptography.getvda.ai/mcp
 - **Agent Card:** https://authenticated-llm-agent-cryptography.getvda.ai/.well-known/agent.json
 

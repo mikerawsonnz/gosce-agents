@@ -6,8 +6,8 @@
 - **Agent:** `structured-output-agent-openai`
 - **Combination:** `ai-infrastructure_disc_020` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://structured-output-agent-openai.getvda.ai
-- **Version:** 0.1.0
-- **Generated:** 2026-08-02T00:04:42+00:00
+- **Version:** 0.1.1
+- **Generated:** 2026-08-20T14:41:11+00:00
 
 ## Capability declaration
 

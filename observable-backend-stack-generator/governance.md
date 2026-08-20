@@ -7,7 +7,7 @@
 - **Combination:** `infra_grafana_grafana_postgres_prom_prometheus_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://observable-backend-stack-generator.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-07-31T16:21:52+00:00
+- **Generated:** 2026-08-20T14:20:56+00:00
 
 ## Capability declaration
 

@@ -7,7 +7,7 @@
 - **Combination:** `infra_confluentinc_cp_kafka_minio_minio_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://kafka-minio-redis-stack-generator.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-07-31T16:51:08+00:00
+- **Generated:** 2026-08-20T14:24:57+00:00
 
 ## Capability declaration
 

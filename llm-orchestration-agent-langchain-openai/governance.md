@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_opt_039` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://llm-orchestration-agent-langchain-openai.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-07-31T20:08:20+00:00
+- **Generated:** 2026-08-20T14:34:42+00:00
 
 ## Capability declaration
 

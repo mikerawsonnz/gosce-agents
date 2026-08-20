@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_opt_065` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://llm-observability-orchestration.getvda.ai
 - **Version:** 0.1.7
-- **Generated:** 2026-07-31T16:14:12+00:00
+- **Generated:** 2026-08-20T14:20:51+00:00
 
 ## Capability declaration
 

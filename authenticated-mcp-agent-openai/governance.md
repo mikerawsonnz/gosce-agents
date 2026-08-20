@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_014` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://authenticated-mcp-agent-openai.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-07-31T20:03:41+00:00
+- **Generated:** 2026-08-20T14:33:30+00:00
 
 ## Capability declaration
 

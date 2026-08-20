@@ -3,11 +3,11 @@
   "name": "io.github.mikerawsonnz/authenticated-llm-mcp-agent",
   "description": "Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion f",
   "version": "1.0.0",
-  "websiteUrl": "https://google-auth-oauthlib-langchain-la-d042fc.getvda.ai",
+  "websiteUrl": "https://google-auth-oauthlib-langchain-la-c1a755.getvda.ai",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://google-auth-oauthlib-langchain-la-d042fc.getvda.ai/mcp"
+      "url": "https://google-auth-oauthlib-langchain-la-c1a755.getvda.ai/mcp"
     }
   ]
 }

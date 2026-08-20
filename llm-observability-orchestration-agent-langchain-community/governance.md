@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_opt_040` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://llm-observability-orchestration-agent-langchai-c1a755.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-07-31T20:19:11+00:00
+- **Generated:** 2026-08-20T14:42:42+00:00
 
 ## Capability declaration
 
@@ -52,7 +52,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/llm-observability-orchestration-agent-langchain
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/llm-observability-orchestration-agent-langchain-community
 - **MCP endpoint:** https://llm-observability-orchestration-agent-langchai-c1a755.getvda.ai/mcp
 - **Agent Card:** https://llm-observability-orchestration-agent-langchai-c1a755.getvda.ai/.well-known/agent.json
 

@@ -3,11 +3,11 @@
   "name": "io.github.mikerawsonnz/llm-orchestration-jwt-agent",
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith",
   "version": "1.0.0",
-  "websiteUrl": "https://llm-orchestration-jwt-agent.getvda.ai",
+  "websiteUrl": "https://cryptography-langchain-core-mcp-07d652.getvda.ai",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://llm-orchestration-jwt-agent.getvda.ai/mcp"
+      "url": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/mcp"
     }
   ]
 }

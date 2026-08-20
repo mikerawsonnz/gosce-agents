@@ -7,7 +7,7 @@
 - **Combination:** `infra_grafana_grafana_grafana_loki_postgres` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://postgres-grafana-stack-generator.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-07-31T17:27:44+00:00
+- **Generated:** 2026-08-20T14:28:51+00:00
 
 ## Capability declaration
 

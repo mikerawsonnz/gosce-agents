@@ -2,7 +2,7 @@
 
 > Google-OAuth-gated LLM gateway: verify a Google ID token, then run a Gemini (Vertex AI) completion for the verified caller.
 
-A production **remote MCP server** (oauth-llm) on [getvda.ai](https://google-auth-oauthlib-langchain-la-d042fc.getvda.ai). Speaks the open **A2A** (`message/send`) and **MCP** (`invoke` tool) protocols. Discovery (`initialize`, `tools/list`) is free; execution is metered via Nevermined x402 micropayments.
+A production **remote MCP server** (oauth-llm) on [getvda.ai](https://google-auth-oauthlib-langchain-la-c1a755.getvda.ai). Speaks the open **A2A** (`message/send`) and **MCP** (`invoke` tool) protocols. Discovery (`initialize`, `tools/list`) is free; execution is metered via Nevermined x402 micropayments.
 
 ## Capabilities
 
@@ -15,7 +15,7 @@ A production **remote MCP server** (oauth-llm) on [getvda.ai](https://google-aut
 {
   "mcpServers": {
     "authenticated-llm-mcp-agent": {
-      "url": "https://google-auth-oauthlib-langchain-la-d042fc.getvda.ai/mcp",
+      "url": "https://google-auth-oauthlib-langchain-la-c1a755.getvda.ai/mcp",
       "transport": "streamable-http"
     }
   }
@@ -47,7 +47,7 @@ Response:
 
 ## Links
 
-- Homepage: https://google-auth-oauthlib-langchain-la-d042fc.getvda.ai
-- Agent Card (A2A): https://google-auth-oauthlib-langchain-la-d042fc.getvda.ai/.well-known/agent.json
-- Governance: https://google-auth-oauthlib-langchain-la-d042fc.getvda.ai/governance.md
+- Homepage: https://google-auth-oauthlib-langchain-la-c1a755.getvda.ai
+- Agent Card (A2A): https://google-auth-oauthlib-langchain-la-c1a755.getvda.ai/.well-known/agent.json
+- Governance: https://google-auth-oauthlib-langchain-la-c1a755.getvda.ai/governance.md
 - Listed on Smithery: https://smithery.ai/servers/a2a/authenticated-llm-mcp-agent
