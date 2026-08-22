@@ -293,7 +293,7 @@ AGENTS: list[dict] = json.loads(r"""[
   "tool": "integration-agent",
   "title": "Integration Agent",
   "mcp": "https://drift.getvda.ai/mcp",
-  "description": ""
+  "description": "Tells you whether a public MCP server's tools have changed since anyone last looked. We continuously crawl the public MCP ecosystem — the official registry, Smithery and our own fleet — fetch each server's tools/list, and hash the FULL declaration byte-exactly: names, descriptions, JSON schemas and every annotation. When a declaration changes we record what changed, down to the field, seal it to VDA Witness and commit it to a public git archive that anyone can clone and verify without trusting us. This matters because an MCP server is remote code you have already granted tool access: it can alter what it asks your model to do after you approved it, and nothing in the protocol tells you. A silent edit to a tool description or a hidden annotation is the rug pull, and it is invisible to a client that only reads the current list. Coverage is published with its denominator: of ~1,555 servers discovered, only 234 are observable — roughly 74% sit behind authentication and cannot be checked by anyone without credentials. LIMIT, stated plainly: we observe DECLARATIONS, not behaviour. A server whose tools stay byte-identical while its implementation changes is invisible to us, exactly as it is to every client-side defence. If you need behavioural assurance this is not it."
  },
  {
   "tool": "elasticsearch-redis-mysql-stack-generator",
@@ -558,6 +558,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "Structured Output MCP Traced Agent",
   "mcp": "https://structured-output-mcp-traced-agent.getvda.ai/mcp",
   "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
+ },
+ {
+  "tool": "traced-multi-llm-proxy",
+  "title": "Traced Multi-LLM Proxy",
+  "mcp": "https://traced-multi-llm-proxy.getvda.ai/mcp",
+  "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."
  }
 ]""")
 _BY_NAME = {a["tool"]: a for a in AGENTS}
