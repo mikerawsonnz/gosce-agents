@@ -146,6 +146,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
  },
  {
+  "tool": "authenticated-mcp-agent-bcrypt",
+  "title": "Authenticated MCP Agent (Bcrypt)",
+  "mcp": "https://authenticated-mcp-agent-bcrypt.getvda.ai/mcp",
+  "description": "JWT-gated LLM gateway: authenticate (bcrypt/JWT), then run a LangChain-on-Vertex Gemini completion. Unauthenticated calls are rejected."
+ },
+ {
   "tool": "authenticated-mcp-traced-agent",
   "title": "Authenticated MCP Traced Agent",
   "mcp": "https://authenticated-mcp-traced-agent.getvda.ai/mcp",
