@@ -128,6 +128,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."
  },
  {
+  "tool": "auth-token-mcp-traced-service",
+  "title": "Auth Token MCP Traced Service",
+  "mcp": "https://auth-token-mcp-traced-service.getvda.ai/mcp",
+  "description": "Hash passwords with bcrypt and issue/verify JWT session tokens."
+ },
+ {
   "tool": "authenticated-llm-agent-cryptography",
   "title": "Authenticated LLM Agent (Cryptography)",
   "mcp": "https://authenticated-llm-agent-cryptography.getvda.ai/mcp",
