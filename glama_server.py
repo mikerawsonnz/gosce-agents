@@ -572,6 +572,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
  },
  {
+  "tool": "traced-llm-mcp-proxy",
+  "title": "Traced LLM MCP Proxy",
+  "mcp": "https://traced-llm-mcp-proxy.getvda.ai/mcp",
+  "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id."
+ },
+ {
   "tool": "traced-multi-llm-proxy",
   "title": "Traced Multi-LLM Proxy",
   "mcp": "https://traced-multi-llm-proxy.getvda.ai/mcp",
