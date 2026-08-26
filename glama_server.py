@@ -434,6 +434,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
+  "tool": "llm-orchestration-agent-2-df5979",
+  "title": "LLM Orchestration Agent 2",
+  "mcp": "https://llm-orchestration-agent-2-df5979.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
   "tool": "llm-orchestration-agent-d0a1a1",
   "title": "LLM Orchestration Agent",
   "mcp": "https://llm-orchestration-agent-d0a1a1.getvda.ai/mcp",
