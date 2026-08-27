@@ -500,6 +500,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
  },
  {
+  "tool": "nats-mysql-redis-stack-generator",
+  "title": "NATS + MySQL + Redis Stack Generator",
+  "mcp": "https://nats-mysql-redis-stack-generator.getvda.ai/mcp",
+  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
+ },
+ {
   "tool": "nginx-redis-stack-generator",
   "title": "Nginx + Redis Stack Generator",
   "mcp": "https://nginx-redis-7f29d8.getvda.ai/mcp",
