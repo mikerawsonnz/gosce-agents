@@ -7,7 +7,7 @@
 - **Combination:** `infra_mysql_nats_prom_prometheus_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://nats-mysql-redis-stack-generator.getvda.ai
 - **Version:** 0.1.0
-- **Generated:** 2026-08-28T00:03:58+00:00
+- **Generated:** 2026-08-29T00:04:38+00:00
 
 ## Capability declaration
 
