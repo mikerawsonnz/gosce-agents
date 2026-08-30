@@ -452,6 +452,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
  },
  {
+  "tool": "llm-orchestration-agent-opentelemetry-instrumentation-fastapi",
+  "title": "LLM Orchestration Agent (Opentelemetry Instrumentation Fastapi)",
+  "mcp": "https://llm-orchestration-agent-opentelemetry-instrume-a529e4.getvda.ai/mcp",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing."
+ },
+ {
   "tool": "llm-orchestration-jwt-agent-llm-orch",
   "title": "LLM Orchestration JWT Agent",
   "mcp": "https://llm-orchestration-jwt-agent.getvda.ai/mcp",
@@ -498,12 +504,6 @@ AGENTS: list[dict] = json.loads(r"""[
   "title": "MySQL + Redis Compose Generator",
   "mcp": "https://mysql-redis-c736ae.getvda.ai/mcp",
   "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack — health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example."
- },
- {
-  "tool": "nats-mysql-redis-stack-generator",
-  "title": "NATS + MySQL + Redis Stack Generator",
-  "mcp": "https://nats-mysql-redis-stack-generator.getvda.ai/mcp",
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  },
  {
   "tool": "nginx-redis-stack-generator",
