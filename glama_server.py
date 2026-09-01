@@ -572,6 +572,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
  },
  {
+  "tool": "structured-output-mcp-agent-cryptography",
+  "title": "Structured Output MCP Agent (Cryptography)",
+  "mcp": "https://structured-output-mcp-agent-cryptography.getvda.ai/mcp",
+  "description": "Turn a prompt + a field schema into validated, typed JSON (Instructor over Gemini 2.5 Flash on Vertex AI)."
+ },
+ {
   "tool": "structured-output-mcp-agent-instructor",
   "title": "Structured Output MCP Agent (Instructor)",
   "mcp": "https://structured-output-mcp-agent-instructor.getvda.ai/mcp",
