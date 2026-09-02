@@ -326,6 +326,12 @@ AGENTS: list[dict] = json.loads(r"""[
   "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack — messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper."
  },
  {
+  "tool": "fastapi-auth-token-jwt-service",
+  "title": "FastAPI Auth Token JWT Service",
+  "mcp": "https://fastapi-auth-token-jwt-service.getvda.ai/mcp",
+  "description": "Hash passwords with bcrypt and issue/verify JWT session tokens."
+ },
+ {
   "tool": "fastapi-auth-token-service",
   "title": "FastAPI Auth Token Service",
   "mcp": "https://fastapi-auth-token-service.getvda.ai/mcp",

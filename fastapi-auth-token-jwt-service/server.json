@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.mikerawsonnz/fastapi-auth-token-jwt-service",
+  "description": "Hash passwords with bcrypt and issue/verify JWT session tokens.",
+  "version": "1.0.0",
+  "websiteUrl": "https://fastapi-auth-token-jwt-service.getvda.ai",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://fastapi-auth-token-jwt-service.getvda.ai/mcp"
+    }
+  ]
+}
