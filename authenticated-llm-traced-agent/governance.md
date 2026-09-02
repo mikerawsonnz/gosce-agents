@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_opt_001` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://authenticated-llm-traced-agent.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:07:51+00:00
+- **Generated:** 2026-09-02T11:42:15+00:00
 
 ## Capability declaration
 

@@ -7,7 +7,7 @@
 - **Combination:** `bcrypt-langchain-core-mcp-dc2f7b` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://authenticated-mcp-agent-opentelemetry-api.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:42:01+00:00
+- **Generated:** 2026-09-02T12:25:12+00:00
 
 ## Capability declaration
 

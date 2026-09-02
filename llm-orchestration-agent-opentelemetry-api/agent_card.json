@@ -11,15 +11,15 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing.",
+  "description": "LLM Orchestration Agent (Opentelemetry Api): composes cryptography + langchain-openai + mcp + openai + opentelemetry-api + opentelemetry-sdk \u2014 crypto, orchestration, agent-protocol, llm-client, observability via A2A + MCP.",
   "documentationUrl": "https://llm-orchestration-agent-opentelemetry-api.getvda.ai/governance.md",
   "name": "LLM Orchestration Agent (Opentelemetry Api)",
   "preferredTransport": "JSONRPC",
   "proof": {
     "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8, non-ASCII characters emitted LITERALLY and never escaped as \\uXXXX (Python: ensure_ascii=False)",
-    "created": "2026-09-02T10:51:40Z",
+    "created": "2026-09-02T12:18:05Z",
     "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
-    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwiaWF0IjoxNzg4MzQ2MzAwLCJraWQiOiJZNmRQZjJZMmJRUEZRNmM4MWRnaDY4NF9HTTZUM2NiM25US25sY2I3RTJNIiwidHlwIjoiSk9TRSJ9..VyZQ8YCehF9ex9sxim9MfS_a29Y8RFVz_qHY7rYjngZtBbugksHw7ZgutmwBWnDZx4f2NJx7EhvuDWj6x8ImCQ",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwiaWF0IjoxNzg4MzUxNDg1LCJraWQiOiJZNmRQZjJZMmJRUEZRNmM4MWRnaDY4NF9HTTZUM2NiM25US25sY2I3RTJNIiwidHlwIjoiSk9TRSJ9..QZ0a-Ggsb1r6KZFtYI54-tXKaGnx_-bldUZOcEmRHj_D62UQW3Rp-_TsOSD3GktOWcQ6zxdEnEdTXKxqMlhFDQ",
     "type": "JsonWebSignature2020",
     "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
   },

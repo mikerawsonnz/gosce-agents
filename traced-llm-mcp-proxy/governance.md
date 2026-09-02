@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_038` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://traced-llm-mcp-proxy.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:55:48+00:00
+- **Generated:** 2026-09-02T12:33:05+00:00
 
 ## Capability declaration
 

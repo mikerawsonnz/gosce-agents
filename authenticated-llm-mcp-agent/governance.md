@@ -7,7 +7,7 @@
 - **Combination:** `google-auth-oauthlib-langchain-la-c1a755` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://google-auth-oauthlib-langchain-la-c1a755.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:48:03+00:00
+- **Generated:** 2026-09-02T12:28:06+00:00
 
 ## Capability declaration
 

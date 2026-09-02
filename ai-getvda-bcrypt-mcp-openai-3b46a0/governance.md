@@ -7,7 +7,7 @@
 - **Combination:** `bcrypt-mcp-openai-3b46a0` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://authenticated-mcp-agent-bcrypt.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:44:23+00:00
+- **Generated:** 2026-09-02T12:25:12+00:00
 
 ## Capability declaration
 

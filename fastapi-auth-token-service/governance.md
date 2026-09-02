@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_037` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://fastapi-auth-token-service.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:47:40+00:00
+- **Generated:** 2026-09-02T12:17:23+00:00
 
 ## Capability declaration
 

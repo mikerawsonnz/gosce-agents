@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_028` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://authenticated-mcp-traced-agent.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:41:23+00:00
+- **Generated:** 2026-09-02T12:17:12+00:00
 
 ## Capability declaration
 

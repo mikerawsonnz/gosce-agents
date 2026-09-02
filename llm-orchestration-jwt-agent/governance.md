@@ -7,7 +7,7 @@
 - **Combination:** `cryptography-langchain-core-mcp-07d652` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://cryptography-langchain-core-mcp-07d652.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:45:40+00:00
+- **Generated:** 2026-09-02T12:28:01+00:00
 
 ## Capability declaration
 

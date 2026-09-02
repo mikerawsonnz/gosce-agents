@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_015` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://llm-orchestration-mcp-agent.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:10:25+00:00
+- **Generated:** 2026-09-02T11:45:10+00:00
 
 ## Capability declaration
 

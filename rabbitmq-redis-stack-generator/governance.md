@@ -7,7 +7,7 @@
 - **Combination:** `infra_rabbitmq_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://rabbitmq-redis-stack-generator.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:15:52+00:00
+- **Generated:** 2026-09-02T11:49:49+00:00
 
 ## Capability declaration
 

@@ -11,15 +11,15 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Hash passwords with bcrypt and issue/verify JWT session tokens.",
+  "description": "FastAPI Auth Token JWT Service: composes authlib + bcrypt + python-jose \u2014 oauth-oidc, crypto, jwt via A2A + MCP.",
   "documentationUrl": "https://fastapi-auth-token-jwt-service.getvda.ai/governance.md",
   "name": "FastAPI Auth Token JWT Service",
   "preferredTransport": "JSONRPC",
   "proof": {
     "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8, non-ASCII characters emitted LITERALLY and never escaped as \\uXXXX (Python: ensure_ascii=False)",
-    "created": "2026-09-02T10:47:36Z",
+    "created": "2026-09-02T12:36:24Z",
     "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
-    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwiaWF0IjoxNzg4MzQ2MDU2LCJraWQiOiJZNmRQZjJZMmJRUEZRNmM4MWRnaDY4NF9HTTZUM2NiM25US25sY2I3RTJNIiwidHlwIjoiSk9TRSJ9..JC18FUCXLHlQAdKYdAxOl8BjUkufYR0MdzyTR7waIgLJCGe0F8wdm3QG42907sSaVkvbiqt86Oh3MrtVZXJcBQ",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwiaWF0IjoxNzg4MzUyNTg0LCJraWQiOiJZNmRQZjJZMmJRUEZRNmM4MWRnaDY4NF9HTTZUM2NiM25US25sY2I3RTJNIiwidHlwIjoiSk9TRSJ9..4dPWvZct496vD2OJisCa3wi84gPzHU-xI7Vj66eaY7TzZmzZVaRkdJrbiFef-vDVgCUhEsAUtQwRp9_LF2xGBw",
     "type": "JsonWebSignature2020",
     "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
   },

@@ -7,7 +7,7 @@
 - **Combination:** `infra_adminer_mysql_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://mysql-redis-compose-generator-adminer.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:07:54+00:00
+- **Generated:** 2026-09-02T11:42:56+00:00
 
 ## Capability declaration
 

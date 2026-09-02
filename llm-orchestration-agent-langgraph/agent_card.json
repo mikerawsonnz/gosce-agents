@@ -11,15 +11,15 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing.",
+  "description": "LLM Orchestration Agent (Langgraph): composes langchain-core + langgraph + mcp + openai \u2014 orchestration, agent-protocol, llm-client via A2A + MCP.",
   "documentationUrl": "https://llm-orchestration-agent-langgraph.getvda.ai/governance.md",
   "name": "LLM Orchestration Agent (Langgraph)",
   "preferredTransport": "JSONRPC",
   "proof": {
     "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8, non-ASCII characters emitted LITERALLY and never escaped as \\uXXXX (Python: ensure_ascii=False)",
-    "created": "2026-09-02T10:21:38Z",
+    "created": "2026-09-02T11:59:58Z",
     "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
-    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwiaWF0IjoxNzg4MzQ0NDk4LCJraWQiOiJZNmRQZjJZMmJRUEZRNmM4MWRnaDY4NF9HTTZUM2NiM25US25sY2I3RTJNIiwidHlwIjoiSk9TRSJ9..sM5j20KVmFAgSQlLM8gNpXOObQ5l1HRcd4XbrvPKC8CVxNUMZG22R9ZERvFnsVwjMcRTXUfPFhhImSKyv--WAA",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwiaWF0IjoxNzg4MzUwMzk4LCJraWQiOiJZNmRQZjJZMmJRUEZRNmM4MWRnaDY4NF9HTTZUM2NiM25US25sY2I3RTJNIiwidHlwIjoiSk9TRSJ9..cQrbiCHGt7W9r4W0NWs4Kj6P1PLMONIWtbMigC6EUy88JzMq25ZTuhKuYVtoU_8McY2kLA9Mi9W0JksS8chzBg",
     "type": "JsonWebSignature2020",
     "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
   },

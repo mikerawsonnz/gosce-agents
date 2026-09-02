@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_012` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://authenticated-llm-agent-cryptography.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:38:28+00:00
+- **Generated:** 2026-09-02T12:15:33+00:00
 
 ## Capability declaration
 

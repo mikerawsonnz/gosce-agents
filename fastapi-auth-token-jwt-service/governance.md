@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_disc_031` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://fastapi-auth-token-jwt-service.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:47:36+00:00
+- **Generated:** 2026-09-02T12:36:24+00:00
 
 ## Capability declaration
 

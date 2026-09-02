@@ -11,15 +11,15 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Generate a production-ready docker-compose.yml for a multi-service infrastructure stack \u2014 messaging (Kafka/ZooKeeper, RabbitMQ, NATS), object storage (MinIO), search (Elasticsearch/OpenSearch), databases, caches, web servers and auth (Keycloak/Vault). Every service is health-checked, on a private bridge network, with named volumes and a matching .env.example. Kafka auto-wires its required ZooKeeper.",
+  "description": "Kafka + Postgres Stack Generator: composes confluentinc/cp-kafka + confluentinc/cp-zookeeper + postgres \u2014 messaging, database via A2A + MCP.",
   "documentationUrl": "https://postgres-kafka-stack-generator.getvda.ai/governance.md",
   "name": "Kafka + Postgres Stack Generator",
   "preferredTransport": "JSONRPC",
   "proof": {
     "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8, non-ASCII characters emitted LITERALLY and never escaped as \\uXXXX (Python: ensure_ascii=False)",
-    "created": "2026-09-02T10:11:32Z",
+    "created": "2026-09-02T11:45:38Z",
     "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
-    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwiaWF0IjoxNzg4MzQzODkyLCJraWQiOiJZNmRQZjJZMmJRUEZRNmM4MWRnaDY4NF9HTTZUM2NiM25US25sY2I3RTJNIiwidHlwIjoiSk9TRSJ9..wHLL-oxLaIGqDa5mgGseOtdLXM4QK8oVPxYxDolYRWQmOCZmhWWJf4xTL6UcauN_ZAmjx808G4eRAlr17wVIAA",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwiaWF0IjoxNzg4MzQ5NTM4LCJraWQiOiJZNmRQZjJZMmJRUEZRNmM4MWRnaDY4NF9HTTZUM2NiM25US25sY2I3RTJNIiwidHlwIjoiSk9TRSJ9..6BJCQS7P7f2_XS9NtIhGCzkOp7Oj2LN63oaZ07V7tJnbm-4lPPArLoc96FlRlOdLv84aw30VGkoDyMR_5D_BAQ",
     "type": "JsonWebSignature2020",
     "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
   },

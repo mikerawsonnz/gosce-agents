@@ -7,7 +7,7 @@
 - **Combination:** `bcrypt-python-jose-d0e0d0` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://bcrypt-python-jose-d0e0d0.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:45:29+00:00
+- **Generated:** 2026-09-02T12:25:12+00:00
 
 ## Capability declaration
 

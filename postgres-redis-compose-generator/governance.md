@@ -7,7 +7,7 @@
 - **Combination:** `infra_postgres_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://postgres-redis-compose-generator.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:05:00+00:00
+- **Generated:** 2026-09-02T11:39:28+00:00
 
 ## Capability declaration
 

@@ -11,15 +11,15 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Generate a production-ready docker-compose.yml for a Postgres + Redis (database + cache) stack \u2014 health checks, named volumes, PgBouncer pooling, Redis maxmemory/persistence policy, bridge networking and a matching .env.example.",
+  "description": "Memcached + MongoDB + Redis Compose Generator: composes memcached + mongo + redis \u2014 cache, database via A2A + MCP.",
   "documentationUrl": "https://memcached-mongodb-redis-compose-generator.getvda.ai/governance.md",
   "name": "Memcached + MongoDB + Redis Compose Generator",
   "preferredTransport": "JSONRPC",
   "proof": {
     "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8, non-ASCII characters emitted LITERALLY and never escaped as \\uXXXX (Python: ensure_ascii=False)",
-    "created": "2026-09-02T10:09:43Z",
+    "created": "2026-09-02T11:45:10Z",
     "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
-    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwiaWF0IjoxNzg4MzQzNzgzLCJraWQiOiJZNmRQZjJZMmJRUEZRNmM4MWRnaDY4NF9HTTZUM2NiM25US25sY2I3RTJNIiwidHlwIjoiSk9TRSJ9..RHtyD40WFtk8oJnQhnSmoyM-PRfYIDHuTayb8_SGimg20Qx53qY8vGbNY-YPh67m9b8lckkjzi8RyRStRMjlBg",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwiaWF0IjoxNzg4MzQ5NTEwLCJraWQiOiJZNmRQZjJZMmJRUEZRNmM4MWRnaDY4NF9HTTZUM2NiM25US25sY2I3RTJNIiwidHlwIjoiSk9TRSJ9..Jo66HYJ_t1NiE4gXTeIV-akvLiaYhJlJZQf4nwzQ0lzg83aktRofLIdYfR-jPqUajFi1rKbupPyKtYele1FNAA",
     "type": "JsonWebSignature2020",
     "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
   },

@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_025` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://llm-orchestration-jwt-agent.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:53:25+00:00
+- **Generated:** 2026-09-02T12:17:07+00:00
 
 ## Capability declaration
 

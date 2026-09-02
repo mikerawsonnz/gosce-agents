@@ -7,7 +7,7 @@
 - **Combination:** `infra_elasticsearch_elasticsearch_kibana_kibana_mysql_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://elasticsearch-redis-mysql-stack-generator.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:25:31+00:00
+- **Generated:** 2026-09-02T12:03:43+00:00
 
 ## Capability declaration
 

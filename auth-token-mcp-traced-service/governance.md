@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_036` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://auth-token-mcp-traced-service.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:38:28+00:00
+- **Generated:** 2026-09-02T12:32:12+00:00
 
 ## Capability declaration
 

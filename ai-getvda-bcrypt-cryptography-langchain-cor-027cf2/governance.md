@@ -7,7 +7,7 @@
 - **Combination:** `bcrypt-cryptography-langchain-cor-027cf2` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://bcrypt-cryptography-langchain-cor-027cf2.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:41:48+00:00
+- **Generated:** 2026-09-02T12:20:29+00:00
 
 ## Capability declaration
 

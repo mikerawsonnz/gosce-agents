@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_opt_066` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://llm-orchestration-agent-mcp.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:23:32+00:00
+- **Generated:** 2026-09-02T12:02:54+00:00
 
 ## Capability declaration
 

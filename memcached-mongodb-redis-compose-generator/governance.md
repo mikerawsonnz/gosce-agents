@@ -7,7 +7,7 @@
 - **Combination:** `infra_memcached_mongo_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://memcached-mongodb-redis-compose-generator.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:09:43+00:00
+- **Generated:** 2026-09-02T11:45:10+00:00
 
 ## Capability declaration
 

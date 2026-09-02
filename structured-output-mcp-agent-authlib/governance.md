@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_026` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://structured-output-mcp-agent-authlib.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:54:16+00:00
+- **Generated:** 2026-09-02T12:34:21+00:00
 
 ## Capability declaration
 

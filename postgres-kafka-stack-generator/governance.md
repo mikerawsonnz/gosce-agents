@@ -7,7 +7,7 @@
 - **Combination:** `infra_confluentinc_cp_kafka_confluentinc_cp_zookeeper_postgres` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://postgres-kafka-stack-generator.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:11:32+00:00
+- **Generated:** 2026-09-02T11:45:38+00:00
 
 ## Capability declaration
 

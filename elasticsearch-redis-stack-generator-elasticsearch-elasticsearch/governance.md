@@ -7,7 +7,7 @@
 - **Combination:** `infra_elasticsearch_elasticsearch_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://elasticsearch-redis-stack-generator-elasticsea-588e3e.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:29:05+00:00
+- **Generated:** 2026-09-02T12:11:26+00:00
 
 ## Capability declaration
 

@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_opt_056` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://authenticated-llm-mcp-agent.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:21:51+00:00
+- **Generated:** 2026-09-02T12:00:03+00:00
 
 ## Capability declaration
 

@@ -7,7 +7,7 @@
 - **Combination:** `cryptography-google-auth-oauthlib-931267` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://cryptography-google-auth-oauthlib-931267.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:45:34+00:00
+- **Generated:** 2026-09-02T12:27:14+00:00
 
 ## Capability declaration
 

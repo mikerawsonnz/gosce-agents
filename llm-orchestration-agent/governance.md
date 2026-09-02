@@ -7,7 +7,7 @@
 - **Combination:** `langchain-core-langchain-openai-l-736876` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://langchain-core-langchain-openai-l-736876.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:49:45+00:00
+- **Generated:** 2026-09-02T12:28:56+00:00
 
 ## Capability declaration
 

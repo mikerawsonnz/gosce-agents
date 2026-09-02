@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_disc_048` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://structured-output-agent-c2ddcc.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-09-02T10:27:37+00:00
+- **Generated:** 2026-09-02T12:11:26+00:00
 
 ## Capability declaration
 
