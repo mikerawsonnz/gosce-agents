@@ -7,7 +7,7 @@
 - **Combination:** `cryptography-google-auth-oauthlib-7bb152` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://authenticated-llm-oauth-agent.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T15:47:20+00:00
+- **Generated:** 2026-09-02T10:45:30+00:00
 
 ## Capability declaration
 

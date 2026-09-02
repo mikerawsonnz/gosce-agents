@@ -6,8 +6,8 @@
 - **Agent:** `llm-orchestration-agent-opentelemetry-instrume-a529e4`
 - **Combination:** `trust-identity_opt_019` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://llm-orchestration-agent-opentelemetry-instrume-a529e4.getvda.ai
-- **Version:** 0.1.0
-- **Generated:** 2026-08-30T00:06:16+00:00
+- **Version:** 0.1.1
+- **Generated:** 2026-09-02T11:00:33+00:00
 
 ## Capability declaration
 

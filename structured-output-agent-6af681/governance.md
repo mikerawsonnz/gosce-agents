@@ -7,7 +7,7 @@
 - **Combination:** `instructor-litellm-6af681` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://instructor-litellm-6af681.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T15:49:51+00:00
+- **Generated:** 2026-09-02T10:49:19+00:00
 
 ## Capability declaration
 

@@ -7,7 +7,7 @@
 - **Combination:** `infra_mongo_postgres_rabbitmq_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://rabbitmq-postgres-mongodb-stack-generator.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:46:14+00:00
+- **Generated:** 2026-09-02T10:31:06+00:00
 
 ## Capability declaration
 

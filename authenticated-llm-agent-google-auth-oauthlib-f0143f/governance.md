@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_opt_071` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://authenticated-llm-agent-google-auth-oauthlib.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:38:30+00:00
+- **Generated:** 2026-09-02T10:23:39+00:00
 
 ## Capability declaration
 

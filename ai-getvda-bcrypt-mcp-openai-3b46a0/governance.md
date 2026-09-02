@@ -7,7 +7,7 @@
 - **Combination:** `bcrypt-mcp-openai-3b46a0` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://authenticated-mcp-agent-bcrypt.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T15:46:09+00:00
+- **Generated:** 2026-09-02T10:44:23+00:00
 
 ## Capability declaration
 
@@ -52,7 +52,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-mcp-agent-bcrypt
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-mcp-agent-opentelemetry-sdk
 - **MCP endpoint:** https://authenticated-mcp-agent-bcrypt.getvda.ai/mcp
 - **Agent Card:** https://authenticated-mcp-agent-bcrypt.getvda.ai/.well-known/agent.json
 

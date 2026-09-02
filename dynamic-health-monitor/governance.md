@@ -7,7 +7,7 @@
 - **Combination:** `gosce-health-monitor` (zone `platform-engineering`, system `PYPI`)
 - **Public URL:** https://health.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T17:16:13+00:00
+- **Generated:** 2026-09-02T10:05:00+00:00
 
 ## Capability declaration
 

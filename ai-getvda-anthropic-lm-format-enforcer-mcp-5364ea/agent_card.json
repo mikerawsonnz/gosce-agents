@@ -11,15 +11,15 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "Traced LLM MCP Proxy: composes anthropic + lm-format-enforcer + mcp + opentelemetry-api + opentelemetry-sdk \u2014 llm-client, structured-output, agent-protocol, observability via A2A + MCP.",
+  "description": "Proxy Gemini (Vertex AI) completions wrapped in OpenTelemetry trace spans; returns the answer plus the trace/span id.",
   "documentationUrl": "https://traced-llm-proxy-anthropic.getvda.ai/governance.md",
-  "name": "Traced LLM MCP Proxy",
+  "name": "Traced LLM Proxy (Anthropic)",
   "preferredTransport": "JSONRPC",
   "proof": {
     "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8, non-ASCII characters emitted LITERALLY and never escaped as \\uXXXX (Python: ensure_ascii=False)",
-    "created": null,
+    "created": "2026-09-02T10:38:28Z",
     "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
-    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..wa3ylRH4oCFJOAWf0A0XgBYzWVlSwr5skisIlQFwm0g2_julKxz9YYYdEwtHnHJztzxF3D3qJ1r1A61Wwx0ICg",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwiaWF0IjoxNzg4MzQ1NTA4LCJraWQiOiJZNmRQZjJZMmJRUEZRNmM4MWRnaDY4NF9HTTZUM2NiM25US25sY2I3RTJNIiwidHlwIjoiSk9TRSJ9..jKBEODNU1CEARBkcl9X5jECJMaklWe6fyeg2CfpE-AfwfMZczApZ7PVLRcnAegLBwprX0CdXWrNlZlQ3_5SkCg",
     "type": "JsonWebSignature2020",
     "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
   },

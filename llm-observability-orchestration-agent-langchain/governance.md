@@ -7,7 +7,7 @@
 - **Combination:** `langchain-langchain-core-langsmit-d042fc` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://langchain-langchain-core-langsmit-d042fc.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T15:50:28+00:00
+- **Generated:** 2026-09-02T10:49:50+00:00
 
 ## Capability declaration
 

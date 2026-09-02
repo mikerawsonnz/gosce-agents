@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_014` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://authenticated-mcp-agent-openai.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:33:30+00:00
+- **Generated:** 2026-09-02T10:19:41+00:00
 
 ## Capability declaration
 
@@ -53,7 +53,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-mcp-agent-6c9b9c
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-mcp-agent-langchain-core
 - **MCP endpoint:** https://authenticated-mcp-agent-openai.getvda.ai/mcp
 - **Agent Card:** https://authenticated-mcp-agent-openai.getvda.ai/.well-known/agent.json
 

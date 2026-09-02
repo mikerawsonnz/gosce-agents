@@ -7,7 +7,7 @@
 - **Combination:** `authenticated-mcp-agent-aed9d5` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://authenticated-mcp-agent-aed9d5.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T15:43:35+00:00
+- **Generated:** 2026-09-02T10:38:28+00:00
 
 ## Capability declaration
 

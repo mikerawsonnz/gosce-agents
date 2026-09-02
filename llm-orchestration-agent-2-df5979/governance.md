@@ -6,8 +6,8 @@
 - **Agent:** `llm-orchestration-agent-2-df5979`
 - **Combination:** `ai-infrastructure_opt_042` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://llm-orchestration-agent-2-df5979.getvda.ai
-- **Version:** 0.1.0
-- **Generated:** 2026-08-26T00:03:56+00:00
+- **Version:** 0.1.1
+- **Generated:** 2026-09-02T10:50:02+00:00
 
 ## Capability declaration
 

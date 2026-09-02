@@ -11,15 +11,15 @@
   "defaultOutputModes": [
     "application/json"
   ],
-  "description": "LLM Orchestration Agent (Python Jose): composes cryptography + langchain-core + mcp + opentelemetry-api + python-jose \u2014 crypto, orchestration, agent-protocol, observability, jwt via A2A + MCP.",
+  "description": "Run a prompt through a LangChain (system + human) chain over Gemini on Vertex AI; optional LangSmith tracing.",
   "documentationUrl": "https://cryptography-langchain-core-mcp-07d652.getvda.ai/governance.md",
   "name": "LLM Orchestration Agent (Python Jose)",
   "preferredTransport": "JSONRPC",
   "proof": {
     "canonicalization": "JSON, `proof` removed, sorted keys, separators (\u0027,\u0027,\u0027:\u0027), UTF-8, non-ASCII characters emitted LITERALLY and never escaped as \\uXXXX (Python: ensure_ascii=False)",
-    "created": null,
+    "created": "2026-09-02T10:45:40Z",
     "jwks": "https://agents.getvda.ai/.well-known/jwks.json",
-    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwia2lkIjoiWTZkUGYyWTJiUVBGUTZjODFkZ2g2ODRfR002VDNjYjNuVEtubGNiN0UyTSIsInR5cCI6IkpPU0UifQ..Rc4oeIk_2lYvTf9R--RdtFW-UfVFHQ1RAsSeiOoM7VeTasgDVPE3zZPVJeXjXxOuYhY2k-IDk2QnCaHr9NpZCA",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6dHJ1ZSwiY3JpdCI6WyJiNjQiXSwiaWF0IjoxNzg4MzQ1OTQwLCJraWQiOiJZNmRQZjJZMmJRUEZRNmM4MWRnaDY4NF9HTTZUM2NiM25US25sY2I3RTJNIiwidHlwIjoiSk9TRSJ9..23LwL7oJ4m7CQJ0haAt6YlXWCRsBFWeQ830ZIJed10pkC2_uW91IpPYifDqXKyBo-kvn_e4AiuRVi58mb-EcAA",
     "type": "JsonWebSignature2020",
     "verificationMethod": "https://agents.getvda.ai/.well-known/jwks.json#Y6dPf2Y2bQPFQ6c81dgh684_GM6T3cb3nTKnlcb7E2M"
   },

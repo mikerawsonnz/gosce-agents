@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_opt_056` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://authenticated-llm-mcp-agent.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:36:40+00:00
+- **Generated:** 2026-09-02T10:21:51+00:00
 
 ## Capability declaration
 
@@ -52,7 +52,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-llm-mcp-agent
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-llm-oauth-agent
 - **MCP endpoint:** https://authenticated-llm-mcp-agent.getvda.ai/mcp
 - **Agent Card:** https://authenticated-llm-mcp-agent.getvda.ai/.well-known/agent.json
 

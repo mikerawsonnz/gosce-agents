@@ -7,7 +7,7 @@
 - **Combination:** `anthropic-lm-format-enforcer-mcp-5364ea` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://traced-llm-proxy-anthropic.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T15:43:35+00:00
+- **Generated:** 2026-09-02T10:38:28+00:00
 
 ## Capability declaration
 
@@ -52,7 +52,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/traced-llm-mcp-proxy
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/traced-llm-proxy-anthropic
 - **MCP endpoint:** https://traced-llm-proxy-anthropic.getvda.ai/mcp
 - **Agent Card:** https://traced-llm-proxy-anthropic.getvda.ai/.well-known/agent.json
 

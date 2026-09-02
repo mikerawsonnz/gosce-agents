@@ -7,7 +7,7 @@
 - **Combination:** `infra_minio_minio_postgres` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://postgres-minio-stack-generator.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:28:44+00:00
+- **Generated:** 2026-09-02T10:14:16+00:00
 
 ## Capability declaration
 

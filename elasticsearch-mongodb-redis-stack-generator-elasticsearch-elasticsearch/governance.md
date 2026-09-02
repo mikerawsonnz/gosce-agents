@@ -7,7 +7,7 @@
 - **Combination:** `infra_elasticsearch_elasticsearch_mongo_redis_traefik` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://elasticsearch-mongodb-redis-stack-generator-el-d8f067.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:44:59+00:00
+- **Generated:** 2026-09-02T10:30:50+00:00
 
 ## Capability declaration
 

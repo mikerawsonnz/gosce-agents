@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_disc_032` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://structured-output-agent-89bcb0.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:45:57+00:00
+- **Generated:** 2026-09-02T10:30:55+00:00
 
 ## Capability declaration
 
@@ -49,7 +49,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/structured-output-agent-89bcb0
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/structured-output-agent-anthropic
 - **MCP endpoint:** https://structured-output-agent-89bcb0.getvda.ai/mcp
 - **Agent Card:** https://structured-output-agent-89bcb0.getvda.ai/.well-known/agent.json
 

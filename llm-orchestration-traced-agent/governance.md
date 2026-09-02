@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_009` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://llm-orchestration-traced-agent.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:22:44+00:00
+- **Generated:** 2026-09-02T10:09:23+00:00
 
 ## Capability declaration
 

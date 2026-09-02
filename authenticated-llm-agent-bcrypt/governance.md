@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_029` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://authenticated-llm-agent-bcrypt.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:31:05+00:00
+- **Generated:** 2026-09-02T10:16:22+00:00
 
 ## Capability declaration
 

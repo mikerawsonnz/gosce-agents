@@ -7,7 +7,7 @@
 - **Combination:** `infra_minio_minio_redis` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://redis-minio-stack-generator-minio-minio.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:28:26+00:00
+- **Generated:** 2026-09-02T10:13:49+00:00
 
 ## Capability declaration
 

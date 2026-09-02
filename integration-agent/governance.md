@@ -6,8 +6,8 @@
 - **Agent:** `drift`
 - **Combination:** `gosce-drift-observatory` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://drift.getvda.ai
-- **Version:** 0.1.1
-- **Generated:** 2026-08-20T19:53:41+00:00
+- **Version:** 0.1.2
+- **Generated:** 2026-09-02T10:47:34+00:00
 
 ## Capability declaration
 
@@ -48,7 +48,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/integration-agent
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/mcp-drift-observatory
 - **MCP endpoint:** https://drift.getvda.ai/mcp
 - **Agent Card:** https://drift.getvda.ai/.well-known/agent.json
 

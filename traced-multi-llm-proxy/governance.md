@@ -6,8 +6,8 @@
 - **Agent:** `traced-multi-llm-proxy`
 - **Combination:** `ai-infrastructure_opt_005` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://traced-multi-llm-proxy.getvda.ai
-- **Version:** 0.1.0
-- **Generated:** 2026-08-22T00:04:27+00:00
+- **Version:** 0.1.1
+- **Generated:** 2026-09-02T10:56:56+00:00
 
 ## Capability declaration
 

@@ -7,7 +7,7 @@
 - **Combination:** `trust-identity_opt_024` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://llm-orchestration-agent-cryptography.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:29:29+00:00
+- **Generated:** 2026-09-02T10:16:05+00:00
 
 ## Capability declaration
 

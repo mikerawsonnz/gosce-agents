@@ -7,7 +7,7 @@
 - **Combination:** `bcrypt-python-jose-1b8dd0` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://bcrypt-python-jose-1b8dd0.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T15:47:21+00:00
+- **Generated:** 2026-09-02T10:45:20+00:00
 
 ## Capability declaration
 
@@ -49,7 +49,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/fastapi-auth-token-jwt-service
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/fastapi-auth-token-service-bcrypt
 - **MCP endpoint:** https://bcrypt-python-jose-1b8dd0.getvda.ai/mcp
 - **Agent Card:** https://bcrypt-python-jose-1b8dd0.getvda.ai/.well-known/agent.json
 

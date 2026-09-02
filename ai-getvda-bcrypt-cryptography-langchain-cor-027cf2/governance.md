@@ -7,7 +7,7 @@
 - **Combination:** `bcrypt-cryptography-langchain-cor-027cf2` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://bcrypt-cryptography-langchain-cor-027cf2.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T15:43:35+00:00
+- **Generated:** 2026-09-02T10:41:48+00:00
 
 ## Capability declaration
 
@@ -53,7 +53,7 @@ request payload it is given.
 
 ## Distribution
 
-- **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-mcp-agent-bcrypt
+- **Listed on Smithery:** https://smithery.ai/servers/a2a/authenticated-mcp-agent-cryptography
 - **MCP endpoint:** https://bcrypt-cryptography-langchain-cor-027cf2.getvda.ai/mcp
 - **Agent Card:** https://bcrypt-cryptography-langchain-cor-027cf2.getvda.ai/.well-known/agent.json
 

@@ -7,7 +7,7 @@
 - **Combination:** `infra_elasticsearch_elasticsearch_mongo_postgres_rabbitmq` (zone `infrastructure-stacks`, system `DOCKER`)
 - **Public URL:** https://rabbitmq-elasticsearch-postgres-stack-generator-mongo.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:46:35+00:00
+- **Generated:** 2026-09-02T10:31:35+00:00
 
 ## Capability declaration
 

@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_opt_003` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://llm-orchestration-agent-opentelemetry-api.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T14:50:43+00:00
+- **Generated:** 2026-09-02T10:51:40+00:00
 
 ## Capability declaration
 

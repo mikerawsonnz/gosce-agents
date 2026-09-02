@@ -7,7 +7,7 @@
 - **Combination:** `structured-output-mcp-traced-agent` (zone `adopted`, system `PYPI`)
 - **Public URL:** https://structured-output-mcp-traced-agent.getvda.ai
 - **Version:** 0.1.1
-- **Generated:** 2026-08-20T15:51:17+00:00
+- **Generated:** 2026-09-02T10:01:39+00:00
 
 ## Capability declaration
 

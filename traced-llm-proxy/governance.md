@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_opt_012` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://traced-llm-proxy.getvda.ai
 - **Version:** 0.1.7
-- **Generated:** 2026-08-20T14:18:09+00:00
+- **Generated:** 2026-09-02T10:05:00+00:00
 
 ## Capability declaration
 

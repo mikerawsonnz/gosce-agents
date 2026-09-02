@@ -6,8 +6,8 @@
 - **Agent:** `authenticated-mcp-agent-bcrypt`
 - **Combination:** `trust-identity_opt_028` (zone `trust-identity`, system `PYPI`)
 - **Public URL:** https://authenticated-mcp-agent-bcrypt.getvda.ai
-- **Version:** 0.1.0
-- **Generated:** 2026-08-23T00:05:10+00:00
+- **Version:** 0.1.1
+- **Generated:** 2026-09-02T10:40:34+00:00
 
 ## Capability declaration
 

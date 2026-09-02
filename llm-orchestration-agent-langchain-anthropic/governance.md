@@ -7,7 +7,7 @@
 - **Combination:** `ai-infrastructure_opt_053` (zone `ai-infrastructure`, system `PYPI`)
 - **Public URL:** https://llm-orchestration-agent-langchain-anthropic.getvda.ai
 - **Version:** 0.1.2
-- **Generated:** 2026-08-20T14:31:17+00:00
+- **Generated:** 2026-09-02T10:17:58+00:00
 
 ## Capability declaration
 
